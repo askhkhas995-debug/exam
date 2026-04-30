@@ -116,7 +116,19 @@ class Session:
                     selected_index = index
                     break
             else:
-                selected = [{"subject_id": subject_id}]
+                selected_item: dict[str, object] = {"subject_id": subject_id}
+                if kind == "exam":
+                    pool = repo.get_pool(pool_id)
+                    for level in pool.get("levels", []) or []:
+                        assignments = level.get("assignments", []) or []
+                        for assignment in assignments:
+                            assignment_subject = assignment.get("subject_id") if isinstance(assignment, dict) else assignment
+                            if assignment_subject == subject_id:
+                                selected_item["level"] = level.get("level")
+                                break
+                        if selected_item.get("level") is not None:
+                            break
+                selected = [selected_item]
                 selected_index = 0
         if selected and not (0 <= selected_index < len(selected)):
             selected_index = 0
