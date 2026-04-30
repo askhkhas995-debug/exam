@@ -119,17 +119,45 @@ class Session:
                 selected_item: dict[str, object] = {"subject_id": subject_id}
                 if kind == "exam":
                     pool = repo.get_pool(pool_id)
+                    target_level = None
                     for level in pool.get("levels", []) or []:
+                        level_value = level.get("level")
                         assignments = level.get("assignments", []) or []
                         for assignment in assignments:
                             assignment_subject = assignment.get("subject_id") if isinstance(assignment, dict) else assignment
                             if assignment_subject == subject_id:
-                                selected_item["level"] = level.get("level")
+                                selected_item["level"] = level_value
+                                target_level = level_value
                                 break
                         if selected_item.get("level") is not None:
                             break
-                selected = [selected_item]
-                selected_index = 0
+                    if target_level is not None:
+                        rebuilt: list[dict[str, object]] = []
+                        for level in pool.get("levels", []) or []:
+                            level_value = level.get("level")
+                            level_selected = [item for item in selected if item.get("level") == level_value]
+                            if level_value == target_level:
+                                rebuilt.append({"subject_id": subject_id, "level": level_value})
+                                continue
+                            if level_selected:
+                                rebuilt.extend(level_selected)
+                                continue
+                            assignments = level.get("assignments", []) or []
+                            if assignments:
+                                first = assignments[0]
+                                first_subject = first.get("subject_id") if isinstance(first, dict) else first
+                                rebuilt.append({"subject_id": first_subject, "level": level_value})
+                        selected = rebuilt or [selected_item]
+                        selected_index = next(
+                            (i for i, item in enumerate(selected) if item.get("subject_id") == subject_id),
+                            0,
+                        )
+                    else:
+                        selected = [selected_item]
+                        selected_index = 0
+                else:
+                    selected = [selected_item]
+                    selected_index = 0
         if selected and not (0 <= selected_index < len(selected)):
             selected_index = 0
         if not selected:
