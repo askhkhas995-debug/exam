@@ -1,0 +1,12 @@
+module: shell01
+origin: piscine42
+version: v1
+subjects:
+  - print_groups.sh
+  - find_sh.sh
+  - count_files.sh
+  - MAC.sh
+  - special_filename_MaRViN
+  - skip.sh
+  - r_dwssap.sh
+  - add_chelou.sh

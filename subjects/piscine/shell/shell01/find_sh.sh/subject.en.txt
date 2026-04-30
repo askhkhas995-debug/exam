@@ -1,0 +1,7 @@
+# Exercise 01: find_sh.sh
+
+Write a command line that searches for all files ending with .sh
+in the current directory and its subdirectories, displays only
+their names without the .sh extension.
+
+Turn-in files: find_sh.sh

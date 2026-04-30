@@ -1,0 +1,27 @@
+id: alpha_index_case
+title: alpha_index_case
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 1
+type: c_program
+language: c
+expected_files:
+  - alpha_index_case.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror alpha_index_case.c -o alpha_index_case
+run:
+  command: ./alpha_index_case
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/alpha_index_case/profile.yml

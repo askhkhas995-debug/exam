@@ -1,0 +1,21 @@
+id: frog_tar_pack_basic
+title: frog_tar_pack_basic
+origin: frog42
+version: v2
+module: nova_batch_06
+level: 2
+type: shell
+language: sh
+expected_files:
+- frog_tar_pack_basic.sh
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: false
+tags:
+- frog42
+- nova
+- v2

@@ -1,0 +1,7 @@
+# ft_ft
+
+Write a function that takes a pointer to int and sets its value to 42.
+
+Prototype: void ft_ft(int *nbr)
+
+Turn-in files: ft_ft.c

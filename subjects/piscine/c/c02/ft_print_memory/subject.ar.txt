@@ -1,0 +1,5 @@
+# ft_print_memory
+
+اكتب الدالة ft_print_memory.
+
+الملفات المطلوبة: ft_print_memory.c

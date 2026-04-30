@@ -1,0 +1,4 @@
+# frog_echo_matrix
+
+New exercise (nova_batch_02): implement `frog_echo_matrix.c`.
+The program should print exactly `frog_echo_matrix` followed by a newline.

@@ -1,0 +1,5 @@
+Write a program that takes one string argument containing digits and prints the sum of its digits, followed by a newline. Non-digits are ignored unless strict mode is enabled by the profile.
+
+Example: `1337 -> 14`.
+
+Allowed functions: `write`.

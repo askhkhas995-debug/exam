@@ -1,0 +1,7 @@
+# ft_swap
+
+Write a function that swaps the values of two integers whose addresses are entered as parameters.
+
+Prototype: void ft_swap(int *a, int *b)
+
+Turn-in files: ft_swap.c

@@ -1,0 +1,4 @@
+# frog_range_merge
+
+New exercise (nova_batch_04): implement `frog_range_merge.c`.
+The program should print exactly `frog_range_merge` followed by a newline.

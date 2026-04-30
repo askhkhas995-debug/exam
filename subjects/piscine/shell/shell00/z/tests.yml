@@ -1,0 +1,8 @@
+subject_id: z
+validators:
+- validator: tar_archive
+  name: tar_contains_z
+  args:
+    archive_path: testShell00.tar
+    expected_contents:
+    - z

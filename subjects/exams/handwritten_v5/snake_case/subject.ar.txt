@@ -1,0 +1,1 @@
+حوّل string من `snake_case` إلى `PascalCase`: `hello_world_yes -> HelloWorldYes`.

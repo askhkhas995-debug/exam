@@ -1,0 +1,27 @@
+id: nth_reverse
+title: nth_reverse
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 3
+type: c_program
+language: c
+expected_files:
+  - nth_reverse.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror nth_reverse.c -o nth_reverse
+run:
+  command: ./nth_reverse
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/nth_reverse/profile.yml

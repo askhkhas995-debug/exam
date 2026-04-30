@@ -1,0 +1,16 @@
+id: r_dwssap.sh
+title: r_dwssap.sh
+origin: piscine42
+version: v1
+module: shell01
+level: 6
+type: shell
+language: sh
+expected_files:
+- r_dwssap.sh
+norminette: false
+tags:
+- shell01
+- piscine
+correction:
+  profile: corrections/piscine/shell01/r_dwssap.sh/profile.yml

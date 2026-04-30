@@ -1,0 +1,17 @@
+id: p27_reverse_chunks
+title: p27_reverse_chunks
+origin: piscine27
+version: v0
+module: p27_02_strings
+level: 0
+type: c_program
+language: c
+expected_files:
+  - p27_reverse_chunks.c
+allowed_functions:
+  - write
+norminette: true
+tags:
+  - piscine27
+correction:
+  profile: corrections/piscine27/p27_02_strings/p27_reverse_chunks/profile.yml

@@ -1,0 +1,26 @@
+id: revanced_v3
+kind: exam
+version: v3
+display_name: Revanced Practice v3
+group: Imported Practice
+description: Imported Revanced-style practice set.
+levels_count: 4
+origin_label: ExamPoolRevanced
+official_like: false
+imported: true
+duration_minutes: 240
+mode: incremental
+origin: ExamPoolRevanced
+levels:
+  - level: 0
+    pick: 1
+    assignments: [ascii_character, fix_a, fix_z, frequency_character, ft_abs, ft_div, ft_mod, ft_pow, ft_isdigit, is_vowel, is_consonant, rectangle_area, triangle_area]
+  - level: 1
+    pick: 1
+    assignments: [factorial_number, ft_sqrt, ft_str_is_alpha, ft_strcat, ft_strdiff, ft_strjoin, length_words, next_character, prev_character, remove_duplicate, remove_vowels, sum_n]
+  - level: 2
+    pick: 1
+    assignments: [binary_to_decimal, decimal_to_binary, fix_parser, fix_result, ft_bubblesort, ft_strchr, ft_strdel, ft_strndup, ft_strstr, largest_number, smallest_number, sort_words, size_variables, volume_cube, volume_cuboid]
+  - level: 3
+    pick: 1
+    assignments: [add_complex, sub_complex, mult_complex, fix_loop, list_trait, naahio]

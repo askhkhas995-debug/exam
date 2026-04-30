@@ -1,0 +1,5 @@
+# p27_range_step
+
+Return an allocated int range with a custom step.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

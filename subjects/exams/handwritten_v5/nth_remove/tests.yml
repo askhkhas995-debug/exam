@@ -1,0 +1,3 @@
+subject_id: nth_remove
+fixed_tests:
+  - {"args": ["ABCDEF", "2"], "stdout": "ACE\n"}

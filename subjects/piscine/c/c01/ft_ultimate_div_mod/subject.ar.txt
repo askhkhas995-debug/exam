@@ -1,0 +1,7 @@
+# ft_ultimate_div_mod
+
+اكتب الدالة ft_ultimate_div_mod.
+
+النموذج: void ft_ultimate_div_mod(int *a, int *b)
+
+الملفات المطلوبة: ft_ultimate_div_mod.c

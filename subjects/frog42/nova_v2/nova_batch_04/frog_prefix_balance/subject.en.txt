@@ -1,0 +1,4 @@
+# frog_prefix_balance
+
+New exercise (nova_batch_04): implement `frog_prefix_balance.c`.
+The program should print exactly `frog_prefix_balance` followed by a newline.

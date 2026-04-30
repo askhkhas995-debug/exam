@@ -1,0 +1,5 @@
+# ft_strupcase
+
+Write the function ft_strupcase.
+
+Turn-in files: ft_strupcase.c

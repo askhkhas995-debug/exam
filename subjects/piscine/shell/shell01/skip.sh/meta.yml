@@ -1,0 +1,16 @@
+id: skip.sh
+title: skip.sh
+origin: piscine42
+version: v1
+module: shell01
+level: 5
+type: shell
+language: sh
+expected_files:
+- skip.sh
+norminette: false
+tags:
+- shell01
+- piscine
+correction:
+  profile: corrections/piscine/shell01/skip.sh/profile.yml

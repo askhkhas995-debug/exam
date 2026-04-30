@@ -1,0 +1,8 @@
+module: c10
+origin: piscine42
+version: v1
+subjects:
+  - display_file
+  - cat
+  - tail
+  - hexdump

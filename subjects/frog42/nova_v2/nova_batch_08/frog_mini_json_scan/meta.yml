@@ -1,0 +1,21 @@
+id: frog_mini_json_scan
+title: frog_mini_json_scan
+origin: frog42
+version: v2
+module: nova_batch_08
+level: 0
+type: c_program
+language: c
+expected_files:
+- frog_mini_json_scan.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

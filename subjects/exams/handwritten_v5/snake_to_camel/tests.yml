@@ -1,0 +1,9 @@
+subject_id: snake_to_camel
+fixed_tests:
+  - {"args": ["hello_world"], "stdout": "helloWorld\n"}
+  - {"args": ["a_b_c"], "stdout": "aBC\n"}
+  - {"args": [""], "stdout": "\n"}
+  - {"args": ["a"], "stdout": "a\n"}
+  - {"args": ["_leading"], "stdout": "Leading\n"}
+  - {"args": ["trailing_"], "stdout": "trailing\n"}
+  - {"args": [], "stdout": "\n"}

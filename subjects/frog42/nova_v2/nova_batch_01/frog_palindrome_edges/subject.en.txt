@@ -1,0 +1,4 @@
+# frog_palindrome_edges
+
+New exercise (nova_batch_01): implement `frog_palindrome_edges.c`.
+The program should print exactly `frog_palindrome_edges` followed by a newline.

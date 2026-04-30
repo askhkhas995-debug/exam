@@ -1,0 +1,5 @@
+# p27_free_table
+
+Free a NULL-terminated array of strings.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

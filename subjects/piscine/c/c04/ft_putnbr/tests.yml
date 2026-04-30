@@ -1,0 +1,6 @@
+subject_id: ft_putnbr
+fixed_tests:
+- call: ft_putnbr(42)
+  stdout: '42'
+- call: ft_putnbr(-2147483648)
+  stdout: '-2147483648'

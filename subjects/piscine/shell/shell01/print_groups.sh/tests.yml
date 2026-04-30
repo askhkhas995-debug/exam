@@ -1,0 +1,6 @@
+subject_id: print_groups.sh
+fixed_tests:
+- name: current_user
+  args:
+  - $(whoami)
+  exit_code: 0

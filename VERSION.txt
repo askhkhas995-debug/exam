@@ -1,0 +1,6 @@
+PiscineForge
+Version: 0.1.0
+
+This file tracks the active package version and should match pyproject.toml
+and piscine_forge/__init__.py. Internal handoff artifacts are kept under
+docs/internal/ and are not part of the student-facing product surface.

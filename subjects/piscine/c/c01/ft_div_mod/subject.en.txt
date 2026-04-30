@@ -1,0 +1,7 @@
+# ft_div_mod
+
+Write a function that divides parameters a by b and stores the result in div and the remainder in mod.
+
+Prototype: void ft_div_mod(int a, int b, int *div, int *mod)
+
+Turn-in files: ft_div_mod.c

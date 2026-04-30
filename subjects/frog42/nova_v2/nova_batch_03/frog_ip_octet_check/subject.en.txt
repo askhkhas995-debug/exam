@@ -1,0 +1,4 @@
+# frog_ip_octet_check
+
+New exercise (nova_batch_03): implement `frog_ip_octet_check.c`.
+The program should print exactly `frog_ip_octet_check` followed by a newline.

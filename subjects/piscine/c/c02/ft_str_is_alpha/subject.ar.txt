@@ -1,0 +1,5 @@
+# ft_str_is_alpha
+
+اكتب الدالة ft_str_is_alpha.
+
+الملفات المطلوبة: ft_str_is_alpha.c

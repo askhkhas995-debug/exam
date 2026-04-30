@@ -1,0 +1,7 @@
+# ft_print_combn
+
+Write a function that displays all possible different combinations of n different digits in ascending order.
+
+Prototype: void ft_print_combn(int n)
+
+Turn-in files: ft_print_combn.c

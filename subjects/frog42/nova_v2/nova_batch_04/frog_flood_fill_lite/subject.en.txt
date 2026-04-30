@@ -1,0 +1,4 @@
+# frog_flood_fill_lite
+
+New exercise (nova_batch_04): implement `frog_flood_fill_lite.c`.
+The program should print exactly `frog_flood_fill_lite` followed by a newline.

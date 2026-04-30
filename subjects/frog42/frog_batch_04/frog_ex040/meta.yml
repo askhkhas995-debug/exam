@@ -1,0 +1,20 @@
+id: frog_ex040
+title: frog_ex040
+origin: frog42
+version: v1
+module: frog_batch_04
+level: 39
+type: c_program
+language: c
+expected_files:
+- frog_ex040.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- generated

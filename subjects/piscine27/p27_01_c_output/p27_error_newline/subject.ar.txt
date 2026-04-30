@@ -1,0 +1,5 @@
+# p27_error_newline
+
+Handle invalid usage and exact newline behavior.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

@@ -1,0 +1,8 @@
+اكتب program يأخذ string واحد ويطبعه بحالة متناوبة حسب index.
+
+- index زوجي: uppercase
+- index فردي: lowercase
+- يبدأ index من 0
+- الحروف غير alphabetic تبقى كما هي لكنها تُحسب في index
+
+Allowed functions: `write`.

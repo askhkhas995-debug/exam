@@ -1,0 +1,5 @@
+# ft_strupcase
+
+اكتب الدالة ft_strupcase.
+
+الملفات المطلوبة: ft_strupcase.c

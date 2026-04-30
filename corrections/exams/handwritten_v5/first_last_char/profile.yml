@@ -1,0 +1,8 @@
+subject_id: first_last_char
+evaluator: c_program
+strict_stdout: true
+timeout_seconds: 2
+fixed_tests_file: subjects/exams/handwritten_v5/first_last_char/tests.yml
+generator: piscine_forge.generators.string_cases
+notes:
+  - Correction logic must remain private.

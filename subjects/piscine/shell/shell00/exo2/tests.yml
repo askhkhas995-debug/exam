@@ -1,0 +1,6 @@
+subject_id: exo2
+validators:
+- validator: tar_archive
+  name: tar_exists
+  args:
+    archive_path: exo2.tar

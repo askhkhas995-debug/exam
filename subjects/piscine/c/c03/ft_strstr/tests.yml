@@ -1,0 +1,6 @@
+subject_id: ft_strstr
+fixed_tests:
+- call: printf("%s\n", ft_strstr("Hello World", "World"))
+  stdout: 'World
+
+    '

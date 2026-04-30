@@ -1,0 +1,5 @@
+# p27_bsq_lite
+
+Find biggest square on small maps.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

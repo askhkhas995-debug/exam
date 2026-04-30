@@ -1,0 +1,4 @@
+# frog_stack_machine
+
+New exercise (nova_batch_07): implement `frog_stack_machine.c`.
+The program should print exactly `frog_stack_machine` followed by a newline.

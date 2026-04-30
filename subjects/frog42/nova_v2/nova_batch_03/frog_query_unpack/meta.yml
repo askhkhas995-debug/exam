@@ -1,0 +1,21 @@
+id: frog_query_unpack
+title: frog_query_unpack
+origin: frog42
+version: v2
+module: nova_batch_03
+level: 8
+type: c_program
+language: c
+expected_files:
+- frog_query_unpack.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

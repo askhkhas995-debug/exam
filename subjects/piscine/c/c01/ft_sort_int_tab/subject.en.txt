@@ -1,0 +1,7 @@
+# ft_sort_int_tab
+
+Write a function that sorts an array of integers in ascending order.
+
+Prototype: void ft_sort_int_tab(int *tab, int size)
+
+Turn-in files: ft_sort_int_tab.c

@@ -1,0 +1,5 @@
+# ft_str_is_uppercase
+
+اكتب الدالة ft_str_is_uppercase.
+
+الملفات المطلوبة: ft_str_is_uppercase.c

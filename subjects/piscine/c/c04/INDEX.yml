@@ -1,0 +1,10 @@
+module: c04
+origin: piscine42
+version: v1
+subjects:
+  - ft_strlen
+  - ft_putstr
+  - ft_putnbr
+  - ft_atoi
+  - ft_putnbr_base
+  - ft_atoi_base

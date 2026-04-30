@@ -1,0 +1,21 @@
+id: frog_prefix_balance
+title: frog_prefix_balance
+origin: frog42
+version: v2
+module: nova_batch_04
+level: 6
+type: c_program
+language: c
+expected_files:
+- frog_prefix_balance.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

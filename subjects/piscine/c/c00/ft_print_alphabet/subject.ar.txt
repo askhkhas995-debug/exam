@@ -1,0 +1,7 @@
+# ft_print_alphabet
+
+اكتب الدالة ft_print_alphabet.
+
+النموذج: void ft_print_alphabet(void)
+
+الملفات المطلوبة: ft_print_alphabet.c

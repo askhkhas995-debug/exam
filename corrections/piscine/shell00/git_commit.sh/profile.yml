@@ -1,0 +1,4 @@
+subject_id: git_commit.sh
+evaluator: shell
+strict_stdout: true
+timeout_seconds: 5

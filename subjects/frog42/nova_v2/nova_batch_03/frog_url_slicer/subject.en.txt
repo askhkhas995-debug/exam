@@ -1,0 +1,4 @@
+# frog_url_slicer
+
+New exercise (nova_batch_03): implement `frog_url_slicer.c`.
+The program should print exactly `frog_url_slicer` followed by a newline.

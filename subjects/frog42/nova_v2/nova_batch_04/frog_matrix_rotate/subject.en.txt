@@ -1,0 +1,4 @@
+# frog_matrix_rotate
+
+New exercise (nova_batch_04): implement `frog_matrix_rotate.c`.
+The program should print exactly `frog_matrix_rotate` followed by a newline.

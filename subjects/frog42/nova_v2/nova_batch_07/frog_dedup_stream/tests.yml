@@ -1,0 +1,5 @@
+subject_id: frog_dedup_stream
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_dedup_stream\n"

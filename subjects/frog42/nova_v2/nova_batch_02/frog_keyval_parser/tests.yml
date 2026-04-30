@@ -1,0 +1,5 @@
+subject_id: frog_keyval_parser
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_keyval_parser\n"

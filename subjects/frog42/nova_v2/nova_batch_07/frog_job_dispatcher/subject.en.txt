@@ -1,0 +1,4 @@
+# frog_job_dispatcher
+
+New exercise (nova_batch_07): implement `frog_job_dispatcher.c`.
+The program should print exactly `frog_job_dispatcher` followed by a newline.

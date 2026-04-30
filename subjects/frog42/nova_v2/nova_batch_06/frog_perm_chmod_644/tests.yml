@@ -1,0 +1,5 @@
+subject_id: frog_perm_chmod_644
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_perm_chmod_644\n"

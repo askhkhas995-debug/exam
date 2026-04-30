@@ -1,0 +1,10 @@
+required:
+  - subject_id
+  - evaluator
+properties:
+  subject_id: string
+  evaluator: string
+  fixed_tests: list
+  generator: string
+  timeout_seconds: integer
+  strict_stdout: boolean

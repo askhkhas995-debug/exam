@@ -1,0 +1,14 @@
+Write a program that takes one string argument and prints it in zigzag case.
+
+Characters at even indexes must be uppercase. Characters at odd indexes must be lowercase. Index starts at 0. Non-alphabetic characters are printed unchanged but still count in the index.
+
+Examples:
+
+```txt
+$> ./zigzag hello | cat -e
+HeLlO$
+$> ./zigzag "a b c" | cat -e
+A B C$
+```
+
+Allowed functions: `write`.

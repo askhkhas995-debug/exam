@@ -1,0 +1,7 @@
+# Exercise 08: clean
+
+Write a command line that searches for all files ending with ~ or 
+starting and ending with # in the current directory and its
+subdirectories, and deletes them.
+
+Turn-in files: clean

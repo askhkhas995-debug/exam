@@ -1,0 +1,5 @@
+# ft_str_is_printable
+
+Write the function ft_str_is_printable.
+
+Turn-in files: ft_str_is_printable.c

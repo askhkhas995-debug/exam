@@ -1,0 +1,12 @@
+module: c11
+origin: piscine42
+version: v1
+subjects:
+  - ft_foreach
+  - ft_map
+  - ft_any
+  - ft_count_if
+  - ft_is_sort
+  - do-op
+  - ft_sort_string_tab
+  - ft_advanced_sort_string_tab

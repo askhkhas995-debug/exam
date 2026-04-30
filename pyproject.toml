@@ -1,0 +1,15 @@
+[project]
+name = "piscine-forge"
+version = "0.1.0"
+description = "42 Piscine and Friday Exam simulator"
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6.0"]
+
+[project.scripts]
+pforge = "piscine_forge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["piscine_forge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

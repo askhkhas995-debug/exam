@@ -1,0 +1,5 @@
+# p27_list_push
+
+Create and push nodes in a singly linked list.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

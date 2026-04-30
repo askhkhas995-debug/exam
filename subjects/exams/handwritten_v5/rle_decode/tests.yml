@@ -1,0 +1,9 @@
+subject_id: rle_decode
+fixed_tests:
+  - {"args": ["3A2BC"], "stdout": "AAABBC\n"}
+  - {"args": ["12A"], "stdout": "AAAAAAAAAAAA\n"}
+  - {"args": [""], "stdout": "\n"}
+  - {"args": ["A"], "stdout": "A\n"}
+  - {"args": ["1A"], "stdout": "A\n"}
+  - {"args": ["100X"], "stdout": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n"}
+  - {"args": [], "stdout": "\n"}

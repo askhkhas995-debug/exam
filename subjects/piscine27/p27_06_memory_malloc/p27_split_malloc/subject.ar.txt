@@ -1,0 +1,5 @@
+# p27_split_malloc
+
+Split a string into allocated words and free on failure.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

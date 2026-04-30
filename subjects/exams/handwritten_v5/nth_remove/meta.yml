@@ -1,0 +1,27 @@
+id: nth_remove
+title: nth_remove
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 3
+type: c_program
+language: c
+expected_files:
+  - nth_remove.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror nth_remove.c -o nth_remove
+run:
+  command: ./nth_remove
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/nth_remove/profile.yml

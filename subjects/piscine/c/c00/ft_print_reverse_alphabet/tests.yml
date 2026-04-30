@@ -1,0 +1,4 @@
+subject_id: ft_print_reverse_alphabet
+fixed_tests:
+- call: ft_print_reverse_alphabet()
+  stdout: zyxwvutsrqponmlkjihgfedcba

@@ -1,0 +1,7 @@
+# ft_putstr
+
+اكتب الدالة ft_putstr.
+
+النموذج: void ft_putstr(char *str)
+
+الملفات المطلوبة: ft_putstr.c

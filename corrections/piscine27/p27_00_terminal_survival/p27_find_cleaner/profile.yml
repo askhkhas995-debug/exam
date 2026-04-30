@@ -1,0 +1,4 @@
+subject_id: p27_find_cleaner
+evaluator: shell
+strict_stdout: true
+timeout_seconds: 2

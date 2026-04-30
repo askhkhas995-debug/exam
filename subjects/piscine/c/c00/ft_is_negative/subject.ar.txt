@@ -1,0 +1,7 @@
+# ft_is_negative
+
+اكتب الدالة ft_is_negative.
+
+النموذج: void ft_is_negative(int n)
+
+الملفات المطلوبة: ft_is_negative.c

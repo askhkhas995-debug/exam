@@ -1,0 +1,5 @@
+# ft_strlen
+
+اكتب الدالة ft_strlen.
+
+الملفات المطلوبة: ft_strlen.c

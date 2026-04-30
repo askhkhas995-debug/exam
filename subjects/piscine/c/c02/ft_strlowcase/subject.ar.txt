@@ -1,0 +1,5 @@
+# ft_strlowcase
+
+اكتب الدالة ft_strlowcase.
+
+الملفات المطلوبة: ft_strlowcase.c

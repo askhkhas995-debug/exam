@@ -1,0 +1,3 @@
+subject_id: nth_reverse
+fixed_tests:
+  - {"args": ["ABCDEFGH", "2"], "stdout": "HFDB\n"}

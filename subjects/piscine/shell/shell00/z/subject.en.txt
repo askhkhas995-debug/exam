@@ -1,0 +1,6 @@
+# Exercise 00: z
+
+Create a file called z that contains "Z" followed by a newline, then
+create a tar archive testShell00.tar containing z.
+
+Turn-in files: testShell00.tar

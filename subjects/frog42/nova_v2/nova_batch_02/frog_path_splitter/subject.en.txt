@@ -1,0 +1,4 @@
+# frog_path_splitter
+
+New exercise (nova_batch_02): implement `frog_path_splitter.c`.
+The program should print exactly `frog_path_splitter` followed by a newline.

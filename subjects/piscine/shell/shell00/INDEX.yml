@@ -1,0 +1,14 @@
+module: shell00
+origin: piscine42
+version: v1
+subjects:
+  - z
+  - testShell00
+  - exo2
+  - id_rsa_pub
+  - midLS
+  - git_commit.sh
+  - git_ignore.sh
+  - diff
+  - clean
+  - ft_magic

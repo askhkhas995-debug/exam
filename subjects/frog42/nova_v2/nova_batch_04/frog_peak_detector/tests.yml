@@ -1,0 +1,5 @@
+subject_id: frog_peak_detector
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_peak_detector\n"

@@ -1,0 +1,8 @@
+subject_id: ft_putchar
+fixed_tests:
+- call: ft_putchar('a')
+  stdout: a
+- call: ft_putchar('z')
+  stdout: z
+- call: ft_putchar('0')
+  stdout: '0'

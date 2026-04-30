@@ -1,0 +1,5 @@
+# ft_strlowcase
+
+Write the function ft_strlowcase.
+
+Turn-in files: ft_strlowcase.c

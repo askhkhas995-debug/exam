@@ -1,0 +1,23 @@
+id: ft_putchar
+title: ft_putchar
+origin: piscine42
+version: v1
+module: c00
+level: 0
+type: c_function
+language: c
+expected_files:
+- ft_putchar.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: void ft_putchar(char c)
+tags:
+- c00
+- piscine
+correction:
+  profile: corrections/piscine/c00/ft_putchar/profile.yml

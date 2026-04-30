@@ -1,0 +1,21 @@
+id: frog_groups_compact
+title: frog_groups_compact
+origin: frog42
+version: v2
+module: nova_batch_05
+level: 2
+type: shell
+language: sh
+expected_files:
+- frog_groups_compact.sh
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: false
+tags:
+- frog42
+- nova
+- v2

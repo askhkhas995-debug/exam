@@ -1,0 +1,5 @@
+subject_id: frog_hidden_files_map
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_hidden_files_map\n"

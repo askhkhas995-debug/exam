@@ -1,0 +1,21 @@
+id: frog_stack_machine
+title: frog_stack_machine
+origin: frog42
+version: v2
+module: nova_batch_07
+level: 1
+type: c_program
+language: c
+expected_files:
+- frog_stack_machine.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

@@ -1,0 +1,4 @@
+# frog_queue_simulator
+
+New exercise (nova_batch_07): implement `frog_queue_simulator.c`.
+The program should print exactly `frog_queue_simulator` followed by a newline.

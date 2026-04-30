@@ -1,0 +1,6 @@
+# Exercise 05: git_commit.sh
+
+Create a shell script that displays the last 5 commit hashes of
+the current git repository, one per line.
+
+Turn-in files: git_commit.sh

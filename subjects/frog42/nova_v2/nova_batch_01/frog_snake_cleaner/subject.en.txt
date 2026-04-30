@@ -1,0 +1,4 @@
+# frog_snake_cleaner
+
+New exercise (nova_batch_01): implement `frog_snake_cleaner.c`.
+The program should print exactly `frog_snake_cleaner` followed by a newline.

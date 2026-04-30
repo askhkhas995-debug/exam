@@ -1,0 +1,6 @@
+# Exercise 09: ft_magic
+
+Create a magic file called ft_magic that will detect files of 
+type 42 file as "42 file".
+
+Turn-in files: ft_magic

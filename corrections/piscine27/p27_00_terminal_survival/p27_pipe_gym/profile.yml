@@ -1,0 +1,4 @@
+subject_id: p27_pipe_gym
+evaluator: shell
+strict_stdout: true
+timeout_seconds: 2

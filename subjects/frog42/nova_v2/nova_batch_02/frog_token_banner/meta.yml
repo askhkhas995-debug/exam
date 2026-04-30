@@ -1,0 +1,21 @@
+id: frog_token_banner
+title: frog_token_banner
+origin: frog42
+version: v2
+module: nova_batch_02
+level: 2
+type: c_program
+language: c
+expected_files:
+- frog_token_banner.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

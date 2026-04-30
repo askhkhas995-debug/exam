@@ -1,0 +1,5 @@
+# ft_strstr
+
+اكتب الدالة ft_strstr.
+
+الملفات المطلوبة: ft_strstr.c

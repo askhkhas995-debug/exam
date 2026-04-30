@@ -1,0 +1,10 @@
+module: c03
+origin: piscine42
+version: v1
+subjects:
+  - ft_strcmp
+  - ft_strncmp
+  - ft_strcat
+  - ft_strncat
+  - ft_strstr
+  - ft_strlcat

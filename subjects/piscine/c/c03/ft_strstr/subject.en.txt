@@ -1,0 +1,5 @@
+# ft_strstr
+
+Write the function ft_strstr.
+
+Turn-in files: ft_strstr.c

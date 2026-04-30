@@ -1,0 +1,5 @@
+Write a program that converts a CamelCase or lowerCamelCase string to snake_case. Before every uppercase letter that is not the first character, print an underscore, then print the lowercase version.
+
+Example: `HelloWorldYes -> hello_world_yes`.
+
+Allowed functions: `write`.

@@ -1,0 +1,5 @@
+# p27_strdup_safe
+
+Reimplement strdup with malloc and NULL safety.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

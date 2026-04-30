@@ -1,0 +1,9 @@
+subject_id: zigzag
+fixed_tests:
+  - {"args": ["hello"], "stdout": "HeLlO\n"}
+  - {"args": ["a b c"], "stdout": "A B C\n"}
+  - {"args": [""], "stdout": "\n"}
+  - {"args": ["A"], "stdout": "A\n"}
+  - {"args": ["abc def"], "stdout": "AbC DeF\n"}
+  - {"args": ["  "], "stdout": "  \n"}
+  - {"args": [], "stdout": "\n"}

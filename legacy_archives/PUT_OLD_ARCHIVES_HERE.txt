@@ -1,0 +1,9 @@
+ضع هنا الأرشيفات القديمة قبل إعطاء المشروع إلى Codex.
+
+أمثلة:
+- GradeMe archive
+- ExamShell archive
+- ExamPoolRevanced archive
+- DeepThought/tester archive
+
+Codex يجب أن يستخرجها في مجلد مؤقت ولا يعدلها مباشرة.

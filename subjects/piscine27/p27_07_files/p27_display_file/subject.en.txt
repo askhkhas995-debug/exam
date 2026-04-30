@@ -1,0 +1,5 @@
+# p27_display_file
+
+Print a file to stdout with precise error messages.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

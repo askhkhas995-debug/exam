@@ -1,0 +1,5 @@
+norm:
+  enabled: true
+  command: norminette
+  fail_on_error: true
+  soft_mode_for_piscine27_beginner: true

@@ -1,0 +1,4 @@
+# frog_copy_preserve_mode
+
+Write a shell script `frog_copy_preserve_mode.sh` that implements the requested behavior for copy preserve mode.
+Your script must print exactly the expected output for fixed tests.

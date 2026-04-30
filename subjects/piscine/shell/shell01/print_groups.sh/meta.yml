@@ -1,0 +1,16 @@
+id: print_groups.sh
+title: print_groups.sh
+origin: piscine42
+version: v1
+module: shell01
+level: 0
+type: shell
+language: sh
+expected_files:
+- print_groups.sh
+norminette: false
+tags:
+- shell01
+- piscine
+correction:
+  profile: corrections/piscine/shell01/print_groups.sh/profile.yml

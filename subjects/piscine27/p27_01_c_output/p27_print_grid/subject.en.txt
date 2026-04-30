@@ -1,0 +1,5 @@
+# p27_print_grid
+
+Print a rectangle/grid using only write.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

@@ -1,0 +1,29 @@
+id: handwritten_v5
+kind: exam
+version: v5
+display_name: Handwritten Practice v5
+group: Handwritten Practice
+description: Curated handwritten-style practice set.
+levels_count: 5
+origin_label: PiscineForge practice
+official_like: false
+imported: false
+duration_minutes: 240
+mode: incremental
+reset_on_fail: false
+levels:
+  - level: 0
+    pick: 1
+    assignments: [first_last_char, word_edges]
+  - level: 1
+    pick: 1
+    assignments: [zigzag, index_case, alpha_index_case]
+  - level: 2
+    pick: 1
+    assignments: [alt_case, snake_case, snake_to_camel, camel_to_snake]
+  - level: 3
+    pick: 1
+    assignments: [ping_pong, print_nth_char, nth_remove, nth_reverse]
+  - level: 4
+    pick: 1
+    assignments: [rle, rle_decode, digit_sum, digit_root]

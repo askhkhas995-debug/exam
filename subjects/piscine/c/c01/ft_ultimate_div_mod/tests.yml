@@ -1,0 +1,6 @@
+subject_id: ft_ultimate_div_mod
+fixed_tests:
+- call: int a = 10, b = 3; ft_ultimate_div_mod(&a, &b); printf("%d %d\n", a, b)
+  stdout: '3 1
+
+    '

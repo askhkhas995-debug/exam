@@ -1,0 +1,7 @@
+# ft_print_comb2
+
+Write a function that displays all possible different combinations of two different two-digit numbers.
+
+Prototype: void ft_print_comb2(void)
+
+Turn-in files: ft_print_comb2.c

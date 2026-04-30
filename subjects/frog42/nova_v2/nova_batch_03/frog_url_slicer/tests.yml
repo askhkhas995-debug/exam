@@ -1,0 +1,5 @@
+subject_id: frog_url_slicer
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_url_slicer\n"

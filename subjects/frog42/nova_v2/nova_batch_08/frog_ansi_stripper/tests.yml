@@ -1,0 +1,5 @@
+subject_id: frog_ansi_stripper
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_ansi_stripper\n"

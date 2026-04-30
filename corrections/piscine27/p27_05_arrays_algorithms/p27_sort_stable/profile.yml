@@ -1,0 +1,4 @@
+subject_id: p27_sort_stable
+evaluator: c_program
+strict_stdout: true
+timeout_seconds: 2

@@ -1,0 +1,5 @@
+Write a program that decodes a simple Run-Length Encoded string. A number followed by a character means repeat that character `number` times. A character without a number is printed once.
+
+Example: `3A2BC -> AAABBC`.
+
+Allowed functions: `write`.

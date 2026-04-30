@@ -1,0 +1,5 @@
+# p27_list_push
+
+Create and push nodes in a singly linked list.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

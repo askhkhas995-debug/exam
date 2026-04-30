@@ -1,0 +1,5 @@
+# p27_map_solver
+
+Solve a map problem using parsing, algorithm, and output formatting.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

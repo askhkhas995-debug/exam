@@ -1,0 +1,26 @@
+id: piscine27_default
+kind: curriculum
+version: v0
+modules:
+  - id: p27_00_terminal_survival
+    subjects: [p27_pwd_tree, p27_permissions_lab, p27_find_cleaner, p27_git_time_machine, p27_pipe_gym]
+  - id: p27_01_c_output
+    subjects: [p27_putchar_trace, p27_ascii_window, p27_print_grid, p27_number_writer, p27_error_newline]
+  - id: p27_02_strings
+    subjects: [p27_strlen_trace, p27_reverse_chunks, p27_trim_edges, p27_count_words, p27_split_view]
+  - id: p27_03_ascii_transformations
+    subjects: [p27_swap_case, p27_zigzag_alpha, p27_word_wave, p27_snake_title, p27_camel_snake]
+  - id: p27_04_parsing
+    subjects: [p27_atoi_strict, p27_sum_numbers, p27_parse_flags, p27_csv_light, p27_base_reader]
+  - id: p27_05_arrays_algorithms
+    subjects: [p27_minmax, p27_dedup_stable, p27_sort_stable, p27_binary_search_trace, p27_window_unique]
+  - id: p27_06_memory_malloc
+    subjects: [p27_strdup_safe, p27_join_words, p27_range_step, p27_split_malloc, p27_free_table]
+  - id: p27_07_files
+    subjects: [p27_display_file, p27_cat_lite, p27_tail_lite, p27_hex_view, p27_map_reader]
+  - id: p27_08_data_structures
+    subjects: [p27_list_push, p27_list_filter, p27_list_sort, p27_stack_brackets, p27_queue_bfs]
+  - id: p27_09_maps_algorithms
+    subjects: [p27_flood_fill, p27_count_islands, p27_maze_path, p27_bsq_lite, p27_bsq_speed]
+  - id: p27_final
+    subjects: [p27_toolbox, p27_text_analyzer, p27_map_solver, p27_mini_moulinette]

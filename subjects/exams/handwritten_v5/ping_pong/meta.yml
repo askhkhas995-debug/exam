@@ -1,0 +1,27 @@
+id: ping_pong
+title: ping_pong
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 3
+type: c_program
+language: c
+expected_files:
+  - ping_pong.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror ping_pong.c -o ping_pong
+run:
+  command: ./ping_pong
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/ping_pong/profile.yml

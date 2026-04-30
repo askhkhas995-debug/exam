@@ -1,0 +1,16 @@
+id: count_files.sh
+title: count_files.sh
+origin: piscine42
+version: v1
+module: shell01
+level: 2
+type: shell
+language: sh
+expected_files:
+- count_files.sh
+norminette: false
+tags:
+- shell01
+- piscine
+correction:
+  profile: corrections/piscine/shell01/count_files.sh/profile.yml

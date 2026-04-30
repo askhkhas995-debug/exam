@@ -1,0 +1,5 @@
+# p27_map_reader
+
+Read a map file and validate dimensions.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

@@ -1,0 +1,11 @@
+subject_id: find_sh.sh
+fixed_tests:
+- name: basic_find
+  args: []
+  files:
+    test1.sh: '#!/bin/sh'
+    sub/test2.sh: '#!/bin/sh'
+    keep.txt: text
+  stdout_contains:
+  - test1
+  - test2

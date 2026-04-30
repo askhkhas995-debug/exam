@@ -1,0 +1,4 @@
+# frog_dec_to_base
+
+New exercise (nova_batch_03): implement `frog_dec_to_base.c`.
+The program should print exactly `frog_dec_to_base` followed by a newline.

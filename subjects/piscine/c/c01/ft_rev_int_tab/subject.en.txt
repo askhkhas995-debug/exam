@@ -1,0 +1,7 @@
+# ft_rev_int_tab
+
+Write a function that reverses an array of integers.
+
+Prototype: void ft_rev_int_tab(int *tab, int size)
+
+Turn-in files: ft_rev_int_tab.c

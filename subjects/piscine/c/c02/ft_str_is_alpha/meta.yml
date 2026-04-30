@@ -1,0 +1,23 @@
+id: ft_str_is_alpha
+title: ft_str_is_alpha
+origin: piscine42
+version: v1
+module: c02
+level: 2
+type: c_function
+language: c
+expected_files:
+- ft_str_is_alpha.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: int ft_str_is_alpha(char *str)
+tags:
+- c02
+- piscine
+correction:
+  profile: corrections/piscine/c02/ft_str_is_alpha/profile.yml

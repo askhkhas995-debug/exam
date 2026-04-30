@@ -1,0 +1,7 @@
+# ft_putnbr
+
+Write a function that displays the number passed as a parameter. It must handle all int values.
+
+Prototype: void ft_putnbr(int nb)
+
+Turn-in files: ft_putnbr.c

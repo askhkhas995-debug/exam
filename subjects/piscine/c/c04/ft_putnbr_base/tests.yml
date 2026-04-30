@@ -1,0 +1,6 @@
+subject_id: ft_putnbr_base
+fixed_tests:
+- call: ft_putnbr_base(42, "0123456789")
+  stdout: '42'
+- call: ft_putnbr_base(42, "01")
+  stdout: '101010'

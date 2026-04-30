@@ -1,0 +1,27 @@
+id: first_last_char
+title: first_last_char
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 0
+type: c_program
+language: c
+expected_files:
+  - first_last_char.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror first_last_char.c -o first_last_char
+run:
+  command: ./first_last_char
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/first_last_char/profile.yml

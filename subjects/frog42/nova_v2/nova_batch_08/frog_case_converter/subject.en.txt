@@ -1,0 +1,4 @@
+# frog_case_converter
+
+New exercise (nova_batch_08): implement `frog_case_converter.c`.
+The program should print exactly `frog_case_converter` followed by a newline.

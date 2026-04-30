@@ -1,0 +1,9 @@
+subject_id: clean
+fixed_tests:
+- name: basic_clean
+  args: []
+  files:
+    dir1/file~: temp
+    dir1/#backup#: temp
+    dir1/keep.txt: keep
+  exit_code: 0

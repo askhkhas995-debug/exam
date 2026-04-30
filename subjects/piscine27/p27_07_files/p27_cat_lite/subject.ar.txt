@@ -1,0 +1,5 @@
+# p27_cat_lite
+
+Implement a simple cat for multiple files.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

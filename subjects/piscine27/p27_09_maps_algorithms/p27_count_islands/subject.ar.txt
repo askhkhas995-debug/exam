@@ -1,0 +1,5 @@
+# p27_count_islands
+
+Count connected components in a grid.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

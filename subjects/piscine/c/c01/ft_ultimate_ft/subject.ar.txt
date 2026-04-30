@@ -1,0 +1,7 @@
+# ft_ultimate_ft
+
+اكتب الدالة ft_ultimate_ft.
+
+النموذج: void ft_ultimate_ft(int *********nbr)
+
+الملفات المطلوبة: ft_ultimate_ft.c

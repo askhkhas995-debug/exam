@@ -1,0 +1,4 @@
+subject_id: diff
+evaluator: shell
+strict_stdout: true
+timeout_seconds: 5

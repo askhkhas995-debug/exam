@@ -1,0 +1,23 @@
+id: ft_rev_int_tab
+title: ft_rev_int_tab
+origin: piscine42
+version: v1
+module: c01
+level: 7
+type: c_function
+language: c
+expected_files:
+- ft_rev_int_tab.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: void ft_rev_int_tab(int *tab, int size)
+tags:
+- c01
+- piscine
+correction:
+  profile: corrections/piscine/c01/ft_rev_int_tab/profile.yml

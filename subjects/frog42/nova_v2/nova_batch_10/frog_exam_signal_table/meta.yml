@@ -1,0 +1,21 @@
+id: frog_exam_signal_table
+title: frog_exam_signal_table
+origin: frog42
+version: v2
+module: nova_batch_10
+level: 5
+type: c_program
+language: c
+expected_files:
+- frog_exam_signal_table.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

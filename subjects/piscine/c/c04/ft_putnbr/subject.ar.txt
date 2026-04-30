@@ -1,0 +1,5 @@
+# ft_putnbr
+
+اكتب الدالة ft_putnbr.
+
+الملفات المطلوبة: ft_putnbr.c

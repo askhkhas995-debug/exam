@@ -1,0 +1,6 @@
+subject_id: ft_ft
+fixed_tests:
+- call: int x = 0; ft_ft(&x); printf("%d\n", x)
+  stdout: '42
+
+    '

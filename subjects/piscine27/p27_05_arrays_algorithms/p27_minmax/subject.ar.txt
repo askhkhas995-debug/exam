@@ -1,0 +1,5 @@
+# p27_minmax
+
+Find min and max in an integer array.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

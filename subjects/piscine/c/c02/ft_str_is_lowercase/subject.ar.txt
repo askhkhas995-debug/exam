@@ -1,0 +1,5 @@
+# ft_str_is_lowercase
+
+اكتب الدالة ft_str_is_lowercase.
+
+الملفات المطلوبة: ft_str_is_lowercase.c

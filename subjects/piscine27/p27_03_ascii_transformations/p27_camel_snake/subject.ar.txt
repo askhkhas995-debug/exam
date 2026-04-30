@@ -1,0 +1,5 @@
+# p27_camel_snake
+
+Convert camelCase/PascalCase to snake_case.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

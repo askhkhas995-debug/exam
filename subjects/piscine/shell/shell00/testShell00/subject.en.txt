@@ -1,0 +1,6 @@
+# Exercise 01: testShell00
+
+Create a tar archive testShell00.tar that, when extracted, produces
+the file testShell00 which is a symbolic link pointing to /bin/sh.
+
+Turn-in files: testShell00.tar

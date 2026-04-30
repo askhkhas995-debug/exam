@@ -1,0 +1,5 @@
+subject_id: frog_tar_pack_basic
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_tar_pack_basic\n"

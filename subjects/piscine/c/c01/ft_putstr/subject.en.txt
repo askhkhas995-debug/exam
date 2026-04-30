@@ -1,0 +1,7 @@
+# ft_putstr
+
+Write a function that displays a string of characters.
+
+Prototype: void ft_putstr(char *str)
+
+Turn-in files: ft_putstr.c

@@ -1,0 +1,6 @@
+# Exercise 00: print_groups.sh
+
+Write a command that displays the groups of a user given as
+parameter, separated by commas, without trailing spaces.
+
+Turn-in files: print_groups.sh

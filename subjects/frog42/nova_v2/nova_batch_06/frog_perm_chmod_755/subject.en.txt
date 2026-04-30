@@ -1,0 +1,4 @@
+# frog_perm_chmod_755
+
+Write a shell script `frog_perm_chmod_755.sh` that implements the requested behavior for perm chmod 755.
+Your script must print exactly the expected output for fixed tests.

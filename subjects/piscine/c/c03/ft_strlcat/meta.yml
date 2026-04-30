@@ -1,0 +1,23 @@
+id: ft_strlcat
+title: ft_strlcat
+origin: piscine42
+version: v1
+module: c03
+level: 5
+type: c_function
+language: c
+expected_files:
+- ft_strlcat.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+tags:
+- c03
+- piscine
+correction:
+  profile: corrections/piscine/c03/ft_strlcat/profile.yml

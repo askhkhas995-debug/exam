@@ -1,0 +1,5 @@
+# p27_hex_view
+
+Print file bytes in a simplified hex format.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

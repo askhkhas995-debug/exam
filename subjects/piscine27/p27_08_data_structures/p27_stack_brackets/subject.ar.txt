@@ -1,0 +1,5 @@
+# p27_stack_brackets
+
+Validate brackets using a stack.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

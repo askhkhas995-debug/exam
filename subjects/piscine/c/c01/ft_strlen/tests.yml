@@ -1,0 +1,10 @@
+subject_id: ft_strlen
+fixed_tests:
+- expr: ft_strlen("Hello")
+  stdout: '5
+
+    '
+- expr: ft_strlen("")
+  stdout: '0
+
+    '

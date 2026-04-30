@@ -1,0 +1,23 @@
+id: ft_putstr
+title: ft_putstr
+origin: piscine42
+version: v1
+module: c01
+level: 5
+type: c_function
+language: c
+expected_files:
+- ft_putstr.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: void ft_putstr(char *str)
+tags:
+- c01
+- piscine
+correction:
+  profile: corrections/piscine/c01/ft_putstr/profile.yml

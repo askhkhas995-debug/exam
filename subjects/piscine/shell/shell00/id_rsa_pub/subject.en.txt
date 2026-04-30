@@ -1,0 +1,6 @@
+# Exercise 03: id_rsa_pub
+
+Create a file called id_rsa_pub that contains the student's
+public SSH key.
+
+Turn-in files: id_rsa_pub

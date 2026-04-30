@@ -1,0 +1,4 @@
+# frog_trace_digest
+
+New exercise (nova_batch_08): implement `frog_trace_digest.c`.
+The program should print exactly `frog_trace_digest` followed by a newline.

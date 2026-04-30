@@ -1,0 +1,7 @@
+# ft_print_reverse_alphabet
+
+Write a function that displays the alphabet in lowercase, on a single line, in descending order, starting from 'z'.
+
+Prototype: void ft_print_reverse_alphabet(void)
+
+Turn-in files: ft_print_reverse_alphabet.c

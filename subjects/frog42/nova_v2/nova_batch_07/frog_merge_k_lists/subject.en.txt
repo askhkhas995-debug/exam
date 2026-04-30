@@ -1,0 +1,4 @@
+# frog_merge_k_lists
+
+New exercise (nova_batch_07): implement `frog_merge_k_lists.c`.
+The program should print exactly `frog_merge_k_lists` followed by a newline.

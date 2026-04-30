@@ -1,0 +1,21 @@
+id: frog_ip_octet_check
+title: frog_ip_octet_check
+origin: frog42
+version: v2
+module: nova_batch_03
+level: 5
+type: c_program
+language: c
+expected_files:
+- frog_ip_octet_check.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

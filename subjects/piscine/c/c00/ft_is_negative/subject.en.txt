@@ -1,0 +1,7 @@
+# ft_is_negative
+
+Write a function that displays 'N' if the integer is negative, or 'P' if positive or zero.
+
+Prototype: void ft_is_negative(int n)
+
+Turn-in files: ft_is_negative.c

@@ -1,0 +1,16 @@
+id: git_commit.sh
+title: git_commit.sh
+origin: piscine42
+version: v1
+module: shell00
+level: 5
+type: shell
+language: sh
+expected_files:
+- git_commit.sh
+norminette: false
+tags:
+- shell00
+- piscine
+correction:
+  profile: corrections/piscine/shell00/git_commit.sh/profile.yml

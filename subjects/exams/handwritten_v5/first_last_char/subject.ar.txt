@@ -1,0 +1,7 @@
+اكتب program يأخذ argument واحد من نوع string ويطبع أول حرف وآخر حرف، ثم newline.
+
+إذا كان الـ string فيه حرف واحد فقط، اطبع نفس الحرف مرتين.
+
+إذا لم يكن عدد arguments يساوي 1، اطبع newline فقط.
+
+Allowed functions: `write`.

@@ -1,0 +1,5 @@
+# p27_bsq_speed
+
+Find biggest square on large maps with time limits.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

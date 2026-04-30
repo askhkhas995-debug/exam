@@ -1,0 +1,5 @@
+subject_id: frog_word_windows
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_word_windows\n"

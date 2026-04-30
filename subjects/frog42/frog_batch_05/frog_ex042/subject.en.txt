@@ -1,0 +1,7 @@
+# frog_ex042
+
+Write a program named `frog_ex042.c` that prints exactly:
+`frog_ex042` followed by a newline.
+
+Allowed function: write
+Turn-in file: frog_ex042.c

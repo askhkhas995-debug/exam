@@ -1,0 +1,5 @@
+# p27_tail_lite
+
+Print the last N bytes of a file.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

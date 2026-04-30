@@ -1,0 +1,5 @@
+Write a program that takes a string and a positive integer `n`. Print the string after removing every character whose 1-based position is a multiple of `n`.
+
+Example: `ABCDEF 2 -> ACE`.
+
+Allowed functions: `write`.

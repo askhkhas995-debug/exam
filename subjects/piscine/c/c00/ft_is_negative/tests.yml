@@ -1,0 +1,8 @@
+subject_id: ft_is_negative
+fixed_tests:
+- call: ft_is_negative(-1)
+  stdout: N
+- call: ft_is_negative(0)
+  stdout: P
+- call: ft_is_negative(42)
+  stdout: P

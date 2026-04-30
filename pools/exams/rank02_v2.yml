@@ -1,0 +1,26 @@
+id: rank02_v2
+kind: exam
+version: v2
+display_name: Rank 02 Practice
+group: Rank Practice
+description: Rank 02-style incremental exam practice.
+levels_count: 4
+origin_label: 42 School Exam Rank 02
+official_like: false
+imported: true
+duration_minutes: 180
+mode: incremental
+origin: 42-School-Exam-Rank-02
+levels:
+  - level: 0
+    pick: 1
+    assignments: [first_word, fizzbuzz, ft_putstr, ft_strcpy, ft_strlen, ft_swap, repeat_alpha, rev_print, rot_13, rotone, search_and_replace, ulstr]
+  - level: 1
+    pick: 1
+    assignments: [alpha_mirror, camel_to_snake, do_op, ft_atoi, ft_strcmp, ft_strcspn, ft_strdup, ft_strpbrk, ft_strrev, ft_strspn, inter, is_power_of_2, last_word, max, print_bits, reverse_bits, snake_to_camel, swap_bits, union, wdmatch]
+  - level: 2
+    pick: 1
+    assignments: [add_prime_sum, epur_str, expand_str, ft_atoi_base, ft_list_size, ft_range, ft_rrange, hidenp, lcm, paramsum, pgcd, print_hex, rstr_capitalizer, str_capitalizer, tab_mult]
+  - level: 3
+    pick: 1
+    assignments: [flood_fill, fprime, ft_itoa, ft_list_foreach, ft_list_remove_if, ft_split, rev_wstr, rostring, sort_int_tab, sort_list]

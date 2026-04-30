@@ -1,0 +1,5 @@
+subject_id: frog_param_sorter
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_param_sorter\n"

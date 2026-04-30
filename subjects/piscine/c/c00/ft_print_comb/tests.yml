@@ -1,0 +1,6 @@
+subject_id: ft_print_comb
+fixed_tests:
+- call: ft_print_comb()
+  stdout_contains:
+  - '012'
+  - '789'

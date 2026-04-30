@@ -1,0 +1,5 @@
+# p27_binary_search_trace
+
+Binary search that prints checked indexes.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

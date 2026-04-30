@@ -1,0 +1,23 @@
+id: ft_strcmp
+title: ft_strcmp
+origin: piscine42
+version: v1
+module: c03
+level: 0
+type: c_function
+language: c
+expected_files:
+- ft_strcmp.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: int ft_strcmp(char *s1, char *s2)
+tags:
+- c03
+- piscine
+correction:
+  profile: corrections/piscine/c03/ft_strcmp/profile.yml

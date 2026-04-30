@@ -1,0 +1,17 @@
+id: p27_range_step
+title: p27_range_step
+origin: piscine27
+version: v0
+module: p27_06_memory_malloc
+level: 0
+type: c_program
+language: c
+expected_files:
+  - p27_range_step.c
+allowed_functions:
+  - write
+norminette: true
+tags:
+  - piscine27
+correction:
+  profile: corrections/piscine27/p27_06_memory_malloc/p27_range_step/profile.yml

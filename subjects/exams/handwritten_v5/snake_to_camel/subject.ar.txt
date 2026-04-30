@@ -1,0 +1,1 @@
+حوّل `snake_case` إلى `lowerCamelCase`: `hello_world_yes -> helloWorldYes`.

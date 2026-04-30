@@ -1,0 +1,9 @@
+subject_id: rle
+fixed_tests:
+  - {"args": ["AAABBC"], "stdout": "3A2BC\n"}
+  - {"args": ["AAAAAAAAAAAA"], "stdout": "12A\n"}
+  - {"args": [""], "stdout": "\n"}
+  - {"args": ["A"], "stdout": "A\n"}
+  - {"args": ["AB"], "stdout": "AB\n"}
+  - {"args": ["AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"], "stdout": "98A\n"}
+  - {"args": [], "stdout": "\n"}

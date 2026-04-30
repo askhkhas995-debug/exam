@@ -1,0 +1,7 @@
+# ft_print_comb2
+
+اكتب الدالة ft_print_comb2.
+
+النموذج: void ft_print_comb2(void)
+
+الملفات المطلوبة: ft_print_comb2.c

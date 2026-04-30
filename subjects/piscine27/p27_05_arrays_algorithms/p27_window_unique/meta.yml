@@ -1,0 +1,17 @@
+id: p27_window_unique
+title: p27_window_unique
+origin: piscine27
+version: v0
+module: p27_05_arrays_algorithms
+level: 0
+type: c_program
+language: c
+expected_files:
+  - p27_window_unique.c
+allowed_functions:
+  - write
+norminette: true
+tags:
+  - piscine27
+correction:
+  profile: corrections/piscine27/p27_05_arrays_algorithms/p27_window_unique/profile.yml

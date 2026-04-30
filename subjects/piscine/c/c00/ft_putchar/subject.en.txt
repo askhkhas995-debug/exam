@@ -1,0 +1,7 @@
+# ft_putchar
+
+Write a function that displays the character passed as a parameter.
+
+Prototype: void ft_putchar(char c)
+
+Turn-in files: ft_putchar.c

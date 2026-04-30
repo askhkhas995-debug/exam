@@ -1,0 +1,29 @@
+id: print_nth_char
+title: print_nth_char
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 3
+type: c_function
+language: c
+expected_files:
+  - print_nth_char.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+prototype: void print_nth_char(char *str, int n);
+hidden_main: true
+compile:
+  command: gcc -Wall -Wextra -Werror print_nth_char.c __hidden_main.c -o test_print_nth_char
+run:
+  command: ./test_print_nth_char
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/print_nth_char/profile.yml

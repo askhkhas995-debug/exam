@@ -1,0 +1,6 @@
+# Exercise 04: midLS
+
+In a midLS directory inside your repository, place the following
+files with specific permissions and dates.
+
+Turn-in directory: midLS/

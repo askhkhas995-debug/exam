@@ -1,0 +1,16 @@
+id: clean
+title: clean
+origin: piscine42
+version: v1
+module: shell00
+level: 8
+type: shell
+language: sh
+expected_files:
+- clean
+norminette: false
+tags:
+- shell00
+- piscine
+correction:
+  profile: corrections/piscine/shell00/clean/profile.yml

@@ -1,0 +1,23 @@
+id: ft_print_comb2
+title: ft_print_comb2
+origin: piscine42
+version: v1
+module: c00
+level: 6
+type: c_function
+language: c
+expected_files:
+- ft_print_comb2.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: void ft_print_comb2(void)
+tags:
+- c00
+- piscine
+correction:
+  profile: corrections/piscine/c00/ft_print_comb2/profile.yml

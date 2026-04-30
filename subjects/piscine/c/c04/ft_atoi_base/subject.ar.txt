@@ -1,0 +1,5 @@
+# ft_atoi_base
+
+اكتب الدالة ft_atoi_base.
+
+الملفات المطلوبة: ft_atoi_base.c

@@ -1,0 +1,4 @@
+# frog_query_unpack
+
+New exercise (nova_batch_03): implement `frog_query_unpack.c`.
+The program should print exactly `frog_query_unpack` followed by a newline.

@@ -1,0 +1,4 @@
+subject_id: id_rsa_pub
+evaluator: shell
+strict_stdout: true
+timeout_seconds: 5

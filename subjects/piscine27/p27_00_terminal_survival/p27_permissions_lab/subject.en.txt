@@ -1,0 +1,5 @@
+# p27_permissions_lab
+
+Create files and directories with exact permissions and verify them with ls -l.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

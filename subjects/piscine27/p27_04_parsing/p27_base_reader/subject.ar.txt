@@ -1,0 +1,5 @@
+# p27_base_reader
+
+Convert a number from base 2, 8, 10, or 16 to decimal.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

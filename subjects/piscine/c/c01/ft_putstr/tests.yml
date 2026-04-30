@@ -1,0 +1,6 @@
+subject_id: ft_putstr
+fixed_tests:
+- call: ft_putstr("Hello World")
+  stdout: Hello World
+- call: ft_putstr("")
+  stdout: ''

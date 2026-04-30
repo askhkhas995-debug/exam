@@ -1,0 +1,10 @@
+subject_id: ft_atoi_base
+fixed_tests:
+- expr: ft_atoi_base("101010", "01")
+  stdout: '42
+
+    '
+- expr: ft_atoi_base("2a", "0123456789abcdef")
+  stdout: '42
+
+    '

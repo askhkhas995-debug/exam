@@ -1,0 +1,5 @@
+subject_id: frog_sha1_manifest
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_sha1_manifest\n"

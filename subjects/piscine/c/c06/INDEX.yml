@@ -1,0 +1,8 @@
+module: c06
+origin: piscine42
+version: v1
+subjects:
+  - ft_print_program_name
+  - ft_print_params
+  - ft_rev_params
+  - ft_sort_params

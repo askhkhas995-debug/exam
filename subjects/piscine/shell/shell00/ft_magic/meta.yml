@@ -1,0 +1,17 @@
+id: ft_magic
+title: ft_magic
+origin: piscine42
+version: v1
+module: shell00
+level: 9
+type: shell
+language: sh
+expected_files:
+- ft_magic
+norminette: false
+tags:
+- shell00
+- piscine
+correction:
+  profile: corrections/piscine/shell00/ft_magic/profile.yml
+validator_only: true

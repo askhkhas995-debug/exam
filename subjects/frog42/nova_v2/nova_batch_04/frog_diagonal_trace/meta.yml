@@ -1,0 +1,21 @@
+id: frog_diagonal_trace
+title: frog_diagonal_trace
+origin: frog42
+version: v2
+module: nova_batch_04
+level: 2
+type: c_program
+language: c
+expected_files:
+- frog_diagonal_trace.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

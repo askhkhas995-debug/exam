@@ -1,0 +1,5 @@
+Write a program that converts a snake_case string to PascalCase. Words are separated by underscores. The first character of each word must be uppercase. Underscores are removed.
+
+Example: `hello_world_yes -> HelloWorldYes`.
+
+Allowed functions: `write`.

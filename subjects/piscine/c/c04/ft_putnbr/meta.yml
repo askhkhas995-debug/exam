@@ -1,0 +1,23 @@
+id: ft_putnbr
+title: ft_putnbr
+origin: piscine42
+version: v1
+module: c04
+level: 2
+type: c_function
+language: c
+expected_files:
+- ft_putnbr.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: void ft_putnbr(int nb)
+tags:
+- c04
+- piscine
+correction:
+  profile: corrections/piscine/c04/ft_putnbr/profile.yml

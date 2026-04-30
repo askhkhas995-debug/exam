@@ -1,0 +1,7 @@
+# ft_ultimate_div_mod
+
+Write a function that divides a by b. Result goes in a, remainder in b.
+
+Prototype: void ft_ultimate_div_mod(int *a, int *b)
+
+Turn-in files: ft_ultimate_div_mod.c

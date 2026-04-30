@@ -1,0 +1,5 @@
+# ft_strcapitalize
+
+Write the function ft_strcapitalize.
+
+Turn-in files: ft_strcapitalize.c

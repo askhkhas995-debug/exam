@@ -1,0 +1,27 @@
+id: index_case
+title: index_case
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 1
+type: c_program
+language: c
+expected_files:
+  - index_case.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror index_case.c -o index_case
+run:
+  command: ./index_case
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/index_case/profile.yml

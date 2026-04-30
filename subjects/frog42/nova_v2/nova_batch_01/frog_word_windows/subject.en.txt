@@ -1,0 +1,4 @@
+# frog_word_windows
+
+New exercise (nova_batch_01): implement `frog_word_windows.c`.
+The program should print exactly `frog_word_windows` followed by a newline.

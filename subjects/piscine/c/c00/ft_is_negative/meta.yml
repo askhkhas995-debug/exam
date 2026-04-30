@@ -1,0 +1,23 @@
+id: ft_is_negative
+title: ft_is_negative
+origin: piscine42
+version: v1
+module: c00
+level: 4
+type: c_function
+language: c
+expected_files:
+- ft_is_negative.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: void ft_is_negative(int n)
+tags:
+- c00
+- piscine
+correction:
+  profile: corrections/piscine/c00/ft_is_negative/profile.yml

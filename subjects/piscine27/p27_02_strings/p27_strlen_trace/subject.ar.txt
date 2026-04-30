@@ -1,0 +1,5 @@
+# p27_strlen_trace
+
+Implement strlen and optionally print index progression in debug mode.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

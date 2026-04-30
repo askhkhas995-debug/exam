@@ -1,0 +1,3 @@
+subject_id: word_edges
+fixed_tests:
+  - {"args": ["hello", "test", "a"], "stdout": "ho\ntt\naa\n"}

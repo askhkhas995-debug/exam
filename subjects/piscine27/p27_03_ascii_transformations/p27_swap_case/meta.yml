@@ -1,0 +1,17 @@
+id: p27_swap_case
+title: p27_swap_case
+origin: piscine27
+version: v0
+module: p27_03_ascii_transformations
+level: 0
+type: c_program
+language: c
+expected_files:
+  - p27_swap_case.c
+allowed_functions:
+  - write
+norminette: true
+tags:
+  - piscine27
+correction:
+  profile: corrections/piscine27/p27_03_ascii_transformations/p27_swap_case/profile.yml

@@ -1,0 +1,6 @@
+# Exercise 03: MAC.sh
+
+Write a command line that displays the MAC addresses of all
+active network interfaces.
+
+Turn-in files: MAC.sh

@@ -1,0 +1,5 @@
+Write a program that converts alphabetic characters at even indexes to uppercase and alphabetic characters at odd indexes to lowercase. Non-alphabetic characters stay unchanged and count in the index.
+
+Example: `abcdef -> AbCdEf`.
+
+Allowed functions: `write`.

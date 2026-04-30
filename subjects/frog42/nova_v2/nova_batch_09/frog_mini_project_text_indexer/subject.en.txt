@@ -1,0 +1,6 @@
+# frog_mini_project_text_indexer
+
+Mini-project: text indexer.
+
+Deliver a `Makefile` that builds your project binary.
+Add `.c` files as needed. Build must succeed with `make`.

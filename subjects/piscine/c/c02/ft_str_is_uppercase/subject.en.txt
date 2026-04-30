@@ -1,0 +1,5 @@
+# ft_str_is_uppercase
+
+Write the function ft_str_is_uppercase.
+
+Turn-in files: ft_str_is_uppercase.c

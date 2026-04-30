@@ -1,0 +1,23 @@
+id: ft_str_is_printable
+title: ft_str_is_printable
+origin: piscine42
+version: v1
+module: c02
+level: 6
+type: c_function
+language: c
+expected_files:
+- ft_str_is_printable.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: int ft_str_is_printable(char *str)
+tags:
+- c02
+- piscine
+correction:
+  profile: corrections/piscine/c02/ft_str_is_printable/profile.yml

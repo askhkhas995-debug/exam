@@ -1,0 +1,3 @@
+اكتب program يأخذ argument واحد أو أكثر. لكل argument اطبع أول وآخر حرف في سطر مستقل.
+
+Allowed functions: `write`.

@@ -1,0 +1,7 @@
+# ft_print_combn
+
+اكتب الدالة ft_print_combn.
+
+النموذج: void ft_print_combn(int n)
+
+الملفات المطلوبة: ft_print_combn.c

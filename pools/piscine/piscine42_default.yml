@@ -1,0 +1,38 @@
+id: piscine42_default
+kind: curriculum
+version: v1
+modules:
+  - id: shell00
+    subjects: [z, testShell00, exo2, id_rsa_pub, midLS, git_commit.sh, git_ignore.sh, diff, clean, ft_magic]
+  - id: shell01
+    subjects: [print_groups.sh, find_sh.sh, count_files.sh, MAC.sh, special_filename_MaRViN, skip.sh, r_dwssap.sh, add_chelou.sh]
+  - id: c00
+    subjects: [ft_putchar, ft_print_alphabet, ft_print_reverse_alphabet, ft_print_numbers, ft_is_negative, ft_print_comb, ft_print_comb2, ft_putnbr, ft_print_combn]
+  - id: c01
+    subjects: [ft_ft, ft_ultimate_ft, ft_swap, ft_div_mod, ft_ultimate_div_mod, ft_putstr, ft_strlen, ft_rev_int_tab, ft_sort_int_tab]
+  - id: c02
+    subjects: [ft_strcpy, ft_strncpy, ft_str_is_alpha, ft_str_is_numeric, ft_str_is_lowercase, ft_str_is_uppercase, ft_str_is_printable, ft_strupcase, ft_strlowcase, ft_strcapitalize, ft_strlcpy, ft_putstr_non_printable, ft_print_memory]
+  - id: c03
+    subjects: [ft_strcmp, ft_strncmp, ft_strcat, ft_strncat, ft_strstr, ft_strlcat]
+  - id: c04
+    subjects: [ft_strlen, ft_putstr, ft_putnbr, ft_atoi, ft_putnbr_base, ft_atoi_base]
+  - id: c05
+    subjects: [ft_iterative_factorial, ft_recursive_factorial, ft_iterative_power, ft_recursive_power, ft_fibonacci, ft_sqrt, ft_is_prime, ft_find_next_prime, ft_ten_queens_puzzle]
+  - id: c06
+    subjects: [ft_print_program_name, ft_print_params, ft_rev_params, ft_sort_params]
+  - id: c07
+    subjects: [ft_strdup, ft_range, ft_ultimate_range, ft_strjoin, ft_convert_base, ft_split]
+  - id: c08
+    subjects: [ft.h, ft_boolean.h, ft_abs.h, ft_point.h, ft_strs_to_tab, ft_show_tab]
+  - id: c09
+    subjects: [libft_creator.sh, ft_putchar, ft_swap, ft_putstr, ft_strlen, ft_strcmp]
+  - id: c10
+    subjects: [display_file, cat, tail, hexdump]
+  - id: c11
+    subjects: [ft_foreach, ft_map, ft_any, ft_count_if, ft_is_sort, do-op, ft_sort_string_tab, ft_advanced_sort_string_tab]
+  - id: c12
+    subjects: [ft_create_elem, ft_list_push_front, ft_list_size, ft_list_last, ft_list_push_back, ft_list_push_strs, ft_list_clear, ft_list_at, ft_list_reverse, ft_list_foreach, ft_list_foreach_if, ft_list_find, ft_list_remove_if, ft_list_merge, ft_list_sort, ft_list_reverse_fun, ft_sorted_list_insert, ft_sorted_list_merge]
+  - id: c13
+    subjects: [btree_create_node, btree_apply_prefix, btree_apply_infix, btree_apply_suffix, btree_insert_data, btree_search_item, btree_level_count, btree_apply_by_level]
+  - id: projects
+    subjects: [rush00, rush01, rush02, sastantua, match_n_match, eval_expr, bsq]

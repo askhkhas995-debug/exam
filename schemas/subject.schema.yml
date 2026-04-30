@@ -1,0 +1,25 @@
+required:
+  - id
+  - title
+  - origin
+  - version
+  - type
+  - expected_files
+properties:
+  id: string
+  title: string
+  origin: string
+  version: string
+  module: string
+  level: integer
+  type:
+    enum: [c_program, c_function, shell, project]
+  language: string
+  expected_files: list
+  allowed_functions: list
+  forbidden_functions: list
+  norminette: boolean
+  compile: object
+  run: object
+  correction: object
+  submission: object

@@ -1,0 +1,10 @@
+module: c08
+origin: piscine42
+version: v1
+subjects:
+  - ft.h
+  - ft_boolean.h
+  - ft_abs.h
+  - ft_point.h
+  - ft_strs_to_tab
+  - ft_show_tab

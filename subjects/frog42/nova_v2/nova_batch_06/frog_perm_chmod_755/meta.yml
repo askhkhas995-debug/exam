@@ -1,0 +1,21 @@
+id: frog_perm_chmod_755
+title: frog_perm_chmod_755
+origin: frog42
+version: v2
+module: nova_batch_06
+level: 4
+type: shell
+language: sh
+expected_files:
+- frog_perm_chmod_755.sh
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: false
+tags:
+- frog42
+- nova
+- v2

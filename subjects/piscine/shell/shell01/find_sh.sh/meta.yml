@@ -1,0 +1,16 @@
+id: find_sh.sh
+title: find_sh.sh
+origin: piscine42
+version: v1
+module: shell01
+level: 1
+type: shell
+language: sh
+expected_files:
+- find_sh.sh
+norminette: false
+tags:
+- shell01
+- piscine
+correction:
+  profile: corrections/piscine/shell01/find_sh.sh/profile.yml

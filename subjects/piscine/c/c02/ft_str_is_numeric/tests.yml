@@ -1,0 +1,10 @@
+subject_id: ft_str_is_numeric
+fixed_tests:
+- expr: ft_str_is_numeric("12345")
+  stdout: '1
+
+    '
+- expr: ft_str_is_numeric("123a5")
+  stdout: '0
+
+    '

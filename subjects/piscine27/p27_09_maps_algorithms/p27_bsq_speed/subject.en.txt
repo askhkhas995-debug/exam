@@ -1,0 +1,5 @@
+# p27_bsq_speed
+
+Find biggest square on large maps with time limits.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

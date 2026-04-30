@@ -1,0 +1,21 @@
+id: frog_copy_preserve_mode
+title: frog_copy_preserve_mode
+origin: frog42
+version: v2
+module: nova_batch_06
+level: 8
+type: shell
+language: sh
+expected_files:
+- frog_copy_preserve_mode.sh
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: false
+tags:
+- frog42
+- nova
+- v2

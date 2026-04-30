@@ -1,0 +1,5 @@
+# ft_strcmp
+
+اكتب الدالة ft_strcmp.
+
+الملفات المطلوبة: ft_strcmp.c

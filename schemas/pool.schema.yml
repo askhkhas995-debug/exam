@@ -1,0 +1,20 @@
+required:
+  - id
+  - kind
+properties:
+  id: string
+  display_name: string
+  kind:
+    enum: [exam, curriculum, module]
+  version: string
+  duration_minutes: integer
+  mode: string
+  group: string
+  description: string
+  levels_count: integer
+  origin_label: string
+  official_like: boolean
+  imported: boolean
+  levels: list
+  modules: list
+  grading: object

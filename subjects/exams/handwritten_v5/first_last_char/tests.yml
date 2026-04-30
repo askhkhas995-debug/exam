@@ -1,0 +1,8 @@
+subject_id: first_last_char
+fixed_tests:
+  - {"args": ["Hello"], "stdout": "Ho\n"}
+  - {"args": ["a"], "stdout": "aa\n"}
+  - {"args": [], "stdout": "\n"}
+  - {"args": [""], "stdout": "\n"}
+  - {"args": ["ab"], "stdout": "ab\n"}
+  - {"args": ["Hello World"], "stdout": "Hd\n"}

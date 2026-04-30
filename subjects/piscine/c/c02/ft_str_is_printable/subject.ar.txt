@@ -1,0 +1,5 @@
+# ft_str_is_printable
+
+اكتب الدالة ft_str_is_printable.
+
+الملفات المطلوبة: ft_str_is_printable.c

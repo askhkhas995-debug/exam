@@ -1,0 +1,17 @@
+id: p27_pipe_gym
+title: p27_pipe_gym
+origin: piscine27
+version: v0
+module: p27_00_terminal_survival
+level: 0
+type: shell
+language: sh
+expected_files:
+  - p27_pipe_gym.sh
+allowed_functions:
+  - write
+norminette: false
+tags:
+  - piscine27
+correction:
+  profile: corrections/piscine27/p27_00_terminal_survival/p27_pipe_gym/profile.yml

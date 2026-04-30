@@ -1,0 +1,6 @@
+# التمرين 01: testShell00
+
+أنشئ أرشيف tar اسمه testShell00.tar بحيث عند الاستخراج ينتج ملف
+testShell00 وهو رابط رمزي يشير إلى /bin/sh.
+
+الملفات المطلوبة: testShell00.tar

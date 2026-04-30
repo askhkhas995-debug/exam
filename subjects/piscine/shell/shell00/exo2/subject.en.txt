@@ -1,0 +1,6 @@
+# Exercise 02: exo2
+
+Create the following tree structure with specific permissions, 
+dates, and link types as shown.
+
+Turn-in files: exo2.tar

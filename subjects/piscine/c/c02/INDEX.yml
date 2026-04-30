@@ -1,0 +1,17 @@
+module: c02
+origin: piscine42
+version: v1
+subjects:
+  - ft_strcpy
+  - ft_strncpy
+  - ft_str_is_alpha
+  - ft_str_is_numeric
+  - ft_str_is_lowercase
+  - ft_str_is_uppercase
+  - ft_str_is_printable
+  - ft_strupcase
+  - ft_strlowcase
+  - ft_strcapitalize
+  - ft_strlcpy
+  - ft_putstr_non_printable
+  - ft_print_memory

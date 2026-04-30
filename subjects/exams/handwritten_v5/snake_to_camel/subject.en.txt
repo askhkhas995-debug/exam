@@ -1,0 +1,5 @@
+Write a program that converts a snake_case string to lowerCamelCase. The first word stays lowercase. Every word after an underscore starts with uppercase. Underscores are removed.
+
+Example: `hello_world_yes -> helloWorldYes`.
+
+Allowed functions: `write`.

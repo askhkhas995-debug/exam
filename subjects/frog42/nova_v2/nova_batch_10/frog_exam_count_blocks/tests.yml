@@ -1,0 +1,5 @@
+subject_id: frog_exam_count_blocks
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_exam_count_blocks\n"

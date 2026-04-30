@@ -1,0 +1,5 @@
+subject_id: frog_flag_decoder
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_flag_decoder\n"

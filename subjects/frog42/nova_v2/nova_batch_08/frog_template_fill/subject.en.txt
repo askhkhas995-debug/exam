@@ -1,0 +1,4 @@
+# frog_template_fill
+
+New exercise (nova_batch_08): implement `frog_template_fill.c`.
+The program should print exactly `frog_template_fill` followed by a newline.

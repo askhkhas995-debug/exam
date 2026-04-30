@@ -1,0 +1,5 @@
+Write a program that takes a string and a positive integer `n`. Print every nth character, but from the end of the string to the beginning.
+
+Example: `ABCDEFGH 2 -> HFDB`.
+
+Allowed functions: `write`.

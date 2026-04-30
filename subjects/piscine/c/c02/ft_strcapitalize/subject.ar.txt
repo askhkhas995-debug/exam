@@ -1,0 +1,5 @@
+# ft_strcapitalize
+
+اكتب الدالة ft_strcapitalize.
+
+الملفات المطلوبة: ft_strcapitalize.c

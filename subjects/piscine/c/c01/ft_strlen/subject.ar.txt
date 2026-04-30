@@ -1,0 +1,7 @@
+# ft_strlen
+
+اكتب الدالة ft_strlen.
+
+النموذج: int ft_strlen(char *str)
+
+الملفات المطلوبة: ft_strlen.c

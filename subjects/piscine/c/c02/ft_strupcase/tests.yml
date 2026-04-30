@@ -1,0 +1,6 @@
+subject_id: ft_strupcase
+fixed_tests:
+- call: char s[] = "hello"; ft_strupcase(s); printf("%s\n", s)
+  stdout: 'HELLO
+
+    '

@@ -1,0 +1,4 @@
+# frog_char_histogram
+
+New exercise (nova_batch_01): implement `frog_char_histogram.c`.
+The program should print exactly `frog_char_histogram` followed by a newline.

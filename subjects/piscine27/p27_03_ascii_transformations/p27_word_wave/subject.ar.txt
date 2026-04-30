@@ -1,0 +1,5 @@
+# p27_word_wave
+
+Alternate word casing: lower, upper, lower, upper.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

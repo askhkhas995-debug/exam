@@ -1,0 +1,17 @@
+id: exo2
+title: exo2
+origin: piscine42
+version: v1
+module: shell00
+level: 2
+type: shell
+language: sh
+expected_files:
+- exo2.tar
+norminette: false
+tags:
+- shell00
+- piscine
+correction:
+  profile: corrections/piscine/shell00/exo2/profile.yml
+validator_only: true

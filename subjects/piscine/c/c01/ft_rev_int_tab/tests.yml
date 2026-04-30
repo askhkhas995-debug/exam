@@ -1,0 +1,5 @@
+subject_id: ft_rev_int_tab
+fixed_tests:
+- call: int t[] = {1,2,3,4,5}; ft_rev_int_tab(t, 5); for(int i=0;i<5;i++) printf("%d
+    ", t[i]); printf("\n")
+  stdout: "5 4 3 2 1 \n"

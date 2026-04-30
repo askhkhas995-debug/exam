@@ -1,0 +1,5 @@
+subject_id: frog_queue_simulator
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_queue_simulator\n"

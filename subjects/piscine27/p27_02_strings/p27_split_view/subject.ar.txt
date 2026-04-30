@@ -1,0 +1,5 @@
+# p27_split_view
+
+Split a string into words and print each word on a separate line.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

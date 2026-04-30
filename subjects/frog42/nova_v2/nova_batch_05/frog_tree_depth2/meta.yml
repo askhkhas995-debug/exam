@@ -1,0 +1,21 @@
+id: frog_tree_depth2
+title: frog_tree_depth2
+origin: frog42
+version: v2
+module: nova_batch_05
+level: 4
+type: shell
+language: sh
+expected_files:
+- frog_tree_depth2.sh
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: false
+tags:
+- frog42
+- nova
+- v2

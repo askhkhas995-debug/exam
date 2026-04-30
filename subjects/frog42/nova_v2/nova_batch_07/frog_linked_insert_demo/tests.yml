@@ -1,0 +1,5 @@
+subject_id: frog_linked_insert_demo
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_linked_insert_demo\n"

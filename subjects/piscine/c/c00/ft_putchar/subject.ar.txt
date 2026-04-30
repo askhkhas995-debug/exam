@@ -1,0 +1,7 @@
+# ft_putchar
+
+اكتب الدالة ft_putchar.
+
+النموذج: void ft_putchar(char c)
+
+الملفات المطلوبة: ft_putchar.c

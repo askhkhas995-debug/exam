@@ -1,0 +1,5 @@
+# ft_strlcpy
+
+اكتب الدالة ft_strlcpy.
+
+الملفات المطلوبة: ft_strlcpy.c

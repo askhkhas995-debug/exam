@@ -1,0 +1,7 @@
+# ft_div_mod
+
+اكتب الدالة ft_div_mod.
+
+النموذج: void ft_div_mod(int a, int b, int *div, int *mod)
+
+الملفات المطلوبة: ft_div_mod.c

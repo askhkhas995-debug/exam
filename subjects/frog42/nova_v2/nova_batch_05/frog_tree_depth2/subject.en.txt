@@ -1,0 +1,4 @@
+# frog_tree_depth2
+
+Write a shell script `frog_tree_depth2.sh` that implements the requested behavior for tree depth2.
+Your script must print exactly the expected output for fixed tests.

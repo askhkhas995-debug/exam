@@ -1,0 +1,1 @@
+حوّل CamelCase أو lowerCamelCase إلى snake_case.

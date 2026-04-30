@@ -1,0 +1,4 @@
+# frog_peak_detector
+
+New exercise (nova_batch_04): implement `frog_peak_detector.c`.
+The program should print exactly `frog_peak_detector` followed by a newline.

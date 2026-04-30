@@ -1,0 +1,17 @@
+id: p27_number_writer
+title: p27_number_writer
+origin: piscine27
+version: v0
+module: p27_01_c_output
+level: 0
+type: c_program
+language: c
+expected_files:
+  - p27_number_writer.c
+allowed_functions:
+  - write
+norminette: true
+tags:
+  - piscine27
+correction:
+  profile: corrections/piscine27/p27_01_c_output/p27_number_writer/profile.yml

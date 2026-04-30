@@ -1,0 +1,6 @@
+# frog_mini_project_todo_cli
+
+Mini-project: todo cli.
+
+Deliver a `Makefile` that builds your project binary.
+Add `.c` files as needed. Build must succeed with `make`.

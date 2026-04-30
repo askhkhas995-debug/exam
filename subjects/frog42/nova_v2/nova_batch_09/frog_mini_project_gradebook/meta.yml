@@ -1,0 +1,21 @@
+id: frog_mini_project_gradebook
+title: frog_mini_project_gradebook
+origin: frog42
+version: v2
+module: nova_batch_09
+level: 1
+type: project
+language: c
+expected_files:
+- Makefile
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

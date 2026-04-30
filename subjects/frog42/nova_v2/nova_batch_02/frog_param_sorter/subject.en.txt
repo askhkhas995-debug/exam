@@ -1,0 +1,4 @@
+# frog_param_sorter
+
+New exercise (nova_batch_02): implement `frog_param_sorter.c`.
+The program should print exactly `frog_param_sorter` followed by a newline.

@@ -1,0 +1,27 @@
+id: alt_case
+title: alt_case
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 2
+type: c_program
+language: c
+expected_files:
+  - alt_case.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror alt_case.c -o alt_case
+run:
+  command: ./alt_case
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/alt_case/profile.yml

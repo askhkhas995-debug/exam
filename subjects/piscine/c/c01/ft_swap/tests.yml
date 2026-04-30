@@ -1,0 +1,6 @@
+subject_id: ft_swap
+fixed_tests:
+- call: int a = 1, b = 2; ft_swap(&a, &b); printf("%d %d\n", a, b)
+  stdout: '2 1
+
+    '

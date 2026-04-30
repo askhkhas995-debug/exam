@@ -1,0 +1,22 @@
+required:
+  - subject_id
+  - status
+  - checks
+properties:
+  subject_id: string
+  status:
+    enum: [OK, KO, ERROR]
+  checks: list
+  stdout: string
+  stderr: string
+  diff: string
+  failure_reason: string
+  failure_category: string
+  failure_detail: string
+  returncode: integer
+  signal: string
+  type: string
+  pool_id: string
+  module_id: string
+  grade: integer
+  exercises: list

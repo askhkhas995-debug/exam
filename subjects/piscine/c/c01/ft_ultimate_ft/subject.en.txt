@@ -1,0 +1,7 @@
+# ft_ultimate_ft
+
+Write a function that takes a pointer to pointer to ... to pointer (9 levels) to int and sets the value to 42.
+
+Prototype: void ft_ultimate_ft(int *********nbr)
+
+Turn-in files: ft_ultimate_ft.c

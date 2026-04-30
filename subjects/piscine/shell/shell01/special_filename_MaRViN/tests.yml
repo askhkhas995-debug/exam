@@ -1,0 +1,7 @@
+subject_id: special_filename_MaRViN
+validators:
+- validator: weird_filename
+  name: marvin_file
+  args:
+    directory: .
+    expected_name: \"\?\$\*\'MaRViN\'\*\$\?\"

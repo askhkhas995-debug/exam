@@ -1,0 +1,15 @@
+subject_id: testShell00
+validators:
+- validator: tar_archive
+  name: tar_exists
+  args:
+    archive_path: testShell00.tar
+    expected_contents:
+    - testShell00
+- validator: tar_member
+  name: is_symlink
+  args:
+    archive_path: testShell00.tar
+    member_name: testShell00
+    is_symlink: true
+    expected_linkname: /bin/sh

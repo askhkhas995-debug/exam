@@ -1,0 +1,5 @@
+subject_id: frog_island_counter
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_island_counter\n"

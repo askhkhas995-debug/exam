@@ -1,0 +1,27 @@
+id: digit_sum
+title: digit_sum
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 4
+type: c_program
+language: c
+expected_files:
+  - digit_sum.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror digit_sum.c -o digit_sum
+run:
+  command: ./digit_sum
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/digit_sum/profile.yml

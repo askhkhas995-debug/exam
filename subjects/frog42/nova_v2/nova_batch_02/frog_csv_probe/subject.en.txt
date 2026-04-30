@@ -1,0 +1,4 @@
+# frog_csv_probe
+
+New exercise (nova_batch_02): implement `frog_csv_probe.c`.
+The program should print exactly `frog_csv_probe` followed by a newline.

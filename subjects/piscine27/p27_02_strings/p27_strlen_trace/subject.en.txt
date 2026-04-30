@@ -1,0 +1,5 @@
+# p27_strlen_trace
+
+Implement strlen and optionally print index progression in debug mode.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

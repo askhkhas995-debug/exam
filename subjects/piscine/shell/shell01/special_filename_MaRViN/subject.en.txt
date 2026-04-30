@@ -1,0 +1,6 @@
+# Exercise 04: MaRViN
+
+Create a file with the exact name:
+\"\?\$\*\'MaRViN\'\*\$\?\"
+
+Turn-in files: "\?\$\*\'MaRViN\'\*\$\?\"

@@ -1,0 +1,4 @@
+subject_id: ft_print_numbers
+fixed_tests:
+- call: ft_print_numbers()
+  stdout: 0123456789

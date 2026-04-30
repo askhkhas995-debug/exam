@@ -1,0 +1,8 @@
+subject_id: diff
+validators:
+  - name: diff_output
+    validator: file_matches_fixture
+    args:
+      path: diff
+      fixture_path: resources/piscine/shell00/diff/sw.diff
+      exact: true

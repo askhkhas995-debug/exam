@@ -1,0 +1,4 @@
+# frog_ansi_stripper
+
+New exercise (nova_batch_08): implement `frog_ansi_stripper.c`.
+The program should print exactly `frog_ansi_stripper` followed by a newline.

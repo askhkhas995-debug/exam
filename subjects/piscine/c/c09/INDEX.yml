@@ -1,0 +1,10 @@
+module: c09
+origin: piscine42
+version: v1
+subjects:
+  - libft_creator.sh
+  - ft_putchar
+  - ft_swap
+  - ft_putstr
+  - ft_strlen
+  - ft_strcmp

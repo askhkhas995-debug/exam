@@ -1,0 +1,5 @@
+Write a program that alternates the case of words. The first word must be lowercase, the second word uppercase, the third word lowercase, and so on. Words are separated by spaces or tabs. Separators must be preserved.
+
+Example: `hello world yes -> hello WORLD yes`.
+
+Allowed functions: `write`.

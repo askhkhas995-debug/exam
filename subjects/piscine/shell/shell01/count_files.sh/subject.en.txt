@@ -1,0 +1,6 @@
+# Exercise 02: count_files.sh
+
+Write a command line that counts all regular files and directories
+(and links, etc.) in the current directory and its subdirectories.
+
+Turn-in files: count_files.sh

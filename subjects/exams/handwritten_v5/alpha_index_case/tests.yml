@@ -1,0 +1,3 @@
+subject_id: alpha_index_case
+fixed_tests:
+  - {"args": ["ab cd!"], "stdout": "Ab Cd!\n"}

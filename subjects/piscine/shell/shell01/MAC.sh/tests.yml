@@ -1,0 +1,5 @@
+subject_id: MAC.sh
+fixed_tests:
+- name: runs_without_error
+  args: []
+  exit_code: 0

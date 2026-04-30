@@ -1,0 +1,13 @@
+module: c01
+origin: piscine42
+version: v1
+subjects:
+  - ft_ft
+  - ft_ultimate_ft
+  - ft_swap
+  - ft_div_mod
+  - ft_ultimate_div_mod
+  - ft_putstr
+  - ft_strlen
+  - ft_rev_int_tab
+  - ft_sort_int_tab

@@ -1,0 +1,5 @@
+Write a program that compresses consecutive repeated characters using Run-Length Encoding. If a character appears once, print the character only. If it appears more than once, print the number followed by the character.
+
+Examples: `AAABBC -> 3A2BC`; `AAAAAAAAAAAA -> 12A`.
+
+Allowed functions: `write`.

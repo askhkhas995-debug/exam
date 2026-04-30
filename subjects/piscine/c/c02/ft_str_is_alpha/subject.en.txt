@@ -1,0 +1,5 @@
+# ft_str_is_alpha
+
+Write the function ft_str_is_alpha.
+
+Turn-in files: ft_str_is_alpha.c

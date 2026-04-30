@@ -1,0 +1,23 @@
+id: ft_str_is_uppercase
+title: ft_str_is_uppercase
+origin: piscine42
+version: v1
+module: c02
+level: 5
+type: c_function
+language: c
+expected_files:
+- ft_str_is_uppercase.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: int ft_str_is_uppercase(char *str)
+tags:
+- c02
+- piscine
+correction:
+  profile: corrections/piscine/c02/ft_str_is_uppercase/profile.yml

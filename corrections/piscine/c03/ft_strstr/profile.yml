@@ -1,0 +1,4 @@
+subject_id: ft_strstr
+evaluator: c_function
+strict_stdout: true
+timeout_seconds: 2

@@ -1,0 +1,6 @@
+# Exercise 05: skip.sh
+
+Write a command that displays every other line of the input,
+starting with the first line.
+
+Turn-in files: skip.sh

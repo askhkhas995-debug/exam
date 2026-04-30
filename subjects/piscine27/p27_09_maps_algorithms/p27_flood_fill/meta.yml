@@ -1,0 +1,17 @@
+id: p27_flood_fill
+title: p27_flood_fill
+origin: piscine27
+version: v0
+module: p27_09_maps_algorithms
+level: 0
+type: c_program
+language: c
+expected_files:
+  - p27_flood_fill.c
+allowed_functions:
+  - write
+norminette: true
+tags:
+  - piscine27
+correction:
+  profile: corrections/piscine27/p27_09_maps_algorithms/p27_flood_fill/profile.yml

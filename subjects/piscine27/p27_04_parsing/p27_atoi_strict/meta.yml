@@ -1,0 +1,17 @@
+id: p27_atoi_strict
+title: p27_atoi_strict
+origin: piscine27
+version: v0
+module: p27_04_parsing
+level: 0
+type: c_program
+language: c
+expected_files:
+  - p27_atoi_strict.c
+allowed_functions:
+  - write
+norminette: true
+tags:
+  - piscine27
+correction:
+  profile: corrections/piscine27/p27_04_parsing/p27_atoi_strict/profile.yml

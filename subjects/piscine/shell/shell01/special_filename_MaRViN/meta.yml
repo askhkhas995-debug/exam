@@ -1,0 +1,17 @@
+id: special_filename_MaRViN
+title: special_filename_MaRViN
+origin: piscine42
+version: v1
+module: shell01
+level: 4
+type: shell
+language: sh
+expected_files:
+- special_filename_MaRViN
+norminette: false
+tags:
+- shell01
+- piscine
+correction:
+  profile: corrections/piscine/shell01/special_filename_MaRViN/profile.yml
+validator_only: true

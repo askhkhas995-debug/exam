@@ -1,0 +1,6 @@
+subject_id: ft_print_comb2
+fixed_tests:
+- call: ft_print_comb2()
+  stdout_contains:
+  - 00 01
+  - 98 99

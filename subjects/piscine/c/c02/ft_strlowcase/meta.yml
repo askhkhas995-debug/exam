@@ -1,0 +1,23 @@
+id: ft_strlowcase
+title: ft_strlowcase
+origin: piscine42
+version: v1
+module: c02
+level: 8
+type: c_function
+language: c
+expected_files:
+- ft_strlowcase.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: char *ft_strlowcase(char *str)
+tags:
+- c02
+- piscine
+correction:
+  profile: corrections/piscine/c02/ft_strlowcase/profile.yml

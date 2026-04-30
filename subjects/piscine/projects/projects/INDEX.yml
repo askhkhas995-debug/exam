@@ -1,0 +1,53 @@
+module: projects
+origin: piscine42
+version: v1
+subjects:
+  - rush00
+  - rush01
+  - rush02
+  - sastantua
+  - match_n_match
+  - eval_expr
+  - bsq
+submission_contracts:
+  rush00:
+    type: rush_project
+    required_files: [Makefile]
+    allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
+    forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
+    makefile_required: true
+    expected_binary: null
+    allow_extra_files: true
+  rush01:
+    type: rush_project
+    required_files: [Makefile]
+    allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
+    forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
+    makefile_required: true
+    expected_binary: null
+    allow_extra_files: true
+  rush02:
+    type: rush_project
+    required_files: [Makefile]
+    allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
+    forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
+    makefile_required: true
+    expected_binary: null
+    allow_extra_files: true
+  sastantua:
+    type: generic_project
+    status: incomplete
+  match_n_match:
+    type: generic_project
+    status: incomplete
+  eval_expr:
+    type: generic_project
+    status: incomplete
+  bsq:
+    type: bsq_project
+    required_files: [Makefile]
+    allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
+    forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
+    makefile_required: true
+    expected_binary: bsq
+    allow_extra_files: true

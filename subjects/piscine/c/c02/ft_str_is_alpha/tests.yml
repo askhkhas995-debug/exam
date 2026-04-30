@@ -1,0 +1,14 @@
+subject_id: ft_str_is_alpha
+fixed_tests:
+- expr: ft_str_is_alpha("Hello")
+  stdout: '1
+
+    '
+- expr: ft_str_is_alpha("Hel1o")
+  stdout: '0
+
+    '
+- expr: ft_str_is_alpha("")
+  stdout: '1
+
+    '

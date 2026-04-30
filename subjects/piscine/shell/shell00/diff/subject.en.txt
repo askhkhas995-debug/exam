@@ -1,0 +1,6 @@
+# Exercise 07: diff
+
+Create a file called diff that contains what diff would output 
+when comparing file a and file b.
+
+Turn-in files: diff

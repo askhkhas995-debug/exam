@@ -1,0 +1,7 @@
+Write a program that takes one string argument and prints it while replacing characters according to their index. Index starts at 0. The character at index 0 is never replaced.
+
+Rules: multiple of both 3 and 5 -> `r`; multiple of 3 only -> `5`; multiple of 5 only -> `3`; otherwise original character.
+
+Example: `abcdef -> abc5e3`.
+
+Allowed functions: `write`.

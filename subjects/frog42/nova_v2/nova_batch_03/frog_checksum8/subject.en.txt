@@ -1,0 +1,4 @@
+# frog_checksum8
+
+New exercise (nova_batch_03): implement `frog_checksum8.c`.
+The program should print exactly `frog_checksum8` followed by a newline.

@@ -1,0 +1,5 @@
+# ft_putstr
+
+اكتب الدالة ft_putstr.
+
+الملفات المطلوبة: ft_putstr.c

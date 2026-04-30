@@ -1,0 +1,16 @@
+Write a program that takes one string argument and prints the first and the last character of the string, followed by a newline.
+
+If the string contains only one character, print that character twice.
+
+If the number of arguments is not exactly 1, print only a newline.
+
+Examples:
+
+```txt
+$> ./first_last_char Hello | cat -e
+Ho$
+$> ./first_last_char a | cat -e
+aa$
+```
+
+Allowed functions: `write`.

@@ -1,0 +1,21 @@
+id: frog_markdown_toc
+title: frog_markdown_toc
+origin: frog42
+version: v2
+module: nova_batch_08
+level: 1
+type: c_program
+language: c
+expected_files:
+- frog_markdown_toc.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+tags:
+- frog42
+- nova
+- v2

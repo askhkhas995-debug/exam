@@ -1,0 +1,23 @@
+id: ft_strlcpy
+title: ft_strlcpy
+origin: piscine42
+version: v1
+module: c02
+level: 10
+type: c_function
+language: c
+expected_files:
+- ft_strlcpy.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+tags:
+- c02
+- piscine
+correction:
+  profile: corrections/piscine/c02/ft_strlcpy/profile.yml

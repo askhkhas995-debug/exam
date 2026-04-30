@@ -1,0 +1,6 @@
+subject_id: ft_strncat
+fixed_tests:
+- call: char d[20] = "Hello"; ft_strncat(d, " World", 3); printf("%s\n", d)
+  stdout: 'Hello Wo
+
+    '

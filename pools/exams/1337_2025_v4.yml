@@ -1,0 +1,29 @@
+id: 1337_2025_v4
+kind: exam
+version: v4
+display_name: Legacy 1337 Practice 2025
+group: Legacy Practice
+description: Imported legacy practice pool. Not an official 42 exam.
+levels_count: 5
+origin_label: 1337 legacy blend
+official_like: false
+imported: true
+duration_minutes: 240
+mode: incremental
+origin: 1337 legacy blend
+levels:
+  - level: 0
+    pick: 1
+    assignments: [aff_a, aff_z, only_z, first_word, fizzbuzz]
+  - level: 1
+    pick: 1
+    assignments: [repeat_alpha, rev_print, rot_13, rotone, search_and_replace, ulstr, alpha_mirror]
+  - level: 2
+    pick: 1
+    assignments: [camel_to_snake, snake_to_camel, inter, union, wdmatch, ft_atoi, ft_strcmp]
+  - level: 3
+    pick: 1
+    assignments: [add_prime_sum, epur_str, expand_str, ft_atoi_base, ft_range, ft_rrange, print_hex]
+  - level: 4
+    pick: 1
+    assignments: [fprime, ft_itoa, ft_split, rev_wstr, rostring, sort_int_tab, sort_list]

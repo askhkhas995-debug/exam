@@ -1,0 +1,8 @@
+subject_id: digit_root
+fixed_tests:
+  - {"args": ["0"], "stdout": "0\n"}
+  - {"args": ["9"], "stdout": "9\n"}
+  - {"args": ["123"], "stdout": "6\n"}
+  - {"args": ["9999"], "stdout": "9\n"}
+  - {"args": ["493193"], "stdout": "2\n"}
+  - {"args": [], "stdout": "\n"}

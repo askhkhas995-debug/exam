@@ -1,0 +1,6 @@
+# frog_mini_project_log_analyzer
+
+Mini-project: log analyzer.
+
+Deliver a `Makefile` that builds your project binary.
+Add `.c` files as needed. Build must succeed with `make`.

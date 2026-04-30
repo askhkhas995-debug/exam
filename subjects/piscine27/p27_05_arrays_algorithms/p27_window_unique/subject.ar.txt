@@ -1,0 +1,5 @@
+# p27_window_unique
+
+Print the longest substring without repeated characters.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

@@ -1,0 +1,8 @@
+subject_id: id_rsa_pub
+validators:
+- validator: file_content
+  name: has_ssh_key
+  args:
+    path: id_rsa_pub
+    contains:
+    - ssh-

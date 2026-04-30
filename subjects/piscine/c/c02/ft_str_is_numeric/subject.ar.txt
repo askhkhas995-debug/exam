@@ -1,0 +1,5 @@
+# ft_str_is_numeric
+
+اكتب الدالة ft_str_is_numeric.
+
+الملفات المطلوبة: ft_str_is_numeric.c

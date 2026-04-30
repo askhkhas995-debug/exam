@@ -1,0 +1,6 @@
+# Exercise 07: add_chelou.sh
+
+Create a file that when cat and passed to bc, adds the two
+numbers given as arguments.
+
+Turn-in files: add_chelou.sh

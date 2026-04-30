@@ -1,0 +1,5 @@
+subject_id: frog_case_converter
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_case_converter\n"

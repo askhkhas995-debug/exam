@@ -1,0 +1,6 @@
+subject_id: ft_div_mod
+fixed_tests:
+- call: int d, m; ft_div_mod(10, 3, &d, &m); printf("%d %d\n", d, m)
+  stdout: '3 1
+
+    '

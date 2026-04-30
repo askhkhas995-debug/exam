@@ -1,0 +1,9 @@
+grading:
+  timeout_seconds: 2
+  strict_stdout: true
+  strict_stderr: false
+  reject_extra_files: true
+  compile_flags:
+    - -Wall
+    - -Wextra
+    - -Werror

@@ -1,0 +1,6 @@
+piscine42:
+  week_0: [shell00, shell01, c00, exam00]
+  week_1: [c01, c02, c03, rush00, exam01]
+  week_2: [c04, c05, c06, rush01, exam02]
+  week_3: [c07, c08, c09, bsq, final_exam]
+  optional: [c10, c11, c12, c13]

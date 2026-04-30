@@ -1,0 +1,5 @@
+# ft_strlen
+
+Write the function ft_strlen.
+
+Turn-in files: ft_strlen.c

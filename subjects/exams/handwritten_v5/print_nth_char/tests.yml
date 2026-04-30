@@ -1,0 +1,4 @@
+subject_id: print_nth_char
+fixed_tests:
+  - {"call": "print_nth_char(\"ABCDEF\", 2)", "stdout": "BDF\n"}
+  - {"call": "print_nth_char(\"Hello\", 2)", "stdout": "el\n"}

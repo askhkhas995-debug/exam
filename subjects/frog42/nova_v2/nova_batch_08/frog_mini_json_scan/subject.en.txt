@@ -1,0 +1,4 @@
+# frog_mini_json_scan
+
+New exercise (nova_batch_08): implement `frog_mini_json_scan.c`.
+The program should print exactly `frog_mini_json_scan` followed by a newline.

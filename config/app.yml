@@ -1,0 +1,5 @@
+app:
+  name: PiscineForge
+  workspace: workspace
+  default_language: en
+  terminal_ui: true

@@ -1,0 +1,8 @@
+subject_id: alt_case
+fixed_tests:
+  - {"args": ["abc def"], "stdout": "AbC DeF\n"}
+  - {"args": [""], "stdout": "\n"}
+  - {"args": ["a"], "stdout": "A\n"}
+  - {"args": ["hello"], "stdout": "HeLlO\n"}
+  - {"args": ["  spaces  "], "stdout": "  SpAcEs  \n"}
+  - {"args": [], "stdout": "\n"}

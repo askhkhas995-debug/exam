@@ -1,0 +1,4 @@
+# frog_trim_bridge
+
+New exercise (nova_batch_01): implement `frog_trim_bridge.c`.
+The program should print exactly `frog_trim_bridge` followed by a newline.

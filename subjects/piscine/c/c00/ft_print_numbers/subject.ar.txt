@@ -1,0 +1,7 @@
+# ft_print_numbers
+
+اكتب الدالة ft_print_numbers.
+
+النموذج: void ft_print_numbers(void)
+
+الملفات المطلوبة: ft_print_numbers.c

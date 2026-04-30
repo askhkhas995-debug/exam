@@ -1,0 +1,7 @@
+# ft_strlen
+
+Write a function that counts the number of characters in a string.
+
+Prototype: int ft_strlen(char *str)
+
+Turn-in files: ft_strlen.c

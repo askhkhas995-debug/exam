@@ -1,0 +1,5 @@
+# ft_strncat
+
+Write the function ft_strncat.
+
+Turn-in files: ft_strncat.c

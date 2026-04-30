@@ -1,0 +1,27 @@
+id: digit_root
+title: digit_root
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 4
+type: c_program
+language: c
+expected_files:
+  - digit_root.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror digit_root.c -o digit_root
+run:
+  command: ./digit_root
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/digit_root/profile.yml

@@ -1,0 +1,10 @@
+module: c07
+origin: piscine42
+version: v1
+subjects:
+  - ft_strdup
+  - ft_range
+  - ft_ultimate_range
+  - ft_strjoin
+  - ft_convert_base
+  - ft_split

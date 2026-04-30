@@ -1,0 +1,5 @@
+# ft_strncat
+
+اكتب الدالة ft_strncat.
+
+الملفات المطلوبة: ft_strncat.c

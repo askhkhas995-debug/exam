@@ -1,0 +1,5 @@
+# p27_tail_lite
+
+Print the last N bytes of a file.
+
+This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

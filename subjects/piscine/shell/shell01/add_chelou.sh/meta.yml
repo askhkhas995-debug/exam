@@ -1,0 +1,16 @@
+id: add_chelou.sh
+title: add_chelou.sh
+origin: piscine42
+version: v1
+module: shell01
+level: 7
+type: shell
+language: sh
+expected_files:
+- add_chelou.sh
+norminette: false
+tags:
+- shell01
+- piscine
+correction:
+  profile: corrections/piscine/shell01/add_chelou.sh/profile.yml

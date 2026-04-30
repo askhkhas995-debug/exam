@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# C build artifacts
+a.out
+*.o
+*.out
+*.a
+*.so
+
+# Runtime workspace
+workspace/session.json
+workspace/progress.json
+workspace/schedule.json
+workspace/worklog.json
+workspace/profile.json
+workspace/vogsphere/
+workspace/rendu/*
+workspace/subject/*
+workspace/traces/*
+
+# Keep workspace folders if .gitkeep exists
+!workspace/.gitkeep
+!workspace/rendu/.gitkeep
+!workspace/subject/.gitkeep
+!workspace/traces/.gitkeep

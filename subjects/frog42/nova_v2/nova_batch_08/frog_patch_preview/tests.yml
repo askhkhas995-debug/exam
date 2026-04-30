@@ -1,0 +1,5 @@
+subject_id: frog_patch_preview
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_patch_preview\n"

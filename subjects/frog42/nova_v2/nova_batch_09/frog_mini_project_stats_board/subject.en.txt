@@ -1,0 +1,6 @@
+# frog_mini_project_stats_board
+
+Mini-project: stats board.
+
+Deliver a `Makefile` that builds your project binary.
+Add `.c` files as needed. Build must succeed with `make`.

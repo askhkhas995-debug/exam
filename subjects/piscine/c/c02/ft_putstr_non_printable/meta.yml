@@ -1,0 +1,23 @@
+id: ft_putstr_non_printable
+title: ft_putstr_non_printable
+origin: piscine42
+version: v1
+module: c02
+level: 11
+type: c_function
+language: c
+expected_files:
+- ft_putstr_non_printable.c
+allowed_functions:
+- write
+forbidden_functions:
+- printf
+- puts
+- fprintf
+norminette: true
+prototype: void ft_putstr_non_printable(char *str)
+tags:
+- c02
+- piscine
+correction:
+  profile: corrections/piscine/c02/ft_putstr_non_printable/profile.yml

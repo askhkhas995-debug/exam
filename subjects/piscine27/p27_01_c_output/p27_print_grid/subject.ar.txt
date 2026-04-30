@@ -1,0 +1,5 @@
+# p27_print_grid
+
+Print a rectangle/grid using only write.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

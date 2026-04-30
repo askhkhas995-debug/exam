@@ -1,0 +1,7 @@
+# ft_putnbr
+
+اكتب الدالة ft_putnbr.
+
+النموذج: void ft_putnbr(int nb)
+
+الملفات المطلوبة: ft_putnbr.c

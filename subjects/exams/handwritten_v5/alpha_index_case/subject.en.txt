@@ -1,0 +1,5 @@
+Write a program that alternates case only by counting alphabetic characters. Non-alphabetic characters stay unchanged and do not count.
+
+Example: `ab cd! -> Ab Cd!`.
+
+Allowed functions: `write`.

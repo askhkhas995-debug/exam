@@ -1,0 +1,7 @@
+# Exercise 06: r_dwssap.sh
+
+Write a command that behaves like the following:
+Display the content of /etc/passwd reversed line by line,
+with each line's content also reversed.
+
+Turn-in files: r_dwssap.sh

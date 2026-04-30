@@ -1,0 +1,7 @@
+# ft_print_numbers
+
+Write a function that displays all digits, on a single line, in ascending order.
+
+Prototype: void ft_print_numbers(void)
+
+Turn-in files: ft_print_numbers.c

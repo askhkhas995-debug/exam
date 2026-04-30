@@ -1,0 +1,5 @@
+subject_id: frog_column_pick
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_column_pick\n"

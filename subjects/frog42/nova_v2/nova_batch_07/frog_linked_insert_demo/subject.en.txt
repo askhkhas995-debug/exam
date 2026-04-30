@@ -1,0 +1,4 @@
+# frog_linked_insert_demo
+
+New exercise (nova_batch_07): implement `frog_linked_insert_demo.c`.
+The program should print exactly `frog_linked_insert_demo` followed by a newline.

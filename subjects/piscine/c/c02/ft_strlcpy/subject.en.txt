@@ -1,0 +1,5 @@
+# ft_strlcpy
+
+Write the function ft_strlcpy.
+
+Turn-in files: ft_strlcpy.c

@@ -1,0 +1,16 @@
+id: MAC.sh
+title: MAC.sh
+origin: piscine42
+version: v1
+module: shell01
+level: 3
+type: shell
+language: sh
+expected_files:
+- MAC.sh
+norminette: false
+tags:
+- shell01
+- piscine
+correction:
+  profile: corrections/piscine/shell01/MAC.sh/profile.yml

@@ -1,0 +1,5 @@
+# p27_csv_light
+
+Parse a simple comma-separated line with no quoted fields.
+
+هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

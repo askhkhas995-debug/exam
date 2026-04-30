@@ -1,0 +1,27 @@
+id: camel_to_snake
+title: camel_to_snake
+origin: handwritten
+version: v5
+module: exams/handwritten_v5
+level: 2
+type: c_program
+language: c
+expected_files:
+  - camel_to_snake.c
+allowed_functions:
+  - write
+forbidden_functions:
+  - printf
+  - puts
+  - fprintf
+  - malloc
+norminette: true
+compile:
+  command: gcc -Wall -Wextra -Werror camel_to_snake.c -o camel_to_snake
+run:
+  command: ./camel_to_snake
+tags:
+  - handwritten_v5
+  - exam
+correction:
+  profile: corrections/exams/handwritten_v5/camel_to_snake/profile.yml

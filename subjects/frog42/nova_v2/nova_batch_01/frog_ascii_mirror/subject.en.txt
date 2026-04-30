@@ -1,0 +1,4 @@
+# frog_ascii_mirror
+
+New exercise (nova_batch_01): implement `frog_ascii_mirror.c`.
+The program should print exactly `frog_ascii_mirror` followed by a newline.

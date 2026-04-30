@@ -1,0 +1,1 @@
+اكتب function تطبع كل حرف رقم `n` من string. العد 1-based. إذا `n <= 0` أو string فارغ أو `n` أكبر من الطول اطبع newline فقط.

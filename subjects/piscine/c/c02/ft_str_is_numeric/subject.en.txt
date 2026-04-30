@@ -1,0 +1,5 @@
+# ft_str_is_numeric
+
+Write the function ft_str_is_numeric.
+
+Turn-in files: ft_str_is_numeric.c

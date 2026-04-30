@@ -1,0 +1,5 @@
+# ft_strncmp
+
+Write the function ft_strncmp.
+
+Turn-in files: ft_strncmp.c

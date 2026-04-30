@@ -1,0 +1,4 @@
+subject_id: ft_print_alphabet
+fixed_tests:
+- call: ft_print_alphabet()
+  stdout: abcdefghijklmnopqrstuvwxyz

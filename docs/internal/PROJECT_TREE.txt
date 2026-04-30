@@ -1,0 +1,27 @@
+piscine-forge-rebuilt/
+├── README.md
+├── pyproject.toml
+├── config/
+├── docs/
+├── prompts/
+├── schemas/
+├── subjects/
+│   ├── piscine/
+│   ├── exams/
+│   └── piscine27/
+├── corrections/
+├── pools/
+├── piscine_forge/
+│   ├── cli.py
+│   ├── loader.py
+│   ├── picker.py
+│   ├── session.py
+│   ├── evaluators/
+│   ├── generators/
+│   └── compat/
+├── workspace/
+│   ├── subject/
+│   ├── rendu/
+│   └── traces/
+├── legacy_archives/
+└── tests/

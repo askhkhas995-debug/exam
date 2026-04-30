@@ -1,0 +1,10 @@
+subject_id: ft_strcmp
+fixed_tests:
+- expr: 'ft_strcmp("abc", "abc") == 0 ? 1 : 0'
+  stdout: '1
+
+    '
+- expr: 'ft_strcmp("abc", "abd") < 0 ? 1 : 0'
+  stdout: '1
+
+    '

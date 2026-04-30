@@ -1,0 +1,3 @@
+subject_id: index_case
+fixed_tests:
+  - {"args": ["abcdef"], "stdout": "AbCdEf\n"}

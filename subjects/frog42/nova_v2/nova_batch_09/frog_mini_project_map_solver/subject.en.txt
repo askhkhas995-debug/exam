@@ -1,0 +1,6 @@
+# frog_mini_project_map_solver
+
+Mini-project: map solver.
+
+Deliver a `Makefile` that builds your project binary.
+Add `.c` files as needed. Build must succeed with `make`.

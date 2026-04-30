@@ -1,0 +1,5 @@
+subject_id: frog_hash_bucket_stats
+fixed_tests:
+- name: basic
+  args: []
+  stdout: "frog_hash_bucket_stats\n"

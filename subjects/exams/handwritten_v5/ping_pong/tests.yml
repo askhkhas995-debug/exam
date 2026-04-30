@@ -1,0 +1,8 @@
+subject_id: ping_pong
+fixed_tests:
+  - {"args": ["1"], "stdout": "1\n"}
+  - {"args": ["3"], "stdout": "ping\n"}
+  - {"args": ["5"], "stdout": "pong\n"}
+  - {"args": ["15"], "stdout": "ping pong\n"}
+  - {"args": ["0"], "stdout": "ping pong\n"}
+  - {"args": [], "stdout": "\n"}
