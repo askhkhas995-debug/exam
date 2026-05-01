@@ -1,146 +1,162 @@
-# References for Piscine projects
-# This file tracks public/open-source implementations and tests for behavior inference only.
-# Remote downloads are disabled; reference entries are catalog metadata only.
-# Usage policy is strictly limited to reference_only and behavior_inference_only.
-#
-# IMPORTANT: THIS FILE IS A LOCAL REFERENCE CATALOG ONLY.
-# External repositories are not contacted by PiscineForge commands.
-# This data was used once during a manual preparation phase to establish local testing boundaries.
-
 external_references:
-  - id: hexanyn_bsq
-    repo: "42/piscine/bsq"
-    repo_url: "https://git.hexanyn.fr/42/piscine/bsq"
-    projects:
-      - bsq
-    source_kind:
-      - subject_reference
-      - code_reference
-      - behavior_inference_reference
-    usage_policy:
-      - reference_only
-      - behavior_inference_only
-      - do_not_vendor
-      - license_review_required
-    notes:
-      - "GitLab-hosted BSQ reference. Audit accessible files manually."
-      - "Keep this as reference catalog metadata only."
-
-  - id: itsanuness_42piscine
-    repo: "ItsAnunesS/42Piscine"
-    repo_url: "https://github.com/ItsAnunesS/42Piscine"
-    projects:
-      - rush00
-      - rush01
-      - rush02
-      - bsq
-    subject_pdfs:
-      - project: rush00
-        language: en
-        url: "https://github.com/ItsAnunesS/42Piscine/blob/master/Rush/Rush00/en.subject.pdf"
-      - project: rush01
-        language: en
-        url: "https://github.com/ItsAnunesS/42Piscine/blob/master/Rush/Rush01/en.subject.pdf"
-      - project: rush02
-        language: en
-        url: "https://github.com/ItsAnunesS/42Piscine/blob/master/Rush/Rush02/en.subject.pdf"
-      - project: bsq
-        language: en
-        url: "https://github.com/ItsAnunesS/42Piscine/blob/master/BSQ/en.subject.pdf"
-    usage_policy:
-      - reference_only
-      - behavior_inference_only
-      - do_not_vendor
-    license_status: "check_repo_license"
-
-  - id: sebastiencs_piscine_42
-    repo: "sebastiencs/piscine_42"
-    repo_url: "https://github.com/sebastiencs/piscine_42"
-    projects:
-      - eval_expr
-      - match_n_match
-      - sastantua
-      - bsq
-    subject_pdfs:
-      - project: eval_expr
-        url: "https://github.com/sebastiencs/piscine_42/blob/master/PDFs/evalexpr.pdf"
-      - project: match_n_match
-        url: "https://github.com/sebastiencs/piscine_42/blob/master/PDFs/match-nmatch.pdf"
-      - project: sastantua
-        url: "https://github.com/sebastiencs/piscine_42/blob/master/PDFs/sastantua.pdf"
-      - project: bsq
-        url: "https://github.com/sebastiencs/piscine_42/blob/master/bsq.pdf"
-    usage_policy:
-      - reference_only
-      - behavior_inference_only
-      - do_not_vendor
-    license_status: "check_repo_license"
-
-  - id: jraleman_42_piscine_c
-    repo: "jraleman/42.Piscine-C"
-    repo_url: "https://github.com/jraleman/42.Piscine-C"
-    projects:
-      - bsq
-      - rush00
-    subject_pdfs:
-      - project: bsq
-        language: en
-        url: "https://github.com/jraleman/42.Piscine-C/blob/master/bsq/resources/bsq.en.pdf"
-    usage_policy:
-      - reference_only
-      - behavior_inference_only
-      - do_not_vendor
-    license_status: "check_repo_license"
-
-  - id: e_b3rry_bsq_unit_test
-    repo: "E-B3rry/BSQUnitTest"
-    repo_url: "https://github.com/E-B3rry/BSQUnitTest"
-    projects:
-      - bsq
-    source_kind:
-      - public_tests_reference
-      - behavior_inference_reference
-    usage_policy:
-      - behavior_inference_only
-      - license_review_required
-    license_status: "check_repo_license"
-
-  - id: agolz_piscine_rush_00
-    repo: "AGolz/Piscine_Rush_00"
-    repo_url: "https://github.com/AGolz/Piscine_Rush_00"
-    projects:
-      - rush00
-    source_kind:
-      - code_reference
-      - behavior_inference_reference
-    usage_policy:
-      - reference_only
-      - behavior_inference_only
-      - do_not_vendor
-    license_status: "check_repo_license"
-
-  - id: npasquie_evalexpr
-    repo: "npasquie/evalexpr"
-    repo_url: "https://github.com/npasquie/evalexpr"
-    projects:
-      - eval_expr
-    source_kind:
-      - code_reference
-      - behavior_inference_reference
-    usage_policy:
-      - behavior_inference_only
-      - do_not_vendor
-    license_status: "check_repo_license"
-
-  - id: justin0u0_sastantua
-    repo: "justin0u0/sastantua"
-    repo_url: "https://github.com/justin0u0/sastantua"
-    projects:
-      - sastantua
-    source_kind:
-      - code_reference
-      - behavior_inference_reference
-    usage_policy:
-      - behavior_inference_only
-      - do_not_vendor
-    license_status: "check_repo_license"
+- id: hexanyn_bsq
+  repo: 42/piscine/bsq
+  repo_url: https://git.hexanyn.fr/42/piscine/bsq
+  projects:
+  - bsq
+  source_kind:
+  - subject_reference
+  - code_reference
+  - behavior_inference_reference
+  usage_policy:
+  - reference_only
+  - behavior_inference_only
+  - do_not_vendor
+  - license_review_required
+  notes:
+  - GitLab-hosted BSQ reference. Audit accessible files manually.
+  - Keep this as reference catalog metadata only.
+- id: itsanuness_42piscine
+  repo: ItsAnunesS/42Piscine
+  repo_url: https://github.com/ItsAnunesS/42Piscine
+  projects:
+  - rush00
+  - rush01
+  - rush02
+  - bsq
+  subject_pdfs:
+  - project: rush00
+    language: en
+    url: https://github.com/ItsAnunesS/42Piscine/blob/master/Rush/Rush00/en.subject.pdf
+  - project: rush01
+    language: en
+    url: https://github.com/ItsAnunesS/42Piscine/blob/master/Rush/Rush01/en.subject.pdf
+  - project: rush02
+    language: en
+    url: https://github.com/ItsAnunesS/42Piscine/blob/master/Rush/Rush02/en.subject.pdf
+  - project: bsq
+    language: en
+    url: https://github.com/ItsAnunesS/42Piscine/blob/master/BSQ/en.subject.pdf
+  usage_policy:
+  - reference_only
+  - behavior_inference_only
+  - do_not_vendor
+  license_status: check_repo_license
+- id: sebastiencs_piscine_42
+  repo: sebastiencs/piscine_42
+  repo_url: https://github.com/sebastiencs/piscine_42
+  projects:
+  - eval_expr
+  - match_n_match
+  - sastantua
+  - bsq
+  subject_pdfs:
+  - project: eval_expr
+    url: https://github.com/sebastiencs/piscine_42/blob/master/PDFs/evalexpr.pdf
+  - project: match_n_match
+    url: https://github.com/sebastiencs/piscine_42/blob/master/PDFs/match-nmatch.pdf
+  - project: sastantua
+    url: https://github.com/sebastiencs/piscine_42/blob/master/PDFs/sastantua.pdf
+  - project: bsq
+    url: https://github.com/sebastiencs/piscine_42/blob/master/bsq.pdf
+  usage_policy:
+  - reference_only
+  - behavior_inference_only
+  - do_not_vendor
+  license_status: check_repo_license
+- id: jraleman_42_piscine_c
+  repo: jraleman/42.Piscine-C
+  repo_url: https://github.com/jraleman/42.Piscine-C
+  projects:
+  - bsq
+  - rush00
+  subject_pdfs:
+  - project: bsq
+    language: en
+    url: https://github.com/jraleman/42.Piscine-C/blob/master/bsq/resources/bsq.en.pdf
+  usage_policy:
+  - reference_only
+  - behavior_inference_only
+  - do_not_vendor
+  license_status: check_repo_license
+- id: e_b3rry_bsq_unit_test
+  repo: E-B3rry/BSQUnitTest
+  repo_url: https://github.com/E-B3rry/BSQUnitTest
+  projects:
+  - bsq
+  source_kind:
+  - public_tests_reference
+  - behavior_inference_reference
+  usage_policy:
+  - behavior_inference_only
+  - license_review_required
+  license_status: check_repo_license
+- id: agolz_piscine_rush_00
+  repo: AGolz/Piscine_Rush_00
+  repo_url: https://github.com/AGolz/Piscine_Rush_00
+  projects:
+  - rush00
+  source_kind:
+  - code_reference
+  - behavior_inference_reference
+  usage_policy:
+  - reference_only
+  - behavior_inference_only
+  - do_not_vendor
+  license_status: check_repo_license
+- id: npasquie_evalexpr
+  repo: npasquie/evalexpr
+  repo_url: https://github.com/npasquie/evalexpr
+  projects:
+  - eval_expr
+  source_kind:
+  - code_reference
+  - behavior_inference_reference
+  usage_policy:
+  - behavior_inference_only
+  - do_not_vendor
+  license_status: check_repo_license
+- id: justin0u0_sastantua
+  repo: justin0u0/sastantua
+  repo_url: https://github.com/justin0u0/sastantua
+  projects:
+  - sastantua
+  source_kind:
+  - code_reference
+  - behavior_inference_reference
+  usage_policy:
+  - behavior_inference_only
+  - do_not_vendor
+  license_status: check_repo_license
+- id: benniebickles_piscine_42
+  repo: BennieBickles/Piscine-42
+  repo_url: https://github.com/BennieBickles/Piscine-42
+  projects:
+  - rush00
+  - rush01
+  usage_policy:
+  - reference_only
+  - behavior_inference_only
+  - do_not_vendor
+  license_status: check_repo_license
+- id: parmenide_piscine_42_subject
+  repo: Parmenide-Heraclides/Piscine-42-subject
+  repo_url: https://github.com/Parmenide-Heraclides/Piscine-42-subject
+  projects:
+  - rush02
+  usage_policy:
+  - reference_only
+  - behavior_inference_only
+  - do_not_vendor
+  license_status: check_repo_license
+- id: dpetrosy_42_piscine
+  repo: dpetrosy/42-Piscine
+  repo_url: https://github.com/dpetrosy/42-Piscine
+  projects:
+  - rush02
+  - bsq
+  usage_policy:
+  - reference_only
+  - behavior_inference_only
+  - do_not_vendor
+  license_status: check_repo_license

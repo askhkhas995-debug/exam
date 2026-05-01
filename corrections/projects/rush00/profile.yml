@@ -1,0 +1,5 @@
+subject_id: rush00
+kind: project
+binary: rush-00
+timeout_seconds: 5
+fixed_tests_file: corrections/projects/rush00/tests.yml

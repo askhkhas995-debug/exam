@@ -145,10 +145,27 @@ def test_project_requirements_commands_are_metadata_driven() -> None:
 
     rush = run_cli("project", "requirements", "rush00")
     assert "Project        : rush00" in rush.stdout
-    assert "Correction status: preflight only" in rush.stdout
+    assert "Correction status: local trainer" in rush.stdout
     assert "rush_project" not in rush.stdout
     assert "Makefile" in rush.stdout
-    assert "Expected binary" not in rush.stdout
+    assert "Expected binary" in rush.stdout
+    assert "rush-00" in rush.stdout
+
+    for rush_id in ["rush01", "rush02"]:
+        req = run_cli("project", "requirements", rush_id)
+        assert f"Project        : {rush_id}" in req.stdout
+        assert "Correction status: preflight only" in req.stdout
+        assert "Submission contract: configured" in req.stdout
+        assert "Local tests    : missing" in req.stdout
+        assert "Project Moulinette is a local trainer, not official 42 Moulinette." in req.stdout
+
+
+    eval_expr = run_cli("project", "requirements", "eval_expr")
+    assert "Project        : eval_expr" in eval_expr.stdout
+    assert "Correction status: local trainer" in eval_expr.stdout
+    assert "Local tests    : configured" in eval_expr.stdout
+    assert "Expected binary" in eval_expr.stdout
+    assert "eval_expr" in eval_expr.stdout
 
     for rush_id in ["rush01", "rush02", "eval_expr"]:
         req = run_cli("project", "requirements", rush_id)
@@ -263,10 +280,22 @@ def test_project_check_incomplete_metadata_and_rush_ok_path() -> None:
     rendu.mkdir(parents=True, exist_ok=True)
     (rendu / "Makefile").write_text("all:\n\t@true\n", encoding="utf-8")
     (rendu / "rush.c").write_text("int main(void) { return 0; }\n", encoding="utf-8")
+    (rendu / "rush-00").write_text("#!/bin/sh\n", encoding="utf-8")
     rush = run_cli("project", "check", "rush00")
     assert "Project        : Rush00" in rush.stdout
     assert "Status         : [OK]" in rush.stdout
-    assert "binary" not in rush.stdout
+    assert "binary         : [OK]" in rush.stdout
+
+    for rush_id, label in [("rush01", "Rush01"), ("rush02", "Rush02")]:
+        result = run_cli("project", "check", rush_id)
+        assert f"Project        : {label}" in result.stdout
+        assert "Status         : [OK]" in result.stdout
+        assert "binary" not in result.stdout
+
+    eval_result = run_cli("project", "check", "eval_expr")
+    assert "Project        : Eval Expr" in eval_result.stdout
+    assert "Status         : [KO]" in eval_result.stdout
+    assert "Expected binary `eval_expr` was not found after build." in eval_result.stdout
 
     for rush_id, label in [("rush01", "Rush01"), ("rush02", "Rush02"), ("eval_expr", "Eval Expr")]:
         result = run_cli("project", "check", rush_id)

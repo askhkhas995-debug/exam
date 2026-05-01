@@ -1,0 +1,22 @@
+subject_id: eval_expr
+fixed_tests:
+  - name: eval_single
+    args: ["42"]
+    stdout: "42\n"
+    exit_code: 0
+  - name: eval_add
+    args: ["1+1"]
+    stdout: "2\n"
+    exit_code: 0
+  - name: eval_precedence
+    args: ["2*3+4"]
+    stdout: "10\n"
+    exit_code: 0
+  - name: eval_paren
+    args: ["2*(3+4)"]
+    stdout: "14\n"
+    exit_code: 0
+  - name: eval_div_mod
+    args: ["10/2+10%3"]
+    stdout: "6\n"
+    exit_code: 0

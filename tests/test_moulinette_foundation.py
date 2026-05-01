@@ -124,6 +124,38 @@ def write_bsq_runner(error_exit_code: int = 1) -> None:
     write_rendu("bsq.py", BSQ_RUNNER.replace("__ERROR_EXIT__", str(error_exit_code)))
 
 
+def write_rush00_runner() -> None:
+    write_rendu("Makefile", "all:\n\tcp rush00.py rush-00\n\tchmod +x rush-00\n")
+    write_rendu(
+        "rush00.py",
+        "#!/usr/bin/env python3\n"
+        "import sys\n"
+        "x=int(sys.argv[1]); y=int(sys.argv[2])\n"
+        "if x<=0 or y<=0: raise SystemExit(1)\n"
+        "for r in range(y):\n"
+        "    if y==1:\n"
+        "        row='o' + ('-'*(x-2) if x>1 else '') + ('o' if x>1 else '')\n"
+        "    elif r==0 or r==y-1:\n"
+        "        row='o' + ('-'*(x-2) if x>1 else '') + ('o' if x>1 else '')\n"
+        "    else:\n"
+        "        row='|' + (' '*(x-2) if x>1 else '') + ('|' if x>1 else '')\n"
+        "    print(row)\n",
+    )
+
+
+def write_eval_expr_runner() -> None:
+    write_rendu("Makefile", "all:\n\tcp eval_expr.py eval_expr\n\tchmod +x eval_expr\n")
+    write_rendu(
+        "eval_expr.py",
+        "#!/usr/bin/env python3\n"
+        "import re,sys\n"
+        "expr=sys.argv[1]\n"
+        "if not re.fullmatch(r'[0-9+\\-*/%() ]+', expr):\n"
+        "    raise SystemExit(1)\n"
+        "print(int(eval(expr, {'__builtins__':None}, {})))\n",
+    )
+
+
 def start_diff() -> None:
     result = run_cli("start", "piscine42", "--subject", "diff")
     assert result.returncode == 0
@@ -224,6 +256,31 @@ def test_bsq_invalid_map_reports_error_when_exit_code_is_wrong() -> None:
     failed = trace["checks"][-1]
     assert failed["status"] == "KO"
     assert "expected exit code 1" in failed["details"]
+
+
+def test_rush00_project_moulinette_runs_fixed_output_tests() -> None:
+    clean_workspace()
+    assert run_cli("start", "piscine42", "--subject", "rush00").returncode == 0
+    write_rush00_runner()
+
+    result = run_cli("moulinette")
+    assert result.returncode == 0
+    trace = latest_trace()
+    assert trace["status"] == "OK"
+    assert any(case["name"] == "rush00_5x3" for case in trace["test_cases"])
+
+
+def test_eval_expr_project_moulinette_runs_expression_tests() -> None:
+    clean_workspace()
+    assert run_cli("start", "piscine42", "--subject", "eval_expr").returncode == 0
+    write_eval_expr_runner()
+
+    result = run_cli("moulinette")
+    assert result.returncode == 0
+    trace = latest_trace()
+    assert trace["status"] == "OK"
+    names = {case["name"] for case in trace["test_cases"]}
+    assert {"eval_single", "eval_add", "eval_precedence", "eval_paren", "eval_div_mod"}.issubset(names)
 
 
 def test_moulinette_summary_is_separate_from_single_exercise_flow() -> None:
