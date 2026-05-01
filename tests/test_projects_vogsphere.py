@@ -150,6 +150,14 @@ def test_project_requirements_commands_are_metadata_driven() -> None:
     assert "Makefile" in rush.stdout
     assert "Expected binary" not in rush.stdout
 
+    for rush_id in ["rush01", "rush02", "eval_expr"]:
+        req = run_cli("project", "requirements", rush_id)
+        assert f"Project        : {rush_id}" in req.stdout
+        assert "Correction status: preflight only" in req.stdout
+        assert "Submission contract: configured" in req.stdout
+        assert "Local tests    : missing" in req.stdout
+        assert "Project Moulinette is a local trainer, not official 42 Moulinette." in req.stdout
+
     for project_id in INCOMPLETE_PROJECTS:
         incomplete = run_cli("project", "requirements", project_id)
         assert f"Project        : {project_id}" in incomplete.stdout
@@ -259,6 +267,12 @@ def test_project_check_incomplete_metadata_and_rush_ok_path() -> None:
     assert "Project        : Rush00" in rush.stdout
     assert "Status         : [OK]" in rush.stdout
     assert "binary" not in rush.stdout
+
+    for rush_id, label in [("rush01", "Rush01"), ("rush02", "Rush02"), ("eval_expr", "Eval Expr")]:
+        result = run_cli("project", "check", rush_id)
+        assert f"Project        : {label}" in result.stdout
+        assert "Status         : [OK]" in result.stdout
+        assert "binary" not in result.stdout
 
 
 def test_project_check_rejects_unsafe_symlink() -> None:
