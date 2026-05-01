@@ -1,5 +1,0 @@
-subject_id: frog_safe_eval_arith
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_safe_eval_arith\n"

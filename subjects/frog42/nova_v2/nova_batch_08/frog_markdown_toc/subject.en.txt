@@ -1,4 +1,0 @@
-# frog_markdown_toc
-
-New exercise (nova_batch_08): implement `frog_markdown_toc.c`.
-The program should print exactly `frog_markdown_toc` followed by a newline.

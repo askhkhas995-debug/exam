@@ -1,4 +1,0 @@
-# frog_patch_preview
-
-New exercise (nova_batch_08): implement `frog_patch_preview.c`.
-The program should print exactly `frog_patch_preview` followed by a newline.

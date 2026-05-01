@@ -1,6 +1,0 @@
-# frog_mini_project_scheduler
-
-Mini-project: scheduler.
-
-Deliver a `Makefile` that builds your project binary.
-Add `.c` files as needed. Build must succeed with `make`.

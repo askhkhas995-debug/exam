@@ -1,5 +1,0 @@
-# p27_maze_path
-
-Find if a path exists from start to end.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

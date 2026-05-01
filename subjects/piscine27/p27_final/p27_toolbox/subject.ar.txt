@@ -1,5 +1,0 @@
-# p27_toolbox
-
-Build a small libft-like toolbox with tests.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

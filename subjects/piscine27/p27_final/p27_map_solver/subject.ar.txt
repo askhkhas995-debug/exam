@@ -1,5 +1,0 @@
-# p27_map_solver
-
-Solve a map problem using parsing, algorithm, and output formatting.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

@@ -1,4 +1,0 @@
-# frog_log_rotate_lite
-
-Write a shell script `frog_log_rotate_lite.sh` that implements the requested behavior for log rotate lite.
-Your script must print exactly the expected output for fixed tests.

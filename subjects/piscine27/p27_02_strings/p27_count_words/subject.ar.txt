@@ -1,5 +1,0 @@
-# p27_count_words
-
-Count words separated by spaces, tabs, and newlines.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

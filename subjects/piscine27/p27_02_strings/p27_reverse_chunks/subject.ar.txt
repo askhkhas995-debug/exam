@@ -1,5 +1,0 @@
-# p27_reverse_chunks
-
-Reverse chunks of size N inside a string.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

@@ -1,6 +1,0 @@
-# frog_mini_project_gradebook
-
-Mini-project: gradebook.
-
-Deliver a `Makefile` that builds your project binary.
-Add `.c` files as needed. Build must succeed with `make`.

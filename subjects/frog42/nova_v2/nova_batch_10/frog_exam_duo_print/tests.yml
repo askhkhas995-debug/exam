@@ -1,5 +1,0 @@
-subject_id: frog_exam_duo_print
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_exam_duo_print\n"

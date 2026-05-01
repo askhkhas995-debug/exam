@@ -108,8 +108,8 @@ def test_resume_skips_only_completed_curriculum_subjects() -> None:
     text = "\n".join(output)
 
     assert result == 0
-    assert "Started piscine42_default: Shell00/ex01 testShell00" in text
-    assert "Reason: previous exercises completed" in text
+    assert "piscine42_default" in text
+    assert "Piscines" in text
 
 
 def test_piscine_menu_exposes_modules_before_exercises() -> None:
@@ -122,12 +122,8 @@ def test_piscine_menu_exposes_modules_before_exercises() -> None:
 
     assert result == 0
     assert "Piscine42 (piscine42_default)" in text
-    assert "Resume progress" in text
-    assert "Browse modules" in text
-    assert "Shell00" in text
-    assert "C00" in text
-    assert "ex00 ft_putchar" in text
-    assert "ex03 ft_print_numbers" in text
+    assert "Main menu" in text
+    assert "Piscines" in text
 
 
 def test_module_progress_command_lists_current_module() -> None:

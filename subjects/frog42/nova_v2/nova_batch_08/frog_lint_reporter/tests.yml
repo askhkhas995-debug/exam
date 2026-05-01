@@ -1,5 +1,0 @@
-subject_id: frog_lint_reporter
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_lint_reporter\n"

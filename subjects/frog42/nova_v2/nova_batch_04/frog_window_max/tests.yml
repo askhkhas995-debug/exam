@@ -1,5 +1,0 @@
-subject_id: frog_window_max
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_window_max\n"

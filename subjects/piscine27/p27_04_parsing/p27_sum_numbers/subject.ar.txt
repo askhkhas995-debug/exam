@@ -1,5 +1,0 @@
-# p27_sum_numbers
-
-Extract and sum all integer numbers inside a string.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

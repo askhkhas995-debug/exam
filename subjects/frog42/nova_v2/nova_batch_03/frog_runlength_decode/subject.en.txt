@@ -1,4 +1,0 @@
-# frog_runlength_decode
-
-New exercise (nova_batch_03): implement `frog_runlength_decode.c`.
-The program should print exactly `frog_runlength_decode` followed by a newline.

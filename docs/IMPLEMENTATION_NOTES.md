@@ -18,7 +18,7 @@ No original archive or handoff directory was modified.
   Moulinette for Piscine, Grademe for Exam, the projects menu with local
   requirements/checks, local educational Vogsphere, and the terminal
   banner/menu.
-- Normal Piscine, Friday exams, and Piscine27 are separate pool families. CLI commands map `pforge start piscine42` and `pforge start piscine27` to curriculum pools, while `pforge exam ...` uses versioned exam pools.
+- Normal Piscine, Friday exams, and Piscine are separate pool families. CLI commands map `pforge start piscine42` and `pforge start piscine42` to curriculum pools, while `pforge exam ...` uses versioned exam pools.
 - Physical `meta.yml` subjects are loaded directly. `INDEX.yml` files are also loaded as virtual metadata so the normal Piscine and legacy exam pools can be listed and selected before every full subject is imported from PDFs or legacy archives.
 - Student-visible workspace files are sanitized. `workspace/subject/meta.yml` omits correction profile paths, and correction files are not copied to `workspace/subject` or `workspace/rendu`.
 - Norminette is wrapped, not reimplemented. Its result is recorded. Compile/test/forbidden failures can still surface explicitly so tracebacks identify the first actionable school-style failure.
@@ -54,7 +54,7 @@ No original archive or handoff directory was modified.
 - Shell evaluator supports exact output, contains checks, private fixture comparisons, executable checks, tar inspection, symlink, hardlink, permissions, timestamp, weird filename, Git commit, and `.gitignore` validators.
 - Memory/sanitizer checks are not implemented yet.
 - Legacy Rank02/Classic/Revanced pools are selectable and metadata-driven through indexes, but only subjects with tests/corrections can be fully graded.
-- Piscine27 has 54 subjects from the handoff, but most tests remain placeholders except the implemented shell validation slice.
+- Piscine has 54 subjects from the handoff, but most tests remain placeholders except the implemented shell validation slice.
 - `pforge moulinette summary` is a best-effort summary layer over current session/progress/trace data. It does not re-run complete modules and does not replace the single-subject evaluator.
 - Full module correction, module auto-advance, and progress mutation from module-level checks are not implemented.
 - `pforge vog` is a first local educational Vogsphere simulation. It snapshots only `workspace/rendu/` into `workspace/vogsphere/repos/<name>/` and stores local metadata/history/submission state in `workspace/vogsphere/state.json`.

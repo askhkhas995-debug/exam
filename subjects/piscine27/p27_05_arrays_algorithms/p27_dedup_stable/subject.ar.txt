@@ -1,5 +1,0 @@
-# p27_dedup_stable
-
-Remove duplicates while preserving order.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

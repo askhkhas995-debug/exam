@@ -4,7 +4,7 @@
 
 1. `subjects/exams/handwritten_v5/`
 2. `subjects/piscine/`
-3. `subjects/piscine27/`
+3. `subjects/piscine/`
 4. الأرشيفات القديمة بعد تحليلها
 
 كل exercise يجب أن يحتوي:

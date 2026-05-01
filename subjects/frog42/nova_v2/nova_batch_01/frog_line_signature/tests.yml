@@ -1,5 +1,0 @@
-subject_id: frog_line_signature
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_line_signature\n"

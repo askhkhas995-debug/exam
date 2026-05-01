@@ -1,4 +1,0 @@
-# frog_range_cli
-
-New exercise (nova_batch_02): implement `frog_range_cli.c`.
-The program should print exactly `frog_range_cli` followed by a newline.

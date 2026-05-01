@@ -1,5 +1,0 @@
-subject_id: frog_template_fill
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_template_fill\n"

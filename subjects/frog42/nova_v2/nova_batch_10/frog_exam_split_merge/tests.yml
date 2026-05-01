@@ -1,5 +1,0 @@
-subject_id: frog_exam_split_merge
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_exam_split_merge\n"

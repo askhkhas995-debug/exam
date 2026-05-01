@@ -1,5 +1,0 @@
-subject_id: frog_grep_lite
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_grep_lite\n"

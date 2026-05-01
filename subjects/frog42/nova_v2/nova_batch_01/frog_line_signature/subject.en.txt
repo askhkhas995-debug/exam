@@ -1,4 +1,0 @@
-# frog_line_signature
-
-New exercise (nova_batch_01): implement `frog_line_signature.c`.
-The program should print exactly `frog_line_signature` followed by a newline.

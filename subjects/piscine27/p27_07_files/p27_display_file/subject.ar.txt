@@ -1,5 +1,0 @@
-# p27_display_file
-
-Print a file to stdout with precise error messages.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

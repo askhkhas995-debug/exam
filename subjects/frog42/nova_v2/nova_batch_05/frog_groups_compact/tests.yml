@@ -1,5 +1,0 @@
-subject_id: frog_groups_compact
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_groups_compact\n"

@@ -1,5 +1,0 @@
-subject_id: frog_dec_to_base
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_dec_to_base\n"

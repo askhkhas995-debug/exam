@@ -1,4 +1,0 @@
-# frog_flag_decoder
-
-New exercise (nova_batch_02): implement `frog_flag_decoder.c`.
-The program should print exactly `frog_flag_decoder` followed by a newline.

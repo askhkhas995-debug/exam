@@ -1,5 +1,0 @@
-# p27_git_time_machine
-
-Print last N commits, branch name, and ignored files.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

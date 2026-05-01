@@ -1,4 +1,0 @@
-# frog_perm_chmod_644
-
-Write a shell script `frog_perm_chmod_644.sh` that implements the requested behavior for perm chmod 644.
-Your script must print exactly the expected output for fixed tests.

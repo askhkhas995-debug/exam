@@ -1,4 +1,0 @@
-# frog_grep_lite
-
-Write a shell script `frog_grep_lite.sh` that implements the requested behavior for grep lite.
-Your script must print exactly the expected output for fixed tests.

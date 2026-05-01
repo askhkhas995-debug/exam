@@ -1,5 +1,0 @@
-# p27_parse_flags
-
-Parse flags like -abc into enabled options.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

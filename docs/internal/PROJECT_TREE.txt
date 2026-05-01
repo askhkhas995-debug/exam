@@ -8,7 +8,7 @@ piscine-forge-rebuilt/
 ├── subjects/
 │   ├── piscine/
 │   ├── exams/
-│   └── piscine27/
+│   └── /
 ├── corrections/
 ├── pools/
 ├── piscine_forge/

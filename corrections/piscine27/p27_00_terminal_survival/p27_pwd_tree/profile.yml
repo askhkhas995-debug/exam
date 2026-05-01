@@ -1,4 +1,0 @@
-subject_id: p27_pwd_tree
-evaluator: shell
-strict_stdout: true
-timeout_seconds: 2

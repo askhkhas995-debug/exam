@@ -1,4 +1,0 @@
-# frog_lint_reporter
-
-New exercise (nova_batch_08): implement `frog_lint_reporter.c`.
-The program should print exactly `frog_lint_reporter` followed by a newline.

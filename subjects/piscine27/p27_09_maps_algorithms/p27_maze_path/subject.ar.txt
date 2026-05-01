@@ -1,5 +1,0 @@
-# p27_maze_path
-
-Find if a path exists from start to end.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

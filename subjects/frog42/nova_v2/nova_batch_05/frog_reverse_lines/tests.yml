@@ -1,5 +1,0 @@
-subject_id: frog_reverse_lines
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_reverse_lines\n"

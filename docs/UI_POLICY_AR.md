@@ -9,7 +9,7 @@ pforge validate
 pforge list subjects
 pforge list pools
 pforge start piscine42
-pforge start piscine27
+pforge start piscine42
 pforge exam handwritten_v5
 pforge grademe
 pforge trace

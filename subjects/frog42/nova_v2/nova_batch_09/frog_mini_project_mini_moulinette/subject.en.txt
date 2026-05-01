@@ -1,6 +1,0 @@
-# frog_mini_project_mini_moulinette
-
-Mini-project: mini moulinette.
-
-Deliver a `Makefile` that builds your project binary.
-Add `.c` files as needed. Build must succeed with `make`.

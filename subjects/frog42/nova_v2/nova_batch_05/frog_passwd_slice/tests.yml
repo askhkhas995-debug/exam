@@ -1,5 +1,0 @@
-subject_id: frog_passwd_slice
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_passwd_slice\n"

@@ -1,6 +1,0 @@
-# frog_mini_project_file_watcher
-
-Mini-project: file watcher.
-
-Deliver a `Makefile` that builds your project binary.
-Add `.c` files as needed. Build must succeed with `make`.

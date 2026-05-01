@@ -1,5 +1,0 @@
-# p27_parse_flags
-
-Parse flags like -abc into enabled options.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

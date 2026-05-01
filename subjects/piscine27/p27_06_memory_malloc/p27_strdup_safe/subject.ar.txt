@@ -1,5 +1,0 @@
-# p27_strdup_safe
-
-Reimplement strdup with malloc and NULL safety.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

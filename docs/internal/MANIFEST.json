@@ -8,7 +8,7 @@
     "Codex prompts",
     "new handwritten_v5 subjects",
     "Piscine42 index",
-    "Piscine27 curriculum",
+    "Piscine curriculum",
     "schema/config files",
     "Python skeleton",
     "legacy archive placeholder"
@@ -16,6 +16,6 @@
   "counts": {
     "files": 437,
     "handwritten_v5_subjects": 17,
-    "piscine27_subjects": 54
+    "_subjects": 54
   }
 }

@@ -1,4 +1,0 @@
-# frog_window_max
-
-New exercise (nova_batch_04): implement `frog_window_max.c`.
-The program should print exactly `frog_window_max` followed by a newline.

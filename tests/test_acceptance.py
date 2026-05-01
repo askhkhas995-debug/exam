@@ -140,9 +140,6 @@ def test_c_program_and_function_and_shell_grademe() -> None:
     write_rendu("print_nth_char.c", PRINT_NTH)
     assert run_cli("grademe", "--subject", "print_nth_char").returncode == 0
 
-    clean_workspace()
-    write_rendu("p27_pwd_tree.sh", "pwd\nfind . -maxdepth 2 | sort\n")
-    assert run_cli("grademe", "--subject", "p27_pwd_tree").returncode == 0
 
 
 def test_failure_modes_and_trace_generation() -> None:

@@ -1,4 +1,0 @@
-# frog_spiral_walk
-
-New exercise (nova_batch_04): implement `frog_spiral_walk.c`.
-The program should print exactly `frog_spiral_walk` followed by a newline.

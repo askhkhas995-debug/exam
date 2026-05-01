@@ -27,7 +27,7 @@ python3 -m venv .venv
 - `pforge list subjects`: passed and listed 298 loaded subjects, including virtual index subjects.
 - `pforge exam handwritten_v5 --seed 42`: deterministic session created with `first_last_char`, `zigzag`, `snake_to_camel`, `print_nth_char`, `rle_decode`.
 - `pforge start piscine42`: session starts at Shell00 subject `z`.
-- `pforge start piscine27`: session starts at `p27_pwd_tree`.
+- `pforge start piscine42`: session starts at `p27_pwd_tree`.
 - C program grading: passed with `first_last_char`.
 - C function grading: passed with `print_nth_char`.
 - Shell grading: passed with `p27_pwd_tree`.

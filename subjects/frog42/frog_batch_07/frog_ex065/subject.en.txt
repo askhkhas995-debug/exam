@@ -1,7 +1,0 @@
-# frog_ex065
-
-Write a program named `frog_ex065.c` that prints exactly:
-`frog_ex065` followed by a newline.
-
-Allowed function: write
-Turn-in file: frog_ex065.c

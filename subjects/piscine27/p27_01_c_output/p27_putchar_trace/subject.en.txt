@@ -1,5 +1,0 @@
-# p27_putchar_trace
-
-Implement ft_putchar and a small trace program that prints one character per line.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

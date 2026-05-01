@@ -1,4 +1,0 @@
-# frog_binary_search_steps
-
-New exercise (nova_batch_07): implement `frog_binary_search_steps.c`.
-The program should print exactly `frog_binary_search_steps` followed by a newline.

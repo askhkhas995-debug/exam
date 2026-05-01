@@ -1,5 +1,0 @@
-subject_id: frog_token_banner
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_token_banner\n"

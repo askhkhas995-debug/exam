@@ -1,5 +1,0 @@
-subject_id: frog_char_histogram
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_char_histogram\n"

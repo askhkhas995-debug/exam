@@ -1,5 +1,0 @@
-subject_id: frog_binary_search_steps
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_binary_search_steps\n"

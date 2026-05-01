@@ -1,4 +1,0 @@
-# frog_argv_weaver
-
-New exercise (nova_batch_02): implement `frog_argv_weaver.c`.
-The program should print exactly `frog_argv_weaver` followed by a newline.

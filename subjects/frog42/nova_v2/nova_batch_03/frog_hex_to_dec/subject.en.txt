@@ -1,4 +1,0 @@
-# frog_hex_to_dec
-
-New exercise (nova_batch_03): implement `frog_hex_to_dec.c`.
-The program should print exactly `frog_hex_to_dec` followed by a newline.

@@ -1,4 +1,0 @@
-# frog_hash_bucket_stats
-
-New exercise (nova_batch_07): implement `frog_hash_bucket_stats.c`.
-The program should print exactly `frog_hash_bucket_stats` followed by a newline.

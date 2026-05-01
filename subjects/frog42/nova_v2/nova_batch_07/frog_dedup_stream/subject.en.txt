@@ -1,4 +1,0 @@
-# frog_dedup_stream
-
-New exercise (nova_batch_07): implement `frog_dedup_stream.c`.
-The program should print exactly `frog_dedup_stream` followed by a newline.

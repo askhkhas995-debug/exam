@@ -1,4 +1,0 @@
-# frog_sort_numeric_safe
-
-Write a shell script `frog_sort_numeric_safe.sh` that implements the requested behavior for sort numeric safe.
-Your script must print exactly the expected output for fixed tests.

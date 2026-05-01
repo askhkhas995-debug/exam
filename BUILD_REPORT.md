@@ -5,7 +5,7 @@
 - Clean project directory: `piscine-forge-rebuilt/`.
 - Metadata-driven loader for physical `meta.yml` subjects and virtual `INDEX.yml` subjects.
 - Pool loader and validator, including missing subject reference detection.
-- CLI commands: `validate`, `list subjects`, `list pools`, `start piscine42`, `start piscine27`, `exam`, `subject current`, `subject set`, `grademe`, `trace`, `status`, `finish`.
+- CLI commands: `validate`, `list subjects`, `list pools`, `start piscine42`, `start `, `exam`, `subject current`, `subject set`, `grademe`, `trace`, `status`, `finish`.
 - Deterministic seeded exam sessions.
 - Workspace/session system under `workspace/subject`, `workspace/rendu`, and `workspace/traces`.
 - C program evaluator with expected files, extra-file rejection, Norminette wrapper, forbidden scanner, compile, timeout, exact stdout comparison, and traces.
@@ -49,7 +49,7 @@
 - Rich generated test adapters from Revanced generator scripts.
 - BSQ map generator and large project correction.
 - Sanitizer/memory checks.
-- More Piscine27 fixed tests and progressive hint enforcement.
+- More Piscine fixed tests and progressive hint enforcement.
 
 ## Known Limitations
 

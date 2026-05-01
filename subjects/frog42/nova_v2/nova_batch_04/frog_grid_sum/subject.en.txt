@@ -1,4 +1,0 @@
-# frog_grid_sum
-
-New exercise (nova_batch_04): implement `frog_grid_sum.c`.
-The program should print exactly `frog_grid_sum` followed by a newline.

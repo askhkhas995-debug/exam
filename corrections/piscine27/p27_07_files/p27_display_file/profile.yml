@@ -1,4 +1,0 @@
-subject_id: p27_display_file
-evaluator: c_program
-strict_stdout: true
-timeout_seconds: 2

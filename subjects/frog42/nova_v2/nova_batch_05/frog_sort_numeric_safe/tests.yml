@@ -1,5 +1,0 @@
-subject_id: frog_sort_numeric_safe
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_sort_numeric_safe\n"
