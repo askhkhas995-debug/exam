@@ -1,1 +1,1 @@
-# TODO: adapters for GradeMe archive logic after Codex extracts it.
+# GradeMe archive adapters are out of scope for the current local preview.

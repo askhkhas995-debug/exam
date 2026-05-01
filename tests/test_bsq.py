@@ -1,6 +1,8 @@
 """Tests for BSQ map generator."""
 from __future__ import annotations
 
+from pathlib import Path
+
 import pytest
 
 from piscine_forge.generators.bsq import (
@@ -111,3 +113,14 @@ class TestInvalidMaps:
         assert len(cases) >= 3
         for case in cases:
             assert case.get("expect_error") is True
+
+    def test_project_profile_requires_stderr_and_failure_for_invalid_maps(self):
+        import yaml
+
+        data = yaml.safe_load((Path(__file__).resolve().parents[1] / "corrections" / "projects" / "bsq" / "tests.yml").read_text(encoding="utf-8"))
+        invalid_cases = [case for case in data["fixed_tests"] if case["name"].startswith("invalid_")]
+        assert invalid_cases
+        for case in invalid_cases:
+            assert case["expect_error"] is True
+            assert case["exit_code"] == 1
+            assert case["expected_stderr"] == "map error\n"

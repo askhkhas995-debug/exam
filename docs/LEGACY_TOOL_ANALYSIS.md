@@ -32,7 +32,7 @@ Reused in PiscineForge:
 Rewritten:
 
 - Bash scripts are replaced by Python evaluators using metadata.
-- Network telemetry, VIP features, cooldowns, and cheat commands are omitted.
+- Remote telemetry, VIP features, cooldowns, and cheat commands are omitted.
 - Traceback is now paired with structured JSON.
 
 ## ExamShell / Classic Pools
@@ -76,7 +76,7 @@ Relevant behavior found:
 
 - Four-level rank02-style exercise pools.
 - README describes random selection, reset-on-fail behavior, `subjects`, `rendu`, `traces`, and `grademe`.
-- Exercise README files provide subject text and reference solutions.
+- Exercise README files provide subject text and examples.
 
 Reused in PiscineForge:
 

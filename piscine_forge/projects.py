@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import fnmatch
+import shutil
 from pathlib import Path
 from typing import Any
 
+from .correction_source import SourceResolution, render_source_lines
 from .ui import RenderContext, format_kv, render_separator, status_marker
 
+import yaml
 
 PROJECT_LABELS = {
     "rush00": "Rush00",
@@ -17,6 +20,16 @@ PROJECT_LABELS = {
     "bsq": "BSQ",
 }
 
+def load_legacy_metadata(repo, project_id: str) -> dict[str, Any]:
+    slug = project_id.replace("-", "_").lower()
+    meta_path = repo.root / "resources" / "legacy_subjects" / "projects" / slug / "subject.meta.yml"
+    if not meta_path.exists():
+        return {}
+    try:
+        with meta_path.open(encoding="utf-8") as f:
+            return yaml.safe_load(f) or {}
+    except (OSError, yaml.YAMLError):
+        return {}
 
 def project_display_name(subject_id: str) -> str:
     return PROJECT_LABELS.get(subject_id, subject_id.replace("_", " ").replace("-", " ").title())
@@ -90,8 +103,48 @@ def contract_is_complete(contract: dict[str, Any]) -> bool:
     return str(contract.get("status", "")).lower() != "incomplete"
 
 
-def project_requirement_state(project: dict[str, Any]) -> str:
-    return "complete" if contract_is_complete(submission_contract(project)) else "metadata incomplete"
+def _project_slug(project_id: str) -> str:
+    return project_id.replace("-", "_").lower()
+
+
+def _legacy_path(repo, raw_path: str | None) -> Path | None:
+    if not raw_path:
+        return None
+    path = Path(raw_path)
+    if path.is_absolute():
+        return None
+    candidate = (repo.root / path).resolve()
+    if not candidate.is_relative_to(repo.root):
+        return None
+    return candidate
+
+
+def _reference_file_status(repo, meta: dict[str, Any], key: str) -> str:
+    raw_path = (meta.get("subject_pdf") or {}).get(key)
+    path = _legacy_path(repo, raw_path)
+    return "available" if path and path.exists() else "missing"
+
+
+def _local_tests_status(project: dict[str, Any], repo) -> str:
+    tests_path = repo.root / "corrections" / "projects" / project["id"] / "tests.yml"
+    if not tests_path.exists():
+        return "missing"
+    try:
+        with tests_path.open(encoding="utf-8") as f:
+            tests = yaml.safe_load(f) or {}
+    except (OSError, yaml.YAMLError):
+        return "missing"
+    fixed_tests = tests.get("fixed_tests") or []
+    return "configured" if fixed_tests else "missing"
+
+
+def _correction_status(project: dict[str, Any], repo) -> str:
+    contract = submission_contract(project)
+    if not contract_is_complete(contract):
+        return "metadata incomplete"
+    if str(contract.get("status", "")).lower() == "local_tests_configured" and _local_tests_status(project, repo) == "configured":
+        return "local trainer"
+    return "preflight only"
 
 
 def render_project_list(repo, *, ctx: RenderContext | None = None) -> str:
@@ -125,23 +178,37 @@ def render_project_detail(project: dict[str, Any], rendu: Path, *, ctx: RenderCo
     return "\n".join(lines)
 
 
-def render_project_requirements(project: dict[str, Any], *, ctx: RenderContext | None = None) -> str:
+def render_project_requirements(project: dict[str, Any], repo, *, ctx: RenderContext | None = None) -> str:
     contract = submission_contract(project)
+    legacy_meta = load_legacy_metadata(repo, project["id"])
+    correction_status = _correction_status(project, repo)
+    local_tests = _local_tests_status(project, repo)
+
     lines = [
         render_separator("Project Requirements", ctx=ctx),
         "",
-        format_kv("Project", project["name"], ctx=ctx),
-        format_kv("Type", "Piscine project", ctx=ctx),
-        format_kv("Correction", "Project Moulinette", ctx=ctx),
-        format_kv("Rendu", "workspace/rendu/", ctx=ctx, role="path"),
-        "",
+        format_kv("Project", _project_slug(str(project["id"])), ctx=ctx),
+        format_kv("Mode", "local trainer", ctx=ctx),
     ]
+
+    lines.append(format_kv("Built-in subject", "available" if project.get("entry") else "missing", ctx=ctx))
+    lines.append(format_kv("Reference PDF", _reference_file_status(repo, legacy_meta, "local_pdf_path"), ctx=ctx))
+    lines.append(format_kv("Reference text", _reference_file_status(repo, legacy_meta, "local_text_path"), ctx=ctx))
+    lines.append(format_kv("Local tests", local_tests, ctx=ctx))
+    lines.append(format_kv("Correction status", correction_status, ctx=ctx))
+    lines.append(format_kv("Submission contract", "configured" if contract_is_complete(contract) else "missing", ctx=ctx))
+    lines.append(format_kv("Official 42 services", "not connected", ctx=ctx))
+    lines.append(format_kv("Remote downloads", "disabled", ctx=ctx))
+    lines.append("")
+
     if not contract_is_complete(contract):
-        lines.append(format_kv("Status", "metadata incomplete", ctx=ctx))
         lines.extend(
             [
+                "This project is listed, but detailed submission requirements are not fully configured yet.",
                 "",
-                "This project exists, but detailed submission requirements are not fully configured yet.",
+                render_separator("Limitations", ctx=ctx),
+                "",
+                "Project Moulinette is a local trainer, not official 42 Moulinette.",
                 "",
                 render_separator("Next", ctx=ctx),
                 "",
@@ -154,7 +221,7 @@ def render_project_requirements(project: dict[str, Any], *, ctx: RenderContext |
     allowed = [str(item) for item in contract.get("allowed_patterns", []) or []]
     forbidden = [str(item) for item in contract.get("forbidden_files", []) or []]
     binary = contract.get("expected_binary")
-    lines.extend([format_kv("Status", "preflight configured", ctx=ctx), ""])
+    lines.extend([render_separator("Limitations", ctx=ctx), "", "Project Moulinette is a local trainer, not official 42 Moulinette.", ""])
     lines.extend([render_separator("Required", ctx=ctx), ""])
     lines.extend([f"  {item}" for item in required] or ["  not configured"])
     if allowed:
@@ -162,7 +229,7 @@ def render_project_requirements(project: dict[str, Any], *, ctx: RenderContext |
         lines.extend(f"  {item}" for item in allowed)
     if binary:
         lines.extend(["", render_separator("Expected binary", ctx=ctx), "", f"  {binary}"])
-    lines.extend(["", render_separator("Moulinette will run", ctx=ctx), "", "  make"])
+    lines.extend(["", render_separator("Local checks", ctx=ctx), "", "  make"])
     if binary:
         lines.append(f"  ./{binary} <maps>")
     lines.extend(["", render_separator("Forbidden", ctx=ctx), ""])
@@ -170,7 +237,125 @@ def render_project_requirements(project: dict[str, Any], *, ctx: RenderContext |
     return "\n".join(lines)
 
 
+def render_project_references(repo, project_id: str | None = None, *, ctx: RenderContext | None = None) -> str:
+    catalog = "resources/legacy_subjects/references.yml"
+    lines = [
+        render_separator("Project References", ctx=ctx),
+        "",
+        format_kv("Catalog", catalog, ctx=ctx, role="path"),
+        format_kv("Purpose", "local reference catalog only", ctx=ctx),
+        format_kv("Remote downloads", "disabled", ctx=ctx),
+        "",
+    ]
+
+    ref_path = repo.root / "resources" / "legacy_subjects" / "references.yml"
+    if not ref_path.exists():
+        return "\n".join(lines) + "No references catalog found."
+
+    try:
+        with ref_path.open(encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+    except (OSError, yaml.YAMLError) as e:
+        return "\n".join(lines) + f"Error loading references: {e}"
+
+    refs = data.get("external_references", [])
+    if project_id:
+        slug = _project_slug(project_id)
+        refs = [r for r in refs if slug in r.get("projects", [])]
+        lines.append(format_kv("Filter", slug, ctx=ctx))
+        lines.append("")
+
+    if not refs:
+        lines.append("No references found.")
+        return "\n".join(lines)
+
+    for ref in refs:
+        projects = ", ".join(str(project) for project in ref.get("projects", []) or [])
+        lines.append(format_kv("Reference ID", ref.get("id", "unknown"), ctx=ctx))
+        lines.append(format_kv("Repository", ref.get("repo", "unknown"), ctx=ctx))
+        lines.append(format_kv("URL", ref.get("repo_url", "unknown"), ctx=ctx))
+        lines.append(format_kv("Projects", projects or "none", ctx=ctx))
+        policies = ref.get("usage_policy", [])
+        lines.append(format_kv("Policy", ", ".join(policies) if policies else "none", ctx=ctx))
+        lines.append("")
+
+    return "\n".join(lines)
+
+
+
+def _copy_local_pdf(pdf_path: Path, copy_to: str) -> tuple[int, str]:
+    requested = Path(copy_to).expanduser()
+    if requested.exists() and requested.is_dir():
+        destination = requested / "subject.pdf"
+    elif requested.suffix.lower() == ".pdf":
+        destination = requested
+    else:
+        requested.mkdir(parents=True, exist_ok=True)
+        destination = requested / "subject.pdf"
+    if destination.exists():
+        return 1, f"destination exists; not overwritten: {destination.as_posix()}"
+    try:
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(pdf_path, destination)
+    except OSError as exc:
+        return 1, f"copy failed: {exc}"
+    return 0, f"copied to {destination.as_posix()}"
+
+
+def render_project_subject_result(
+    repo,
+    project_id: str,
+    copy_to: str | None = None,
+    *,
+    ctx: RenderContext | None = None,
+) -> tuple[int, str]:
+    lines = [render_separator("Project Subject", ctx=ctx), ""]
+    slug = _project_slug(project_id)
+    meta = load_legacy_metadata(repo, project_id)
+
+    if not meta:
+        lines.append(f"No local legacy metadata found for '{project_id}'.")
+        return 1, "\n".join(lines)
+
+    lines.append(format_kv("Project", slug, ctx=ctx))
+    pdf_info = meta.get("subject_pdf", {})
+    pdf_rel_path = str(pdf_info.get("local_pdf_path") or f"resources/legacy_subjects/projects/{slug}/subject.pdf")
+    text_rel_path = str(pdf_info.get("local_text_path") or f"resources/legacy_subjects/projects/{slug}/subject.txt")
+    pdf_path = _legacy_path(repo, pdf_rel_path)
+    text_path = _legacy_path(repo, text_rel_path)
+    pdf_exists = bool(pdf_path and pdf_path.exists())
+    text_exists = bool(text_path and text_path.exists())
+
+    lines.append(format_kv("Reference PDF", "available" if pdf_exists else "missing", ctx=ctx))
+    if pdf_exists:
+        lines.append(format_kv("Local PDF path", pdf_rel_path, ctx=ctx, role="path"))
+    else:
+        lines.append(format_kv("Expected local path", pdf_rel_path, ctx=ctx, role="path"))
+    lines.append(format_kv("Reference text", "available" if text_exists else "missing", ctx=ctx))
+    if text_exists:
+        lines.append(format_kv("Local text path", text_rel_path, ctx=ctx, role="path"))
+    lines.append(format_kv("Remote downloads", "disabled", ctx=ctx))
+
+    exit_code = 0
+    if pdf_exists:
+        if copy_to:
+            copy_code, message = _copy_local_pdf(pdf_path, copy_to)
+            exit_code = copy_code
+            lines.append(format_kv("Copy", message, ctx=ctx))
+    else:
+        if copy_to:
+            exit_code = 1
+            lines.append(format_kv("Copy", "failed; local reference PDF is missing", ctx=ctx))
+        lines.append("Note: add the PDF manually if you want a local reference copy.")
+
+    return exit_code, "\n".join(lines)
+
+
+def render_project_subject(repo, project_id: str, copy_to: str | None = None, *, ctx: RenderContext | None = None) -> str:
+    return render_project_subject_result(repo, project_id, copy_to, ctx=ctx)[1]
+
 def _all_submission_files(rendu: Path) -> tuple[list[Path], str | None]:
+
     if not rendu.exists():
         return [], None
     files: list[Path] = []
@@ -275,11 +460,20 @@ def _check_submission(project: dict[str, Any], rendu: Path) -> dict[str, Any]:
     }
 
 
-def render_project_submission_check(project: dict[str, Any], rendu: Path, *, ctx: RenderContext | None = None) -> str:
+def render_project_submission_check(
+    project: dict[str, Any],
+    rendu: Path,
+    *,
+    source: SourceResolution | None = None,
+    ctx: RenderContext | None = None,
+) -> str:
     result = _check_submission(project, rendu)
     lines = [render_separator("Submission Check", ctx=ctx), ""]
     lines.append(format_kv("Project", project["name"], ctx=ctx))
-    lines.append(format_kv("Rendu", _display_rendu(rendu), ctx=ctx, role="path"))
+    if source and source.is_vogsphere:
+        lines.extend(render_source_lines(source, ctx=ctx))
+    else:
+        lines.append(format_kv("Rendu", _display_rendu(rendu), ctx=ctx, role="path"))
     if result["status"] == "incomplete":
         lines.append(format_kv("Status", "metadata incomplete", ctx=ctx))
         lines.extend(["", "Cannot run strict submission check yet."])

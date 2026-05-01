@@ -11,51 +11,109 @@ The interface is a minimal Terminal UI, not a GUI. It uses aligned text and simp
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -e .
-.venv/bin/pforge doctor
 ```
 
 On systems with an externally managed Python installation, use a virtual environment as shown above.
 
-## Common Commands
+## Quickstart
+
+Run:
 
 ```bash
-pforge validate
-pforge doctor
-pforge version
-pforge
 pforge menu
-pforge list subjects
-pforge list pools
+pforge validate
 pforge start piscine42
-pforge start piscine27
-pforge projects
-pforge project list
-pforge project requirements bsq
-pforge project check bsq
-pforge vog status
-pforge vog init myrepo
-pforge vog commit -m "initial submit" myrepo
-pforge vog push myrepo
-pforge vog submit myrepo
-pforge exam handwritten_v5 --seed 42
-pforge subject current
 pforge current
-pforge module list
-pforge module current
-pforge module progress
-pforge correct
 pforge moulinette
-pforge moulinette summary
-pforge grademe
-pforge trace
-pforge status
-pforge history
-pforge reset session
-pforge finish
 ```
 
 Work only in `workspace/rendu/`. The active subject is copied or rendered into `workspace/subject/`. Corrections are never copied into the workspace.
 See `docs/STUDENT_USAGE.md` for reset safety and the full student workflow.
+
+Exam example:
+
+```bash
+pforge exam handwritten_v5 --subject first_last_char
+pforge grademe
+pforge exam status
+```
+
+Projects example:
+
+```bash
+pforge projects
+pforge project requirements bsq
+pforge project check bsq
+```
+
+Vogsphere example:
+
+```bash
+pforge vog init demo
+pforge vog status demo
+pforge vog commit -m "initial" demo
+pforge vog push demo
+pforge vog submit demo
+```
+
+## Command Map
+
+Core:
+
+```bash
+pforge menu
+pforge validate
+pforge doctor
+pforge current
+pforge status
+pforge trace
+pforge history
+```
+
+Piscine:
+
+```bash
+pforge start piscine42
+pforge start piscine27
+pforge moulinette
+pforge moulinette --source vog
+pforge correct
+pforge module list
+pforge module current
+pforge module progress
+```
+
+Exam:
+
+```bash
+pforge exam <pool>
+pforge exam status
+pforge exam rules
+pforge grademe
+```
+
+Projects:
+
+```bash
+pforge projects
+pforge project list
+pforge project current
+pforge project requirements <project>
+pforge project check <project>
+pforge project check <project> --source vog
+```
+
+Vogsphere:
+
+```bash
+pforge vog init [name]
+pforge vog status [name]
+pforge vog commit -m "message" [name]
+pforge vog log [name]
+pforge vog push [name]
+pforge vog submit [name]
+pforge vog history [name]
+```
 
 ## Correction Modes
 
@@ -113,10 +171,10 @@ pforge project requirements bsq
 pforge project check bsq
 ```
 
-BSQ and Rush projects have preflight submission contracts for the current local
-simulator. Sastantua, Match-N-Match, and Eval Expr are still reported honestly
-as metadata-incomplete until detailed submission contracts are added.
+Rush and Eval Expr projects have local preflight submission contracts.
+BSQ has local functional tests. Project Moulinette tests are local, reverse-engineered, reproducible trainer tests. They are not official 42 tests. See `docs/PROJECT_TESTING_POLICY.md` for details. Sastantua and Match-N-Match are still reported honestly as metadata-incomplete until detailed submission contracts are added.
 
+For legacy subjects like BSQ, Rush, and Sastantua, PiscineForge uses local project data. Local reference PDFs and metadata live in `resources/legacy_subjects/`. External repositories and links are catalog entries only. Remote downloads are disabled.
 `pforge vog` is a local educational Vogsphere simulation. It snapshots only
 `workspace/rendu/` into `workspace/vogsphere/repos/<name>/` and stores local
 metadata in `workspace/vogsphere/state.json`.
@@ -131,10 +189,24 @@ pforge vog submit myrepo
 pforge vog history myrepo
 ```
 
-This layer is not required by Moulinette or Grademe yet. It does not use
-network access, SSH, Kerberos, real 42 servers, or `~/.ssh`.
-Project checks still inspect `workspace/rendu/`; they do not read from
-Vogsphere snapshots yet.
+This layer is local educational storage only. External services are not used;
+SSH, Kerberos, real 42 servers, and `~/.ssh` are out of scope.
+Default correction and project checks still inspect `workspace/rendu/`.
+Moulinette and project checks can opt into the latest submitted local
+Vogsphere snapshot with `--source vog`. Grademe continues to use
+`workspace/rendu/`; Exam does not use Vogsphere.
+
+## Explicit Limitations and Boundaries
+
+- **Project Moulinette is local-only.** It is not the official 42 Moulinette.
+- It does not connect to real 42 services.
+- Real Vogsphere, SSH, Kerberos, and official 42 service integration are out of scope.
+- Remote downloads are disabled.
+- Legacy repositories were used only during one-time preparation.
+- PDFs under `resources/legacy_subjects/projects/<project>/` are local reference copies only.
+- Existing built-in Piscine and exam subjects remain authoritative and are not touched.
+- No solutions are imported, copied, displayed, or used.
+- Project support status varies by project.
 
 Themes are selected with `PFORGE_THEME=official`, `tokyo-night`, `gruvbox`, or `plain`; `graphbox` maps to `gruvbox`. Use `NO_COLOR=1` or `PFORGE_THEME=plain` to disable colors.
 
@@ -151,7 +223,27 @@ private fixtures.
 
 The Vogsphere layer is local educational simulation only. PiscineForge does not
 use Kerberos, does not upload anywhere, does not modify SSH configuration, does
-not contact real 42 infrastructure, and does not provide a GUI.
+not connect to official 42 services, and does not provide a GUI.
+
+Default correction reads `workspace/rendu/`. Submitted Vogsphere snapshots are
+optional local sources only when `--source vog` is passed to Moulinette or
+project checks. Vogsphere does not affect Grademe or Exam. Any future local
+Exam Submit workflow must be separate from Vogsphere. Some virtual project
+metadata may remain incomplete.
+
+## Release Smoke Checklist
+
+```bash
+python3 -m compileall -q piscine_forge
+python3 -m pytest -q
+python3 -m piscine_forge.cli validate
+python3 -m piscine_forge.cli menu
+python3 -m piscine_forge.cli projects
+python3 -m piscine_forge.cli vog status
+python3 -m piscine_forge.cli exam handwritten_v5 --seed 42
+python3 -m piscine_forge.cli exam status
+python3 -m piscine_forge.cli grademe
+```
 
 ## Implemented Evaluator Slices
 
@@ -161,4 +253,3 @@ not contact real 42 infrastructure, and does not provide a GUI.
 - `project`: Makefile presence and `make` execution, Norminette/forbidden hooks.
 
 See `BUILD_REPORT.md`, `TEST_REPORT.md`, and `docs/IMPLEMENTATION_NOTES.md` for details and limitations.
-# exam

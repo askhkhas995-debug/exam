@@ -77,7 +77,7 @@ def evaluate(repo: Repository, session: Session, subject: dict) -> dict:
 
             # If the test specifies a map_file, write it to a temp dir and pass it
             with BuildDir() as build:
-                if test.get("map_content"):
+                if "map_content" in test:
                     map_file = build / "map.txt"
                     map_file.write_text(str(test["map_content"]), encoding="utf-8")
                     args = [str(map_file) if a == "MAP_FILE" else a for a in args]
@@ -91,12 +91,17 @@ def evaluate(repo: Repository, session: Session, subject: dict) -> dict:
                 actual_stdout = proc.stdout if proc else ""
                 actual_stderr = proc.stderr if proc else ""
                 expected_stdout = test.get("stdout")
+                expected_stderr = test.get("expected_stderr")
+                expected_exit_code = test.get("exit_code")
+                expect_error = bool(test.get("expect_error"))
                 case = {
                     "name": test.get("name", f"project_test_{index}"),
                     "command": " ".join([f"./{binary_name}", *args]),
                     "expected_stdout": expected_stdout,
+                    "expected_stderr": expected_stderr,
+                    "expected_exit_code": expected_exit_code,
                     "actual_stdout": actual_stdout,
-                    "stderr": actual_stderr,
+                    "actual_stderr": actual_stderr,
                     "returncode": proc.returncode if proc else None,
                     "timeout": timed_out,
                 }
@@ -104,24 +109,46 @@ def evaluate(repo: Repository, session: Session, subject: dict) -> dict:
                     trace["test_cases"].append(case)
                     add_check(trace, f"test_{index}", "KO", "timeout")
                     return fail(trace, "timeout")
-                if test.get("expect_error") and proc and proc.returncode == 0:
+                if proc is None:
                     trace["test_cases"].append(case)
-                    add_check(trace, f"test_{index}", "KO", "expected error but got success")
+                    add_check(trace, f"test_{index}", "KO", "process did not start")
                     return fail(trace, "project_validator_failure")
-                if not test.get("expect_error") and proc and proc.returncode != int(test.get("exit_code", 0)):
+                if expected_exit_code is not None and proc.returncode != int(expected_exit_code):
+                    trace["test_cases"].append(case)
+                    add_check(
+                        trace,
+                        f"test_{index}",
+                        "KO",
+                        f"expected exit code {int(expected_exit_code)}, got {proc.returncode}",
+                    )
+                    return fail(trace, "project_validator_failure")
+                if expected_exit_code is None and expect_error and proc.returncode == 0:
+                    trace["test_cases"].append(case)
+                    add_check(trace, f"test_{index}", "KO", "expected failure but got exit code 0")
+                    return fail(trace, "project_validator_failure")
+                if expected_exit_code is None and not expect_error and proc.returncode != 0:
                     trace["test_cases"].append(case)
                     add_check(trace, f"test_{index}", "KO", f"exit code {proc.returncode}")
                     return fail_runtime(trace, proc.returncode)
+                failures: list[str] = []
                 if expected_stdout is not None:
                     comparison = exact(str(expected_stdout), actual_stdout)
-                    case["diff"] = comparison.diff
-                    trace["test_cases"].append(case)
-                    add_check(trace, f"test_{index}", "OK" if comparison.ok else "KO", comparison.diff or None)
+                    case["stdout_diff"] = comparison.diff
                     if not comparison.ok:
+                        failures.append("stdout")
+                        trace["test_cases"].append(case)
+                        add_check(trace, f"test_{index}", "KO", comparison.diff or "stdout mismatch")
                         return fail(trace, "wrong_stdout")
-                else:
-                    trace["test_cases"].append(case)
-                    add_check(trace, f"test_{index}", "OK")
+                if expected_stderr is not None:
+                    comparison = exact(str(expected_stderr), actual_stderr)
+                    case["stderr_diff"] = comparison.diff
+                    if not comparison.ok:
+                        failures.append("stderr")
+                        trace["test_cases"].append(case)
+                        add_check(trace, f"test_{index}", "KO", comparison.diff or "stderr mismatch")
+                        return fail(trace, "wrong_stderr")
+                trace["test_cases"].append(case)
+                add_check(trace, f"test_{index}", "OK" if not failures else "KO")
 
     if norm_failed:
         return fail(trace, "norm_error")

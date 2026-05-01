@@ -725,7 +725,7 @@ def show_project_detail(repo: Repository, session: Session, project: dict, input
             continue
         if choice == "2":
             _emit(output, "")
-            _emit(output, render_project_requirements(project, ctx=ctx))
+            _emit(output, render_project_requirements(project, repo, ctx=ctx))
             _pause(input_func)
             continue
         if choice == "3":
@@ -755,7 +755,7 @@ def show_vogsphere(repo: Repository, session: Session, input_func=input, output=
         _emit(output, render_separator("Vogsphere", ctx=ctx))
         _emit(output, "")
         _emit(output, "Local educational simulation.")
-        _emit(output, "No network, SSH, Kerberos, or real 42 server is used.")
+        _emit(output, "External services, SSH, Kerberos, and real 42 servers are not used.")
         _emit(output, "")
         _emit(output, f"Repository    : {default}")
         _emit(output, f"Workspace     : {session.rendu_dir.relative_to(repo.root)}")

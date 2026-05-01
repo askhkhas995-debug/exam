@@ -1,0 +1,24 @@
+display_name: "Rush 02"
+slug: "rush02"
+kind: "piscine_project"
+legacy: true
+preferred_language: "en"
+
+subject_pdf:
+  local_pdf_path: "resources/legacy_subjects/projects/rush02/subject.pdf"
+  local_text_path: "resources/legacy_subjects/projects/rush02/subject.txt"
+  status: "missing"
+
+external_references:
+  - "itsanuness_42piscine"
+
+usage_policy:
+  reference_only: true
+  local_only_after_preparation: true
+  no_runtime_downloads: true
+  no_solution_import: true
+
+notes:
+  - "This PDF is a local reference copy for reading the original subject."
+  - "Existing built-in subject files remain authoritative for the local trainer."
+  - "Normal Project Moulinette commands use local project data."

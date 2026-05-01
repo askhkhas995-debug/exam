@@ -16,7 +16,6 @@ From the project root:
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -e .
-.venv/bin/pforge doctor
 ```
 
 If you do not install it yet, run the same commands with:
@@ -25,37 +24,104 @@ If you do not install it yet, run the same commands with:
 python3 -m piscine_forge.cli --help
 ```
 
-## Start
+## Quickstart
 
-Open the interactive launcher:
+Run:
 
 ```bash
-pforge
-pforge doctor
-pforge version
 pforge menu
-pforge projects
-pforge project list
-pforge project requirements bsq
-pforge project check bsq
-pforge vog status
+pforge validate
+pforge start piscine42
+pforge current
+pforge moulinette
 ```
 
-Start a Piscine path:
+Exam example:
+
+```bash
+pforge exam handwritten_v5 --subject first_last_char
+pforge grademe
+pforge exam status
+```
+
+Projects example:
+
+```bash
+pforge projects
+pforge project requirements bsq
+pforge project check bsq
+```
+
+Vogsphere example:
+
+```bash
+pforge vog init demo
+pforge vog status demo
+pforge vog commit -m "initial" demo
+pforge vog push demo
+pforge vog submit demo
+```
+
+Use `--seed` with exam pools when you want the same selected exercises again.
+
+## Command Map
+
+Core:
+
+```bash
+pforge menu
+pforge validate
+pforge doctor
+pforge current
+pforge status
+pforge trace
+pforge history
+```
+
+Piscine:
 
 ```bash
 pforge start piscine42
 pforge start piscine27
+pforge moulinette
+pforge moulinette --source vog
+pforge correct
+pforge module list
+pforge module current
+pforge module progress
 ```
 
-Start an exam:
+Exam:
 
 ```bash
-pforge exam handwritten_v5 --seed 42
+pforge exam <pool>
+pforge exam status
+pforge exam rules
+pforge grademe
 ```
 
-If you omit `--seed`, the exam selection is not fixed. Use a seed when you want
-the same selected exercises again.
+Projects:
+
+```bash
+pforge projects
+pforge project list
+pforge project current
+pforge project requirements <project>
+pforge project check <project>
+pforge project check <project> --source vog
+```
+
+Vogsphere:
+
+```bash
+pforge vog init [name]
+pforge vog status [name]
+pforge vog commit -m "message" [name]
+pforge vog log [name]
+pforge vog push [name]
+pforge vog submit [name]
+pforge vog history [name]
+```
 
 ## Work on an Exercise
 
@@ -109,7 +175,9 @@ such as `z` is shown as `Shell00 / ex00 / z`. Use `pforge module list` and
 `pforge module progress` to inspect the active module without running
 correction.
 
-`pforge moulinette` corrects the current subject. `pforge moulinette summary`
+`pforge moulinette` corrects the current subject from `workspace/rendu/` by
+default. `pforge moulinette --source vog` corrects the latest local submitted
+Vogsphere snapshot without mutating `workspace/rendu/`. `pforge moulinette summary`
 prints an optional Moulinette-style summary for the current module using the
 current session, progress, and trace data. The summary command does not re-run
 the whole module and does not replace the single-subject evaluator.
@@ -151,6 +219,7 @@ List the project entries that are actually scaffolded in this repository:
 ```bash
 pforge projects
 pforge project list
+pforge project current
 ```
 
 The current project menu is limited to the Piscine project module entries:
@@ -161,13 +230,33 @@ Inspect requirements and preflight-check your current `workspace/rendu/`:
 ```bash
 pforge project requirements bsq
 pforge project check bsq
+pforge project check bsq --source vog
+pforge project references bsq
+pforge project subject bsq
 ```
 
-BSQ and Rush projects have local preflight submission contracts. Some project
+BSQ and Rush projects have local submission contracts. Project Moulinette tests
+are local, reverse-engineered, reproducible trainer tests. They are not official
+42 tests. See `docs/PROJECT_TESTING_POLICY.md` for details. Some project
 entries are still metadata-incomplete; PiscineForge reports that directly
 instead of inventing requirements. A project check is not full Moulinette: it
 checks required files, forbidden files, Makefile presence, configured expected
 binaries, unsafe symlinks, and the current contents of `workspace/rendu/`.
+
+For legacy subjects like BSQ, Rush, and Sastantua, PiscineForge uses local project data. Local reference PDFs and metadata live in `resources/legacy_subjects/`. External repositories and links are catalog entries only. Remote downloads are disabled.
+
+### Explicit Limitations and Boundaries
+
+- **Project Moulinette is local-only.** It is not the official 42 Moulinette.
+- It does not connect to real 42 services.
+- Real Vogsphere, SSH, Kerberos, and official 42 service integration are out of scope.
+- Remote downloads are disabled.
+- Legacy repositories were used only during one-time preparation.
+- PDFs under `resources/legacy_subjects/projects/<project>/` are local reference copies only.
+- Existing built-in Piscine and exam subjects remain authoritative and are not touched.
+- No solutions are imported, copied, displayed, or used.
+- Project support status varies by project.
+
 
 PiscineForge also includes a local educational Vogsphere simulation:
 
@@ -183,10 +272,12 @@ pforge vog history myrepo
 
 This is not real Vogsphere. It snapshots only `workspace/rendu/` into
 `workspace/vogsphere/repos/<name>/` and writes local state to
-`workspace/vogsphere/state.json`. It is not required for Moulinette or Grademe.
-It does not use network access, SSH, Kerberos, real 42 servers, or `~/.ssh`.
-Project checks also do not read from Vogsphere snapshots yet; they inspect the
-working tree in `workspace/rendu/`.
+`workspace/vogsphere/state.json`. External services are not used; SSH,
+Kerberos, real 42 servers, and `~/.ssh` are out of scope.
+Project checks and Moulinette inspect `workspace/rendu/` by default. They can
+use the latest submitted local Vogsphere snapshot only when `--source vog` is
+passed. Grademe continues to use `workspace/rendu/`; Exam does not use
+Vogsphere.
 
 ## Check Progress
 
@@ -285,5 +376,24 @@ later, private fixtures should be handled with a different distribution
 strategy.
 
 The Vogsphere/Git layer is local educational simulation only. PiscineForge does
-not contact real 42 servers, does not use Kerberos, does not upload anywhere,
+not connect to official 42 services, does not use Kerberos, does not upload anywhere,
 does not read or modify your SSH configuration, and does not provide a GUI.
+Default correction reads `workspace/rendu/`. Submitted Vogsphere snapshots are
+optional local sources only when `--source vog` is passed to Moulinette or
+project checks. Vogsphere does not affect Grademe or Exam. Any future local
+Exam Submit workflow must be separate from Vogsphere. Some virtual project
+metadata may remain incomplete.
+
+## Release Smoke Checklist
+
+```bash
+python3 -m compileall -q piscine_forge
+python3 -m pytest -q
+python3 -m piscine_forge.cli validate
+python3 -m piscine_forge.cli menu
+python3 -m piscine_forge.cli projects
+python3 -m piscine_forge.cli vog status
+python3 -m piscine_forge.cli exam handwritten_v5 --seed 42
+python3 -m piscine_forge.cli exam status
+python3 -m piscine_forge.cli grademe
+```

@@ -1,0 +1,24 @@
+display_name: "Match-N-Match"
+slug: "match_n_match"
+kind: "piscine_project"
+legacy: true
+preferred_language: "fr"
+
+subject_pdf:
+  local_pdf_path: "resources/legacy_subjects/projects/match_n_match/subject.pdf"
+  local_text_path: "resources/legacy_subjects/projects/match_n_match/subject.txt"
+  status: "missing"
+
+external_references:
+  - "sebastiencs_piscine_42"
+
+usage_policy:
+  reference_only: true
+  local_only_after_preparation: true
+  no_runtime_downloads: true
+  no_solution_import: true
+
+notes:
+  - "This PDF is a local reference copy for reading the original subject."
+  - "Existing built-in subject files remain authoritative for the local trainer."
+  - "Normal Project Moulinette commands use local project data."

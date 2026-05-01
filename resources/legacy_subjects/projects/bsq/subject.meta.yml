@@ -1,0 +1,28 @@
+display_name: "BSQ"
+slug: "bsq"
+kind: "piscine_project"
+legacy: true
+preferred_language: "en"
+
+subject_pdf:
+  local_pdf_path: "resources/legacy_subjects/projects/bsq/subject.pdf"
+  local_text_path: "resources/legacy_subjects/projects/bsq/subject.txt"
+  status: "missing"
+
+external_references:
+  - "hexanyn_bsq"
+  - "itsanuness_42piscine"
+  - "sebastiencs_piscine_42"
+  - "jraleman_42_piscine_c"
+  - "e_b3rry_bsq_unit_test"
+
+usage_policy:
+  reference_only: true
+  local_only_after_preparation: true
+  no_runtime_downloads: true
+  no_solution_import: true
+
+notes:
+  - "This PDF is a local reference copy for reading the original subject."
+  - "Existing built-in subject files remain authoritative for the local trainer."
+  - "Normal Project Moulinette commands use local project data."

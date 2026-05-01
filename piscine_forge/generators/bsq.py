@@ -169,6 +169,8 @@ def generate_invalid_maps() -> list[dict]:
         "map_content": "...\n...\n",
         "args": ["MAP_FILE"],
         "expect_error": True,
+        "exit_code": 1,
+        "expected_stderr": "map error\n",
     })
 
     # Wrong row count
@@ -177,6 +179,8 @@ def generate_invalid_maps() -> list[dict]:
         "map_content": "5.ox\n...\n...\n",
         "args": ["MAP_FILE"],
         "expect_error": True,
+        "exit_code": 1,
+        "expected_stderr": "map error\n",
     })
 
     # Inconsistent line lengths
@@ -185,6 +189,8 @@ def generate_invalid_maps() -> list[dict]:
         "map_content": "3.ox\n...\n....\n...\n",
         "args": ["MAP_FILE"],
         "expect_error": True,
+        "exit_code": 1,
+        "expected_stderr": "map error\n",
     })
 
     # Empty file
@@ -193,6 +199,8 @@ def generate_invalid_maps() -> list[dict]:
         "map_content": "",
         "args": ["MAP_FILE"],
         "expect_error": True,
+        "exit_code": 1,
+        "expected_stderr": "map error\n",
     })
 
     # Invalid characters
@@ -201,6 +209,8 @@ def generate_invalid_maps() -> list[dict]:
         "map_content": "3.ox\n...\n.X.\n...\n",
         "args": ["MAP_FILE"],
         "expect_error": True,
+        "exit_code": 1,
+        "expected_stderr": "map error\n",
     })
 
     return tests

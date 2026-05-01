@@ -12,6 +12,7 @@ subjects:
 submission_contracts:
   rush00:
     type: rush_project
+    status: preflight_configured
     required_files: [Makefile]
     allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
     forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
@@ -20,6 +21,7 @@ submission_contracts:
     allow_extra_files: true
   rush01:
     type: rush_project
+    status: preflight_configured
     required_files: [Makefile]
     allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
     forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
@@ -28,6 +30,7 @@ submission_contracts:
     allow_extra_files: true
   rush02:
     type: rush_project
+    status: preflight_configured
     required_files: [Makefile]
     allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
     forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
@@ -42,12 +45,23 @@ submission_contracts:
     status: incomplete
   eval_expr:
     type: generic_project
-    status: incomplete
+    status: preflight_configured
+    required_files: [Makefile]
+    allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
+    forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
+    makefile_required: true
+    expected_binary: null
+    allow_extra_files: true
   bsq:
     type: bsq_project
+    status: local_tests_configured
     required_files: [Makefile]
     allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
     forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
     makefile_required: true
     expected_binary: bsq
     allow_extra_files: true
+
+corrections:
+  bsq:
+    profile: corrections/projects/bsq/profile.yml

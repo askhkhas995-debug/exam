@@ -1,1 +1,1 @@
-# TODO: adapters for ExamPoolRevanced archive logic after Codex extracts it.
+# ExamPoolRevanced archive adapters are out of scope for the current local preview.

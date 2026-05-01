@@ -5,6 +5,14 @@ from pathlib import Path
 import sys
 
 from . import __version__
+from .correction_source import (
+    SourceError,
+    materialized_source,
+    render_source_error,
+    render_source_lines,
+    resolve_source,
+    trace_source,
+)
 from .correction_ux import correction_label, is_curriculum, is_exam, render_correction_result
 from .curriculum import current_curriculum_context, exam_context
 from .doctor import render_doctor
@@ -29,6 +37,8 @@ from .projects import (
     render_project_list,
     render_project_requirements,
     render_project_submission_check,
+    render_project_references,
+    render_project_subject_result,
 )
 from .reset import ResetCancelled, reset_all, reset_progress, reset_session, reset_traces
 from .session import Session
@@ -53,17 +63,23 @@ START_ALIASES = {
 }
 
 
-def _add_correction_parser(sub, name: str, help_text: str) -> None:
+def _add_correction_parser(sub, name: str, help_text: str, *, add_source: bool = False) -> None:
     correction_p = sub.add_parser(name, help=help_text)
     correction_p.add_argument("subject_arg", nargs="?")
     correction_p.add_argument("--subject", default=None)
+    if add_source:
+        correction_p.add_argument("--source", choices=["rendu", "vog"], default="rendu", help="correction source")
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="pforge",
         description="PiscineForge: terminal-first 42 Piscine and exam practice.",
-        epilog="Run `pforge menu` for the interactive launcher. Student files go in workspace/rendu/.",
+        epilog=(
+            "Run `pforge menu` for the interactive launcher. Student files go in "
+            "workspace/rendu/. Piscine uses Moulinette; Exam uses Grademe; "
+            "Vogsphere is local educational storage only."
+        ),
     )
     parser.add_argument("--version", action="version", version=f"PiscineForge {__version__}")
     sub = parser.add_subparsers(dest="cmd", metavar="command")
@@ -80,10 +96,18 @@ def build_parser() -> argparse.ArgumentParser:
     start_p.add_argument("--seed", type=int, default=None)
     start_p.add_argument("--subject", default=None)
 
-    exam_p = sub.add_parser("exam", help="start an exam pool or show exam status/rules")
-    exam_p.add_argument("pool", nargs="?")
-    exam_p.add_argument("--seed", type=int, default=None)
-    exam_p.add_argument("--subject", default=None)
+    exam_p = sub.add_parser(
+        "exam",
+        help="start an exam pool or show exam status/rules",
+        description=(
+            "Start an exam pool, or use `pforge exam status`, "
+            "`pforge exam rules`, or `pforge exam current` for the active exam."
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    exam_p.add_argument("pool", nargs="?", metavar="{status,rules,current,POOL}")
+    exam_p.add_argument("--seed", type=int, default=None, help="select deterministic exam subjects")
+    exam_p.add_argument("--subject", default=None, help="start the exam on a specific subject when available")
 
     subject_p = sub.add_parser("subject", help="read or change the current subject")
     subject_sub = subject_p.add_subparsers(dest="subject_cmd")
@@ -91,12 +115,14 @@ def build_parser() -> argparse.ArgumentParser:
     set_p = subject_sub.add_parser("set")
     set_p.add_argument("subject_id")
 
-    _add_correction_parser(sub, "correct", "run the active session correction")
+    _add_correction_parser(sub, "correct", "run the active session correction", add_source=True)
     moulinette_p = sub.add_parser(
         "moulinette",
         help="run Piscine-style Moulinette correction or show a module summary",
         description=(
             "Run Piscine-style correction for the active/current subject.\n"
+            "Default source is workspace/rendu/. Use `--source vog` to correct "
+            "the latest local submitted Vogsphere snapshot.\n"
             "Use `pforge moulinette summary` to show an optional module summary "
             "from current progress and traces; it does not re-run the whole module."
         ),
@@ -110,6 +136,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     moulinette_p.add_argument("--subject", default=None)
     moulinette_p.add_argument("--write-trace", action="store_true", help="write a module summary trace for `pforge moulinette summary`")
+    moulinette_p.add_argument("--source", choices=["rendu", "vog"], default="rendu", help="correction source")
     _add_correction_parser(sub, "grademe", "grade the current or specified subject")
 
     module_p = sub.add_parser("module", help="show current Piscine module structure and progress")
@@ -126,23 +153,52 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser("projects", help="list existing Piscine projects")
     sub.add_parser("current", help="show the active subject summary")
 
-    project_p = sub.add_parser("project", help="inspect existing Piscine project requirements and submissions")
+    project_p = sub.add_parser(
+        "project",
+        help="inspect existing Piscine project requirements and submissions",
+        description=(
+            "Inspect local project metadata and preflight-check workspace/rendu/ "
+            "or `--source vog`. Some virtual projects may report metadata incomplete."
+        ),
+    )
     project_sub = project_p.add_subparsers(dest="project_cmd")
     project_sub.add_parser("list", help="list existing Piscine projects")
     project_sub.add_parser("current", help="show the active project")
     requirements_p = project_sub.add_parser("requirements", help="show project submission requirements")
-    requirements_p.add_argument("project", nargs="?")
+    requirements_p.add_argument("project", nargs="?", metavar="project")
     check_p = project_sub.add_parser("check", help="preflight-check project files in workspace/rendu")
-    check_p.add_argument("project", nargs="?")
+    check_p.add_argument("project", nargs="?", metavar="project")
+    check_p.add_argument("--source", choices=["rendu", "vog"], default="rendu", help="submission source")
+    references_p = project_sub.add_parser("references", help="show legacy reference repository catalog")
+    references_p.add_argument("project", nargs="?", metavar="project", help="filter by specific project")
+    subject_p = project_sub.add_parser("subject", help="show or copy local legacy subject pdf/text")
+    subject_p.add_argument("project", nargs="?", metavar="project")
+    subject_p.add_argument("--copy-to", metavar="path", help="copy the local subject to this path")
 
-    vog_p = sub.add_parser("vog", help="local educational Vogsphere simulation")
+    vog_p = sub.add_parser(
+        "vog",
+        help="local educational Vogsphere simulation",
+        description=(
+            "Manage local educational Vogsphere snapshots. External services, "
+            "SSH, Kerberos, and real 42/Vogsphere services are not used. Submitted "
+            "snapshots are optional sources only when a command uses `--source vog`."
+        ),
+    )
     vog_sub = vog_p.add_subparsers(dest="vog_cmd")
-    for name in ["init", "status", "log", "push", "submit", "history"]:
-        child = vog_sub.add_parser(name)
-        child.add_argument("name", nargs="?")
-    commit_p = vog_sub.add_parser("commit")
-    commit_p.add_argument("name", nargs="?")
-    commit_p.add_argument("-m", "--message", required=True)
+    vog_help = {
+        "init": "initialize a local educational Vogsphere repo",
+        "status": "show local Vogsphere repo status",
+        "log": "show local Vogsphere commits",
+        "push": "mark the latest commit as pushed locally",
+        "submit": "mark the latest pushed commit as submitted locally",
+        "history": "show local Vogsphere action history",
+    }
+    for name, help_text in vog_help.items():
+        child = vog_sub.add_parser(name, help=help_text)
+        child.add_argument("name", nargs="?", metavar="name")
+    commit_p = vog_sub.add_parser("commit", help="snapshot workspace/rendu into local Vogsphere")
+    commit_p.add_argument("name", nargs="?", metavar="name")
+    commit_p.add_argument("-m", "--message", required=True, help="commit message")
 
     reset_p = sub.add_parser("reset", help="safely clear generated workspace state")
     reset_sub = reset_p.add_subparsers(dest="reset_cmd")
@@ -244,6 +300,9 @@ def _no_active_correction_message() -> str:
 def _run_correction_command(repo: Repository, session: Session, args) -> int:
     target = getattr(args, "target", None)
     if args.cmd == "moulinette" and target == "summary" and not args.subject:
+        if getattr(args, "source", "rendu") != "rendu":
+            print("Moulinette summary does not use a correction source.")
+            return 1
         return _run_moulinette_summary_command(repo, session, write_summary_trace=bool(getattr(args, "write_trace", False)))
 
     subject = args.subject or target or getattr(args, "subject_arg", None)
@@ -254,6 +313,10 @@ def _run_correction_command(repo: Repository, session: Session, args) -> int:
         return 1
     if args.cmd == "moulinette" and is_exam(state):
         print("Exam sessions use Grademe. Run `pforge grademe` or `pforge correct`.")
+        return 1
+    source_name = getattr(args, "source", "rendu")
+    if source_name != "rendu" and is_exam(state):
+        print("Exam/Grademe correction uses workspace/rendu. Vogsphere is not an Exam source.")
         return 1
     if args.cmd == "grademe" and is_curriculum(state):
         print("Active Piscine sessions use Moulinette; running Moulinette.")
@@ -266,8 +329,24 @@ def _run_correction_command(repo: Repository, session: Session, args) -> int:
     state = session.load_if_exists()
     label = correction_label(state)
     run_label = "manual correction" if manual_subject else label
-    print(f"Running {run_label}...")
-    trace = evaluate_subject(repo, session)
+    if label == "Grademe":
+        print(f"Running {run_label}...")
+        trace = evaluate_subject(repo, session)
+    else:
+        source = resolve_source(repo.root, source_name, preferred_name=session.current_subject_id())
+        if isinstance(source, SourceError):
+            print(render_source_error(source, ctx=render_context(sys.stdout)))
+            return 1
+        print(f"Running {run_label}...")
+        for line in render_source_lines(source, ctx=render_context(sys.stdout)):
+            print(line)
+        try:
+            with materialized_source(source) as source_dir:
+                trace = evaluate_subject(repo, session, source_dir=source_dir)
+        except ValueError as exc:
+            print(render_source_error(SourceError(source=source.source, reason=str(exc)), ctx=render_context(sys.stdout)))
+            return 1
+        trace["correction_source"] = trace_source(source)
     paths = write_trace_bundle(session.trace_dir, trace)
     record_attempt(repo, session, trace, paths["latest"])
     attempts = _attempts_for_trace(repo, trace)
@@ -514,10 +593,30 @@ def main(argv=None) -> int:
                 print("Unknown or missing project. Use `pforge project list`.")
                 return 1
             if args.project_cmd == "requirements":
-                print(render_project_requirements(project, ctx=ctx))
+                print(render_project_requirements(project, repo, ctx=ctx))
                 return 0
-            print(render_project_submission_check(project, session.rendu_dir, ctx=ctx))
+            source = resolve_source(repo.root, args.source, preferred_name=str(project["id"]))
+            if isinstance(source, SourceError):
+                print(render_source_error(source, ctx=ctx))
+                return 1
+            try:
+                with materialized_source(source) as source_dir:
+                    print(render_project_submission_check(project, source_dir, source=source, ctx=ctx))
+            except ValueError as exc:
+                print(render_source_error(SourceError(source=source.source, reason=str(exc)), ctx=ctx))
+                return 1
             return 0
+        if args.project_cmd == "references":
+            print(render_project_references(repo, getattr(args, "project", None), ctx=ctx))
+            return 0
+        if args.project_cmd == "subject":
+            project = _project_from_arg_or_session(repo, session, args.project)
+            if not project:
+                print("Unknown or missing project. Use `pforge project list`.")
+                return 1
+            code, text = render_project_subject_result(repo, str(project["id"]), getattr(args, "copy_to", None), ctx=ctx)
+            print(text)
+            return code
         parser.print_help()
         return 2
 

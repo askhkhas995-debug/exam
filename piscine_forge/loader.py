@@ -7,7 +7,7 @@ import re
 
 try:
     import yaml
-except Exception:  # pragma: no cover
+except ImportError:  # pragma: no cover
     yaml = None
 
 
@@ -123,6 +123,10 @@ class Repository:
                 contract = submission_contracts.get(str(sid))
                 if contract:
                     out[str(sid)]["meta"]["submission"] = contract
+                
+                correction = data.get("corrections", {}).get(str(sid))
+                if correction:
+                    out[str(sid)]["meta"]["correction"] = correction
         return out
 
     def pools(self) -> dict[str, dict]:

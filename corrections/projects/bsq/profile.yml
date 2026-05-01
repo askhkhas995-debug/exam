@@ -1,0 +1,5 @@
+subject_id: bsq
+evaluator: project
+binary: bsq
+timeout_seconds: 10
+fixed_tests_file: corrections/projects/bsq/tests.yml

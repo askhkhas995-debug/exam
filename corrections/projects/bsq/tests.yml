@@ -1,0 +1,206 @@
+subject_id: bsq
+fixed_tests:
+  - name: "valid_1x1_empty"
+    args: ["MAP_FILE"]
+    map_content: |
+      1.ox
+      .
+    stdout: |
+      x
+
+  - name: "valid_1x1_obstacle"
+    args: ["MAP_FILE"]
+    map_content: |
+      1.ox
+      o
+    stdout: |
+      o
+
+  - name: "valid_small_empty"
+    args: ["MAP_FILE"]
+    map_content: |
+      3.ox
+      ...
+      ...
+      ...
+    stdout: |
+      xxx
+      xxx
+      xxx
+
+  - name: "valid_small_obstacle"
+    args: ["MAP_FILE"]
+    map_content: |
+      4.ox
+      ....
+      ..o.
+      ....
+      ....
+    stdout: |
+      xx..
+      xxo.
+      ....
+      ....
+
+  - name: "valid_biggest_square_top_left"
+    args: ["MAP_FILE"]
+    map_content: |
+      3.ox
+      ...
+      ...
+      ..o
+    stdout: |
+      xx.
+      xx.
+      ..o
+
+  - name: "valid_biggest_square_bottom_right"
+    args: ["MAP_FILE"]
+    map_content: |
+      3.ox
+      oo.
+      o..
+      ...
+    stdout: |
+      oo.
+      oxx
+      .xx
+
+  - name: "valid_rectangular"
+    args: ["MAP_FILE"]
+    map_content: |
+      2.ox
+      .....
+      .....
+    stdout: |
+      xx...
+      xx...
+
+  - name: "invalid_missing_header"
+    args: ["MAP_FILE"]
+    map_content: |
+      ...
+      ...
+      ...
+    expect_error: true
+    exit_code: 1
+    expected_stderr: "map error\n"
+
+  - name: "invalid_header"
+    args: ["MAP_FILE"]
+    map_content: |
+      abc.ox
+      ...
+      ...
+      ...
+    expect_error: true
+    exit_code: 1
+    expected_stderr: "map error\n"
+
+  - name: "invalid_inconsistent_row_length"
+    args: ["MAP_FILE"]
+    map_content: |
+      3.ox
+      ...
+      ..
+      ...
+    expect_error: true
+    exit_code: 1
+    expected_stderr: "map error\n"
+
+  - name: "invalid_bad_characters"
+    args: ["MAP_FILE"]
+    map_content: |
+      3.ox
+      ...
+      .X.
+      ...
+    expect_error: true
+    exit_code: 1
+    expected_stderr: "map error\n"
+
+  - name: "invalid_empty_file"
+    args: ["MAP_FILE"]
+    map_content: ""
+    expect_error: true
+    exit_code: 1
+    expected_stderr: "map error\n"
+
+  - name: "invalid_too_few_lines"
+    args: ["MAP_FILE"]
+    map_content: |
+      4.ox
+      ...
+      ...
+      ...
+    expect_error: true
+    exit_code: 1
+    expected_stderr: "map error\n"
+
+  - name: "invalid_too_many_lines"
+    args: ["MAP_FILE"]
+    map_content: |
+      2.ox
+      ...
+      ...
+      ...
+    expect_error: true
+    exit_code: 1
+    expected_stderr: "map error\n"
+
+  - name: "invalid_malformed_map"
+    args: ["MAP_FILE"]
+    map_content: |
+      2.o.
+      ..
+      oo
+    expect_error: true
+    exit_code: 1
+    expected_stderr: "map error\n"
+    
+  - name: "performance_large_map"
+    args: ["MAP_FILE"]
+    timeout: 10
+    map_content: |
+      20.ox
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+      ....................
+    stdout: |
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxx

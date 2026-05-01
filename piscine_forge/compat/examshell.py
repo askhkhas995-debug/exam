@@ -1,1 +1,1 @@
-# TODO: adapters for ExamShell archive logic after Codex extracts it.
+# ExamShell archive adapters are out of scope for the current local preview.
