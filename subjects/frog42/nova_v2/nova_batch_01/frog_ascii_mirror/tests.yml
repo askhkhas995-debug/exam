@@ -1,5 +1,0 @@
-subject_id: frog_ascii_mirror
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_ascii_mirror\n"

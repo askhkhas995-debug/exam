@@ -82,7 +82,7 @@ Piscine:
 
 ```bash
 pforge start piscine42
-pforge start piscine27
+pforge start piscine42
 pforge moulinette
 pforge moulinette --source vog
 pforge correct

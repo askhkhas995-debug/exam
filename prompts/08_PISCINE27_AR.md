@@ -1,6 +1,6 @@
-# Prompt 08 — Piscine27
+# Prompt 08 — Piscine
 
-Piscine27 مسار مستقل لا ينسخ 42.  
+Piscine مسار مستقل لا ينسخ 42.  
 هدفه تعليم debugging، self-testing، reasoning، وpeer review بطريقة أفضل.
 
-نفّذ modules من `subjects/piscine27/`.
+نفّذ modules من `subjects/piscine/`.

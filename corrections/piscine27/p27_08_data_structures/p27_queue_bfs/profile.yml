@@ -1,4 +1,0 @@
-subject_id: p27_queue_bfs
-evaluator: c_program
-strict_stdout: true
-timeout_seconds: 2

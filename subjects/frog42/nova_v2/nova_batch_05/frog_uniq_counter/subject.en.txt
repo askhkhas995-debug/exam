@@ -1,4 +1,0 @@
-# frog_uniq_counter
-
-Write a shell script `frog_uniq_counter.sh` that implements the requested behavior for uniq counter.
-Your script must print exactly the expected output for fixed tests.

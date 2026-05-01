@@ -1,5 +1,0 @@
-# p27_binary_search_trace
-
-Binary search that prints checked indexes.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

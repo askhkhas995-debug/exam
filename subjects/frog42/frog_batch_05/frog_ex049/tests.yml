@@ -1,5 +1,0 @@
-subject_id: frog_ex049
-cases:
-  - name: basic
-    args: []
-    stdout: "frog_ex049\n"

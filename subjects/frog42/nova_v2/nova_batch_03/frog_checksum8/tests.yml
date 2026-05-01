@@ -1,5 +1,0 @@
-subject_id: frog_checksum8
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_checksum8\n"

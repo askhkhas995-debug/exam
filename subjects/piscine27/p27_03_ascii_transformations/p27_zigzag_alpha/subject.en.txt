@@ -1,5 +1,0 @@
-# p27_zigzag_alpha
-
-Alternate case by alphabetic-character count only.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

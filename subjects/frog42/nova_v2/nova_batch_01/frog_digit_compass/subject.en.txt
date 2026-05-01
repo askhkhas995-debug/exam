@@ -1,4 +1,0 @@
-# frog_digit_compass
-
-New exercise (nova_batch_01): implement `frog_digit_compass.c`.
-The program should print exactly `frog_digit_compass` followed by a newline.

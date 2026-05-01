@@ -1,4 +1,0 @@
-# frog_camel_fragments
-
-New exercise (nova_batch_01): implement `frog_camel_fragments.c`.
-The program should print exactly `frog_camel_fragments` followed by a newline.

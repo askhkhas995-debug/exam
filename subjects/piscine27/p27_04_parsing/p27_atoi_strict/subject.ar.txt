@@ -1,5 +1,0 @@
-# p27_atoi_strict
-
-Implement atoi with overflow behavior defined by the profile.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

@@ -1,5 +1,0 @@
-# p27_free_table
-
-Free a NULL-terminated array of strings.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

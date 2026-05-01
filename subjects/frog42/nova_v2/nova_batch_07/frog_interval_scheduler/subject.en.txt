@@ -1,4 +1,0 @@
-# frog_interval_scheduler
-
-New exercise (nova_batch_07): implement `frog_interval_scheduler.c`.
-The program should print exactly `frog_interval_scheduler` followed by a newline.

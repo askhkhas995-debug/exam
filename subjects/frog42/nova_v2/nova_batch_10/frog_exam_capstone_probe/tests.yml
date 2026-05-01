@@ -1,5 +1,0 @@
-subject_id: frog_exam_capstone_probe
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_exam_capstone_probe\n"

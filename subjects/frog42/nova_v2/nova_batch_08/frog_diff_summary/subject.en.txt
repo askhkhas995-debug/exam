@@ -1,4 +1,0 @@
-# frog_diff_summary
-
-New exercise (nova_batch_08): implement `frog_diff_summary.c`.
-The program should print exactly `frog_diff_summary` followed by a newline.

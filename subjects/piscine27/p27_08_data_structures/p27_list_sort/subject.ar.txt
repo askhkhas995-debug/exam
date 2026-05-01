@@ -1,5 +1,0 @@
-# p27_list_sort
-
-Sort a linked list using a comparator.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

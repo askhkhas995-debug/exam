@@ -1,5 +1,0 @@
-# p27_stack_brackets
-
-Validate brackets using a stack.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

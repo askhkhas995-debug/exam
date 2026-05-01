@@ -1,5 +1,0 @@
-# p27_permissions_lab
-
-Create files and directories with exact permissions and verify them with ls -l.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

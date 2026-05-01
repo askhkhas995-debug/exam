@@ -1,4 +1,0 @@
-# frog_passwd_slice
-
-Write a shell script `frog_passwd_slice.sh` that implements the requested behavior for passwd slice.
-Your script must print exactly the expected output for fixed tests.

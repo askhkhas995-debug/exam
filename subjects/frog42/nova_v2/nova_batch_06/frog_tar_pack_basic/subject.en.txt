@@ -1,4 +1,0 @@
-# frog_tar_pack_basic
-
-Write a shell script `frog_tar_pack_basic.sh` that implements the requested behavior for tar pack basic.
-Your script must print exactly the expected output for fixed tests.

@@ -1,5 +1,0 @@
-subject_id: frog_path_splitter
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_path_splitter\n"

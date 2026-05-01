@@ -1,4 +1,0 @@
-# frog_touch_timestamp
-
-Write a shell script `frog_touch_timestamp.sh` that implements the requested behavior for touch timestamp.
-Your script must print exactly the expected output for fixed tests.

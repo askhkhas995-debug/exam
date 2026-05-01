@@ -1,5 +1,0 @@
-subject_id: frog_trim_bridge
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_trim_bridge\n"

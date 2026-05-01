@@ -1,5 +1,0 @@
-# p27_text_analyzer
-
-Analyze text: words, lines, characters, most frequent word.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

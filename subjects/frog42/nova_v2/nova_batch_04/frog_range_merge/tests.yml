@@ -1,5 +1,0 @@
-subject_id: frog_range_merge
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_range_merge\n"

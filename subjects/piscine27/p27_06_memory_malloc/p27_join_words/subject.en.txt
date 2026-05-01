@@ -1,5 +1,0 @@
-# p27_join_words
-
-Join an array of strings with a separator.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

@@ -1,4 +1,0 @@
-# frog_token_banner
-
-New exercise (nova_batch_02): implement `frog_token_banner.c`.
-The program should print exactly `frog_token_banner` followed by a newline.

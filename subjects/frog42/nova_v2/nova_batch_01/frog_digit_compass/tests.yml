@@ -1,5 +1,0 @@
-subject_id: frog_digit_compass
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_digit_compass\n"

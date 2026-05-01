@@ -1,5 +1,0 @@
-# p27_window_unique
-
-Print the longest substring without repeated characters.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

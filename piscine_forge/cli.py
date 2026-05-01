@@ -58,8 +58,6 @@ from .vogsphere import (
 
 START_ALIASES = {
     "piscine42": "piscine42_default",
-    "piscine27": "piscine27_default",
-    "frog42": "frog42_nova_v2",
 }
 
 
@@ -92,7 +90,7 @@ def build_parser() -> argparse.ArgumentParser:
     list_p.add_argument("what", choices=["subjects", "pools"])
 
     start_p = sub.add_parser("start", help="start a curriculum path")
-    start_p.add_argument("path", choices=["piscine42", "piscine27", "frog42"])
+    start_p.add_argument("path", choices=["piscine42"])
     start_p.add_argument("--seed", type=int, default=None)
     start_p.add_argument("--subject", default=None)
 

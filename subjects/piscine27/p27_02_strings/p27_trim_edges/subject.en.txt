@@ -1,5 +1,0 @@
-# p27_trim_edges
-
-Return a newly allocated string with leading/trailing spaces removed.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

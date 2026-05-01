@@ -1,5 +1,0 @@
-# p27_flood_fill
-
-Fill a region in a 2D grid.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

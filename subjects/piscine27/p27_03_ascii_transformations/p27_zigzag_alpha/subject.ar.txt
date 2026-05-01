@@ -1,5 +1,0 @@
-# p27_zigzag_alpha
-
-Alternate case by alphabetic-character count only.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

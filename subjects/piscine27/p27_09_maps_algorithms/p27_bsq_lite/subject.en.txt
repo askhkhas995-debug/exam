@@ -1,5 +1,0 @@
-# p27_bsq_lite
-
-Find biggest square on small maps.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

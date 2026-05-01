@@ -1,4 +1,0 @@
-# frog_time_parser
-
-New exercise (nova_batch_03): implement `frog_time_parser.c`.
-The program should print exactly `frog_time_parser` followed by a newline.

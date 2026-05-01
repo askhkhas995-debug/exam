@@ -1,5 +1,0 @@
-subject_id: frog_snake_cleaner
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_snake_cleaner\n"

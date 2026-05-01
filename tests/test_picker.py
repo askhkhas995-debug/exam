@@ -53,8 +53,3 @@ class TestCurriculumSequence:
         # First module should be shell00
         assert seq[0]["module"] == "shell00"
 
-    def test_piscine27_sequence(self):
-        repo = Repository(ROOT)
-        pool = repo.get_pool("piscine27_default")
-        seq = curriculum_sequence(pool)
-        assert len(seq) > 0

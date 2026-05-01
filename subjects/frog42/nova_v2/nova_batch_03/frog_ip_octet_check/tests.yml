@@ -1,5 +1,0 @@
-subject_id: frog_ip_octet_check
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_ip_octet_check\n"

@@ -1,5 +1,0 @@
-subject_id: frog_merge_k_lists
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_merge_k_lists\n"

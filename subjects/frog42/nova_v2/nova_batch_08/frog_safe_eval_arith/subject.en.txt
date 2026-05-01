@@ -1,4 +1,0 @@
-# frog_safe_eval_arith
-
-New exercise (nova_batch_08): implement `frog_safe_eval_arith.c`.
-The program should print exactly `frog_safe_eval_arith` followed by a newline.

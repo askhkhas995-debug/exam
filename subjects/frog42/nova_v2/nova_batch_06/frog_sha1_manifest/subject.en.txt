@@ -1,4 +1,0 @@
-# frog_sha1_manifest
-
-Write a shell script `frog_sha1_manifest.sh` that implements the requested behavior for sha1 manifest.
-Your script must print exactly the expected output for fixed tests.

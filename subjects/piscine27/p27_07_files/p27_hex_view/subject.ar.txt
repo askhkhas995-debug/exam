@@ -1,5 +1,0 @@
-# p27_hex_view
-
-Print file bytes in a simplified hex format.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

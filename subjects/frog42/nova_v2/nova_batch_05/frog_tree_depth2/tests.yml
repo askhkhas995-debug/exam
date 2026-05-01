@@ -1,5 +1,0 @@
-subject_id: frog_tree_depth2
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_tree_depth2\n"

@@ -1,5 +1,0 @@
-# p27_putchar_trace
-
-Implement ft_putchar and a small trace program that prints one character per line.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

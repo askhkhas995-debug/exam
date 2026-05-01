@@ -1,4 +1,0 @@
-# frog_diagonal_trace
-
-New exercise (nova_batch_04): implement `frog_diagonal_trace.c`.
-The program should print exactly `frog_diagonal_trace` followed by a newline.

@@ -1,5 +1,0 @@
-subject_id: frog_prefix_balance
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_prefix_balance\n"

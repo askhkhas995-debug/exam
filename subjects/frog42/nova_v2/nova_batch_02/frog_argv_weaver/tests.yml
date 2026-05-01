@@ -1,5 +1,0 @@
-subject_id: frog_argv_weaver
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_argv_weaver\n"

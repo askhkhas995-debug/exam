@@ -1,5 +1,0 @@
-# p27_csv_light
-
-Parse a simple comma-separated line with no quoted fields.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

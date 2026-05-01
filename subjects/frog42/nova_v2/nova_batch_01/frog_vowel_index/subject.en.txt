@@ -1,4 +1,0 @@
-# frog_vowel_index
-
-New exercise (nova_batch_01): implement `frog_vowel_index.c`.
-The program should print exactly `frog_vowel_index` followed by a newline.

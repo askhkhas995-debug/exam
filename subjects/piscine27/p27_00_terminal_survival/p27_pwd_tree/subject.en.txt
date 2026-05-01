@@ -1,5 +1,0 @@
-# p27_pwd_tree
-
-Create a shell script that prints the current directory, then prints a tree-like list of files up to depth 2.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

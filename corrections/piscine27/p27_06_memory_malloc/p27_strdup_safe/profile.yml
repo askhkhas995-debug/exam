@@ -1,4 +1,0 @@
-subject_id: p27_strdup_safe
-evaluator: c_program
-strict_stdout: true
-timeout_seconds: 2

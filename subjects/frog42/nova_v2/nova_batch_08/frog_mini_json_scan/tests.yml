@@ -1,5 +1,0 @@
-subject_id: frog_mini_json_scan
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_mini_json_scan\n"

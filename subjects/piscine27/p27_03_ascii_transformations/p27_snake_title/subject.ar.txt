@@ -1,5 +1,0 @@
-# p27_snake_title
-
-Convert snake_case to title words.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

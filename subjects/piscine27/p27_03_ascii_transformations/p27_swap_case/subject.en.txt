@@ -1,5 +1,0 @@
-# p27_swap_case
-
-Swap uppercase/lowercase, leave non-alpha unchanged.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

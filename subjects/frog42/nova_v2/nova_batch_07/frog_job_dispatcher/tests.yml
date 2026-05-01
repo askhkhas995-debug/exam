@@ -1,5 +1,0 @@
-subject_id: frog_job_dispatcher
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_job_dispatcher\n"

@@ -1,5 +1,0 @@
-subject_id: frog_runlength_encode
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_runlength_encode\n"

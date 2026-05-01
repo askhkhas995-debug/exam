@@ -1,4 +1,0 @@
-# frog_make_hardlink_pair
-
-Write a shell script `frog_make_hardlink_pair.sh` that implements the requested behavior for make hardlink pair.
-Your script must print exactly the expected output for fixed tests.

@@ -1,5 +1,0 @@
-subject_id: frog_make_symlink_pair
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_make_symlink_pair\n"

@@ -1,5 +1,0 @@
-# p27_mini_moulinette
-
-Build a tiny tester that compiles a C file, runs cases, and prints traces.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

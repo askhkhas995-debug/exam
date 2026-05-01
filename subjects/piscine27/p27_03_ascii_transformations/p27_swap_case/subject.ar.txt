@@ -1,5 +1,0 @@
-# p27_swap_case
-
-Swap uppercase/lowercase, leave non-alpha unchanged.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

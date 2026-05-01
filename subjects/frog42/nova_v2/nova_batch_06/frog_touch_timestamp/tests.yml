@@ -1,5 +1,0 @@
-subject_id: frog_touch_timestamp
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_touch_timestamp\n"

@@ -1,4 +1,0 @@
-# frog_topk_words
-
-New exercise (nova_batch_07): implement `frog_topk_words.c`.
-The program should print exactly `frog_topk_words` followed by a newline.

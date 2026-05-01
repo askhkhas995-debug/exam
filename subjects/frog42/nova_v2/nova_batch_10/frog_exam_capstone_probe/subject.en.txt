@@ -1,4 +1,0 @@
-# frog_exam_capstone_probe
-
-New exercise (nova_batch_10): implement `frog_exam_capstone_probe.c`.
-The program should print exactly `frog_exam_capstone_probe` followed by a newline.

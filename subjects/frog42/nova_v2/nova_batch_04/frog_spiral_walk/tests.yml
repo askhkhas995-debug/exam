@@ -1,5 +1,0 @@
-subject_id: frog_spiral_walk
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_spiral_walk\n"

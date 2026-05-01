@@ -1,5 +1,0 @@
-subject_id: frog_palindrome_edges
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_palindrome_edges\n"

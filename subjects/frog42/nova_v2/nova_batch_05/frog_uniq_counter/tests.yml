@@ -1,5 +1,0 @@
-subject_id: frog_uniq_counter
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_uniq_counter\n"

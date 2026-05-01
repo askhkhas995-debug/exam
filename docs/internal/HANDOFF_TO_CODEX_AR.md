@@ -61,7 +61,7 @@ piscine-forge-rebuilt/docs/LEGACY_TOOL_ANALYSIS.md
 6. لا تجعل التمارين hardcoded في الكود. كل شيء يجب أن يأتي من `meta.yml` و`pools/*.yml`.
 7. أبقِ correction files مخفية عن الطالب.
 8. أضف التمارين الجديدة من `subjects/exams/handwritten_v5/`.
-9. أضف مسار Piscine27 من `subjects/piscine27/`.
+9. أضف مسار Piscine من `subjects/piscine/`.
 10. اجعل الواجهة terminal-first.
 11. نفّذ CLI أوّلي:
 
@@ -70,7 +70,7 @@ pforge validate
 pforge list subjects
 pforge list pools
 pforge start piscine42
-pforge start piscine27
+pforge start piscine42
 pforge exam handwritten_v5
 pforge grademe
 pforge trace

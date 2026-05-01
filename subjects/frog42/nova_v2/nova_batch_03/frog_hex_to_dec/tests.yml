@@ -1,5 +1,0 @@
-subject_id: frog_hex_to_dec
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_hex_to_dec\n"

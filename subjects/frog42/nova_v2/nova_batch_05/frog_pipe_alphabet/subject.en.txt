@@ -1,4 +1,0 @@
-# frog_pipe_alphabet
-
-Write a shell script `frog_pipe_alphabet.sh` that implements the requested behavior for pipe alphabet.
-Your script must print exactly the expected output for fixed tests.

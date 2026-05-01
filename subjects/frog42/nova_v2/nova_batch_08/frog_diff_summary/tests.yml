@@ -1,5 +1,0 @@
-subject_id: frog_diff_summary
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_diff_summary\n"

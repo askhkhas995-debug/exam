@@ -1,5 +1,0 @@
-# p27_pipe_gym
-
-Process /etc/passwd with pipeline tools and exact formatting.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

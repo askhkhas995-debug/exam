@@ -1,5 +1,0 @@
-# p27_find_cleaner
-
-Find files ending with ~ or wrapped in #...#, print them, then delete them.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

@@ -1,5 +1,0 @@
-# p27_number_writer
-
-Implement safe ft_putnbr including INT_MIN.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

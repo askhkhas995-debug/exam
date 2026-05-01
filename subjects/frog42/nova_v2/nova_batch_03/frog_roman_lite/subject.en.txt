@@ -1,4 +1,0 @@
-# frog_roman_lite
-
-New exercise (nova_batch_03): implement `frog_roman_lite.c`.
-The program should print exactly `frog_roman_lite` followed by a newline.

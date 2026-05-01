@@ -1,5 +1,0 @@
-# p27_pipe_gym
-
-Process /etc/passwd with pipeline tools and exact formatting.
-
-This is a Piscine27 exercise. Codex must expand fixed tests and edge cases.

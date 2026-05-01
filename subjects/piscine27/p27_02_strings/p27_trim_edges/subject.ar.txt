@@ -1,5 +1,0 @@
-# p27_trim_edges
-
-Return a newly allocated string with leading/trailing spaces removed.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

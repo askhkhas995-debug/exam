@@ -1,4 +1,0 @@
-# frog_keyval_parser
-
-New exercise (nova_batch_02): implement `frog_keyval_parser.c`.
-The program should print exactly `frog_keyval_parser` followed by a newline.

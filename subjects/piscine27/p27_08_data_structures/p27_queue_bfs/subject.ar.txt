@@ -1,5 +1,0 @@
-# p27_queue_bfs
-
-Implement a queue and use it for simple BFS.
-
-هذا تمرين من Piscine27. على Codex توسيع الاختبارات والحالات الحدية.

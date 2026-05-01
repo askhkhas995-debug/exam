@@ -1,5 +1,0 @@
-subject_id: frog_time_parser
-fixed_tests:
-- name: basic
-  args: []
-  stdout: "frog_time_parser\n"

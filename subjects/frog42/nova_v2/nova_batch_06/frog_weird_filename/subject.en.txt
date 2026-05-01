@@ -1,4 +1,0 @@
-# frog_weird_filename
-
-Write a shell script `frog_weird_filename.sh` that implements the requested behavior for weird filename.
-Your script must print exactly the expected output for fixed tests.

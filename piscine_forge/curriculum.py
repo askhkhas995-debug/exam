@@ -29,10 +29,6 @@ def pool_display_name(pool_id: str, pool: dict[str, Any] | None = None) -> str:
         return str(pool["display_name"])
     if "piscine42" in pool_id:
         return "Piscine42"
-    if "piscine27" in pool_id:
-        return "Piscine27"
-    if "frog42" in pool_id:
-        return "Frog42"
     return pool_id
 
 
