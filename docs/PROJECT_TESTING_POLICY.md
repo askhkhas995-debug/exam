@@ -54,3 +54,13 @@ When integrating legacy Piscine projects (BSQ, Rush, Sastantua, etc.):
 - Existing built-in Piscine and exam subjects remain authoritative and are not touched.
 - No solutions are imported, copied, displayed, or used.
 - Project support status varies by project.
+
+### Current Local Trainer Coverage (Release Baseline)
+
+- **BSQ**: local trainer tests configured (`corrections/projects/bsq`).
+- **Rush00 / Rush01 / Rush02**: preflight-only submission checks (contract checks, no functional output suite).
+- **Eval Expr**: preflight-only submission checks (contract checks, no functional expression suite).
+- **Sastantua**: metadata incomplete.
+- **Match-N-Match**: metadata incomplete.
+
+These are local trainer checks only and are **not** official 42 Moulinette/Grademe tests.

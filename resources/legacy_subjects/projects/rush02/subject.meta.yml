@@ -1,24 +1,30 @@
-display_name: "Rush 02"
-slug: "rush02"
-kind: "piscine_project"
+display_name: Rush 02
+slug: rush02
+kind: piscine_project
 legacy: true
-preferred_language: "en"
-
+preferred_language: en
 subject_pdf:
-  local_pdf_path: "resources/legacy_subjects/projects/rush02/subject.pdf"
-  local_text_path: "resources/legacy_subjects/projects/rush02/subject.txt"
-  status: "missing"
-
+  local_pdf_path: resources/legacy_subjects/projects/rush02/subject.pdf
+  local_text_path: resources/legacy_subjects/projects/rush02/subject.txt
+  status: missing
 external_references:
-  - "itsanuness_42piscine"
-
+- itsanuness_42piscine
 usage_policy:
   reference_only: true
   local_only_after_preparation: true
   no_runtime_downloads: true
   no_solution_import: true
-
+  behavior_inference_only: true
+  do_not_vendor: true
 notes:
-  - "This PDF is a local reference copy for reading the original subject."
-  - "Existing built-in subject files remain authoritative for the local trainer."
-  - "Normal Project Moulinette commands use local project data."
+- This PDF is a local reference copy for reading the original subject.
+- Existing built-in subject files remain authoritative for the local trainer.
+- Normal Project Moulinette commands use local project data.
+subject_sources:
+  primary_and_alternatives:
+  - https://github.com/ItsAnunesS/42Piscine/blob/master/Rush/Rush02/en.subject.pdf
+  - https://github.com/Parmenide-Heraclides/Piscine-42-subject/blob/main/Rushs/Rush-02/Rush-02_EN.pdf
+  - https://github.com/dpetrosy/42-Piscine/blob/master/Rush02/Rush02_subject.pdf
+local_trainer_status:
+  correction_status: preflight_only
+  test_status: preflight_only

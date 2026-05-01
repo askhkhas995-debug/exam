@@ -12,12 +12,12 @@ subjects:
 submission_contracts:
   rush00:
     type: rush_project
-    status: preflight_configured
+    status: local_tests_configured
     required_files: [Makefile]
     allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
     forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
     makefile_required: true
-    expected_binary: null
+    expected_binary: rush-00
     allow_extra_files: true
   rush01:
     type: rush_project
@@ -45,12 +45,12 @@ submission_contracts:
     status: incomplete
   eval_expr:
     type: generic_project
-    status: preflight_configured
+    status: local_tests_configured
     required_files: [Makefile]
     allowed_patterns: ["*.c", "*.h", "srcs/*.c", "includes/*.h"]
     forbidden_files: [a.out, "*.o", "*.out", "corrections/*", "tests/*", "__pycache__/*", ".DS_Store"]
     makefile_required: true
-    expected_binary: null
+    expected_binary: eval_expr
     allow_extra_files: true
   bsq:
     type: bsq_project
@@ -63,5 +63,9 @@ submission_contracts:
     allow_extra_files: true
 
 corrections:
+  rush00:
+    profile: corrections/projects/rush00/profile.yml
+  eval_expr:
+    profile: corrections/projects/eval_expr/profile.yml
   bsq:
     profile: corrections/projects/bsq/profile.yml

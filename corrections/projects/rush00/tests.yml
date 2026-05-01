@@ -1,0 +1,14 @@
+subject_id: rush00
+fixed_tests:
+  - name: rush00_1x1
+    args: ["1", "1"]
+    stdout: "o\n"
+    exit_code: 0
+  - name: rush00_5x3
+    args: ["5", "3"]
+    stdout: "o---o\n|   |\no---o\n"
+    exit_code: 0
+  - name: rush00_4x1
+    args: ["4", "1"]
+    stdout: "o--o\n"
+    exit_code: 0

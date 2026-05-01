@@ -1,0 +1,5 @@
+subject_id: eval_expr
+kind: project
+binary: eval_expr
+timeout_seconds: 5
+fixed_tests_file: corrections/projects/eval_expr/tests.yml
